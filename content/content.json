@@ -1,26 +1,26 @@
 {
   "meta": {
-    "version": "1.8",
+    "version": "1.9",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
-    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0). Stage benchmarks + nurture motion and OH/GA state editions are drafts pending sales-enablement approval. Unverifiable 10x/2-hour claims removed 2026-07-21."
+    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0). Stage benchmarks + nurture motion and OH/GA state editions are drafts pending sales-enablement approval. Unverifiable 10x/2-hour claims removed 2026-07-21. Crystal outreach touch kit (persona: campus) merged 2026-07-21."
   },
   "company": {
     "name": "ClearK12",
     "tagline": "Educational Technology",
-    "positioning": "ClearK12 is an educational technology company built for the realities of today's classrooms. We make the day-to-day work of teaching measurably easier — turning student data and required standards into fast, confident instructional action. Our products sit alongside the curriculum, assessments, and systems districts already own; we make those investments work harder rather than asking schools to rip and replace.",
-    "promise": "Educational technology that helps teachers do their best work — with less friction.",
+    "positioning": "ClearK12 is an educational technology company built for the realities of today's classrooms. We make the day-to-day work of teaching measurably easier \u2014 turning student data and required standards into fast, confident instructional action. Our products sit alongside the curriculum, assessments, and systems districts already own; we make those investments work harder rather than asking schools to rip and replace.",
+    "promise": "Educational technology that helps teachers do their best work \u2014 with less friction.",
     "brandPrinciples": [
       {
         "title": "State standard-built",
         "takeaway": "Built around your state's standards.",
-        "body": "Designed for real classrooms and accountability — not repackaged national content."
+        "body": "Designed for real classrooms and accountability \u2014 not repackaged national content."
       },
       {
         "title": "Teacher-first",
         "takeaway": "We remove work from teachers' plates.",
-        "body": "Less prep, planning, and grading — never more."
+        "body": "Less prep, planning, and grading \u2014 never more."
       },
       {
         "title": "Additive, not disruptive",
@@ -29,7 +29,7 @@
       },
       {
         "title": "Speed to action",
-        "takeaway": "We compress the time between “what happened” and “what to do next.”",
+        "takeaway": "We compress the time between \u201cwhat happened\u201d and \u201cwhat to do next.\u201d",
         "body": "Data is everywhere; the value is responding faster."
       },
       {
@@ -39,7 +39,7 @@
       }
     ],
     "voice": "Confident, warm, and practical. We sound like an experienced educator who respects the buyer's time and knows the classroom. We are optimistic without overpromising, and specific without drowning people in features. Sentences are short. Claims are concrete.",
-    "goldenRule": "Lead with the problem the buyer feels, not the features we ship. Features prove the story — they are never the opening line.",
+    "goldenRule": "Lead with the problem the buyer feels, not the features we ship. Features prove the story \u2014 they are never the opening line.",
     "colors": {
       "navy": "#10305C",
       "blue": "#1F9BE0",
@@ -60,15 +60,15 @@
       {
         "name": "Slate Gray",
         "hex": "#565A5C",
-        "use": "Body text, captions, “Educational Technology”"
+        "use": "Body text, captions, \u201cEducational Technology\u201d"
       }
     ],
     "logoRules": [
-      "Keep clear space around the logo equal to the height of the “K12” mark; never crowd it.",
+      "Keep clear space around the logo equal to the height of the \u201cK12\u201d mark; never crowd it.",
       "Place the full-color logo on white or very light backgrounds; use a reversed (white) logo on navy.",
       "Do not stretch, recolor, add effects, or place the logo on busy photos."
     ],
-    "paletteNote": "Use the ClearK12 palette for corporate materials, capabilities decks that span both products, contracts, and the company signature line. Product materials lead with the product palette and carry ClearK12 as the endorsing parent (“a ClearK12 product”).",
+    "paletteNote": "Use the ClearK12 palette for corporate materials, capabilities decks that span both products, contracts, and the company signature line. Product materials lead with the product palette and carry ClearK12 as the endorsing parent (\u201ca ClearK12 product\u201d).",
     "emailSignature": "First Name Last Name | Title\ncleark12.com\nP: phone number",
     "introLine": "Hi, I'm _______ with ClearK12. I'd like to share one of our programs with you, Crystal Instruction.",
     "familyNote": "The platforms are complementary, not competing. Crystal Instruction is about instructional response across Math, ELAR, and Science; Crystal Writing, including LoneStar CR, is a specialist in the single hardest-to-grade skill. Many districts are strong candidates for both.",
@@ -80,8 +80,8 @@
     "tagline": "A system for developing strong writers.",
     "blurb": "The writing development hub that provides scaffolding and support to help students build the skills to become strong writers.",
     "availability": "Available in Texas, Ohio, and Georgia",
-    "positioning": "Crystal Writing is the writing partner for classrooms. Using advanced AI, teachers create standards-aligned response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specific to state standards and grade-level writing expectations.",
-    "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+    "positioning": "Crystal Writing is the writing partner for classrooms. Using advanced AI, teachers create standards-aligned response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback \u2014 built specific to state standards and grade-level writing expectations.",
+    "mission": "Helping teachers grow confident writers \u2014 by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
     "states": [
       {
         "id": "texas",
@@ -103,7 +103,7 @@
         "test": "OST",
         "hash": "#/writing/ohio",
         "status": "draft",
-        "statusLabel": "Playbook: draft — in review",
+        "statusLabel": "Playbook: draft \u2014 in review",
         "statusTip": "Full messaging and playbook adapted from the approved Texas copy; pending sales-enablement sign-off.",
         "note": "Built to Ohio's writing expectations."
       },
@@ -115,16 +115,16 @@
         "test": "Georgia Milestones",
         "hash": "#/writing/georgia",
         "status": "draft",
-        "statusLabel": "Playbook: draft — in review",
+        "statusLabel": "Playbook: draft \u2014 in review",
         "statusTip": "Full messaging and playbook adapted from the approved Texas copy; pending sales-enablement sign-off.",
         "note": "Built to Georgia's writing expectations."
       }
     ],
-    "stateNote": "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; every other state sells as Crystal Writing. Each state below has its own overview, messaging, and playbook.",
+    "stateNote": "The writing story is the same everywhere \u2014 the standards, test names, and product name change by state. Texas sells as LoneStar CR; every other state sells as Crystal Writing. Each state below has its own overview, messaging, and playbook.",
     "bestFitSignals": [
       "State-test writing / constructed-response performance is a named priority.",
       "ELA teachers overloaded with writing grading; low writing-practice volume.",
-      "Grades 3–8 and high-school English focus; interest in AI built to the state's standards."
+      "Grades 3\u20138 and high-school English focus; interest in AI built to the state's standards."
     ],
     "shared": {
       "id": "writing-shared",
@@ -139,8 +139,8 @@
       },
       "oneLiner": "The constructed-response writing partner for classrooms.",
       "marketTagline": "A system for developing strong writers.",
-      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
-      "positioning": "Crystal Writing is the constructed-response writing partner for classrooms. Using advanced AI, teachers create standards-aligned constructed-response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specifically to each state's standards and writing expectations.",
+      "mission": "Helping teachers grow confident writers \u2014 by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "Crystal Writing is the constructed-response writing partner for classrooms. Using advanced AI, teachers create standards-aligned constructed-response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback \u2014 built specifically to each state's standards and writing expectations.",
       "colors": {
         "primary": "#1A2B4C",
         "accent": "#57B4E5",
@@ -148,7 +148,7 @@
         "gray": "#565A5C",
         "primaryLight": "#E9F5FC"
       },
-      "voice": "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to each state's standards and assessments. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      "voice": "Confident, credible, and evidence-led \u2014 Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to each state's standards and assessments. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
       "valuePillars": [
         {
           "title": "More writing practice",
@@ -171,8 +171,8 @@
           "body": "Teachers stop hand-grading every response."
         }
       ],
-      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
-      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness \u2014 it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort \u2014 it's grading time.",
       "model": {
         "name": "Write. Score. Grow.",
         "steps": [
@@ -186,7 +186,7 @@
           },
           {
             "name": "Score",
-            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+            "body": "AI scores every response instantly and returns personalized, actionable feedback \u2014 no manual grading."
           },
           {
             "name": "Revise & Grow",
@@ -215,7 +215,7 @@
             "Fast, useful feedback",
             "Reaching every level"
           ],
-          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+          "leadMessage": "Assign more writing, grade none of it \u2014 and give every student instant feedback."
         },
         {
           "audience": "campus",
@@ -226,7 +226,7 @@
             "Evidence of growth",
             "Increased capacity"
           ],
-          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+          "leadMessage": "More writing practice in every classroom \u2014 with visible, tracked growth."
         },
         {
           "audience": "district",
@@ -256,10 +256,10 @@
       "bestFitSignals": [
         "State-test writing/constructed-response performance is a named priority (ECR).",
         "ELA teachers overloaded with writing grading; low writing-practice volume.",
-        "Grades 3–8 and high school English focus; interest in AI that's built to the state's standards."
+        "Grades 3\u20138 and high school English focus; interest in AI that's built to the state's standards."
       ],
       "discoveryQuestions": [
-        "How is constructed response (ECR) going on the state test — and in daily practice?",
+        "How is constructed response (ECR) going on the state test \u2014 and in daily practice?",
         "Realistically, how often do students write, and how long until they get feedback?",
         "How much time are ELA teachers spending grading writing each week?"
       ],
@@ -271,30 +271,30 @@
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
       "productClaims": "Instant scoring and personalized feedback on every response, built specifically to each state's standards and writing expectations, grounded in the peer-reviewed research above.",
-      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "hook": "Assign more writing, grade none of it \u2014 and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that state ELA assessments lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically to each state's standards and writing expectations. Teachers create constructed-response tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that state ELA assessments lean hard on constructed-response writing \u2014 and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically to each state's standards and writing expectations. Teachers create constructed-response tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback \u2014 so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — state tests lean hard on constructed response, but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for classrooms. Built to state standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] \u2014 state tests lean hard on constructed response, but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for classrooms. Built to state standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks \u2014 so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? \u2014 [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): state tests made constructed response central; practice is capped by grading time; feedback comes days late.",
-          "Who we are (45s): the constructed-response writing partner, built specifically to each state's standards and writing expectations — a specialist, not a curriculum.",
+          "Who we are (45s): the constructed-response writing partner, built specifically to each state's standards and writing expectations \u2014 a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
           "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
-          "Close (15s): more writing, none of the grading — the fastest path to better writers."
+          "Close (15s): more writing, none of the grading \u2014 the fastest path to better writers."
         ]
       },
       "objections": [
         {
           "objection": "Can AI really grade writing accurately?",
-          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control \u2014 you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
         },
         {
           "objection": "Is this just an essay checker like the free tools?",
-          "response": "No — it's built exclusively for each state's standards and constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what the state test requires."
+          "response": "No \u2014 it's built exclusively for each state's standards and constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what the state test requires."
         }
       ]
     },
@@ -324,24 +324,24 @@
       "discovery": "2026-07-21"
     },
     "principle": "Sell the way districts buy: validate what they own, name the pain they feel, and prove we make their people's week easier.",
-    "stagesIntro": "Seven stages, from first touch to expansion. Don't advance a deal until it meets the exit criteria — that's how we keep the pipeline honest.",
+    "stagesIntro": "Seven stages, from first touch to expansion. Don't advance a deal until it meets the exit criteria \u2014 that's how we keep the pipeline honest.",
     "icp": "Both products serve public school districts and campuses. Primary buyers are district administrators (curriculum/C&I, academics, assessment, MTSS, and technology leaders) and campus leaders (principals and APs). Teachers are the users and powerful internal champions.",
     "fitNote": "Before investing in a full demo cycle, confirm FIT. If two or more are unclear, stay in discovery.",
     "discoveryIntro": "Discovery is where deals are won. Ask, listen, and mirror their words back in the demo. Start shared, then go product-specific.",
     "cadenceNote": "Re-enter engaged-but-not-ready contacts into the long-tail nurture below and re-time around their budget/planning cycle.",
     "nurture": {
-      "intro": "Most K-12 deals die on timing, not fit. After the Day-22 break-up email, engaged-but-not-ready contacts move into nurture — treat it as a real pipeline stage with its own motion, not a graveyard.",
+      "intro": "Most K-12 deals die on timing, not fit. After the Day-22 break-up email, engaged-but-not-ready contacts move into nurture \u2014 treat it as a real pipeline stage with its own motion, not a graveyard.",
       "rhythm": [
-        "Monthly value touch — rotate formats: a research stat, a win from a similar district, a new-feature note, or a state-assessment news item. Never 'just checking in.'",
-        "Quarterly personal touch — a short call or personalized email tied to something real: their scores, their board agenda, a leadership change.",
-        "Every touch gets logged with a next-trigger date in the CRM — nurture only works if the next action has a date."
+        "Monthly value touch \u2014 rotate formats: a research stat, a win from a similar district, a new-feature note, or a state-assessment news item. Never 'just checking in.'",
+        "Quarterly personal touch \u2014 a short call or personalized email tied to something real: their scores, their board agenda, a leadership change.",
+        "Every touch gets logged with a next-trigger date in the CRM \u2014 nurture only works if the next action has a date."
       ],
       "triggers": [
-        "Budget planning window (roughly Jan–Apr for the next school year) — re-open the conversation before budgets lock.",
-        "State test results release (STAAR early summer; OST and Georgia Milestones over the summer) — a writing or growth dip is a natural re-entry.",
-        "Back-to-school priority reset (Aug–Sep) — new initiatives get named; map ours to theirs.",
-        "Leadership change — a new superintendent, C&I lead, or principal resets the conversation; champions who move districts take us with them.",
-        "New money — grants, Title reallocations, or a board-approved initiative that names our pain."
+        "Budget planning window (roughly Jan\u2013Apr for the next school year) \u2014 re-open the conversation before budgets lock.",
+        "State test results release (STAAR early summer; OST and Georgia Milestones over the summer) \u2014 a writing or growth dip is a natural re-entry.",
+        "Back-to-school priority reset (Aug\u2013Sep) \u2014 new initiatives get named; map ours to theirs.",
+        "Leadership change \u2014 a new superintendent, C&I lead, or principal resets the conversation; champions who move districts take us with them.",
+        "New money \u2014 grants, Title reallocations, or a board-approved initiative that names our pain."
       ],
       "rule": "Engaged-but-not-ready is a stage, not a dead end. The rep who is already present when budget season opens wins the re-entry."
     },
@@ -352,60 +352,60 @@
         "name": "Prospect",
         "goal": "Build a targeted list of districts/campuses in your state that fit.",
         "exit": "Named contact + a hypothesis for why this account has the pain.",
-        "healthy": "Ongoing — refresh weekly",
-        "stall": "Pipeline coverage below ~3× target → rebalance time toward prospecting."
+        "healthy": "Ongoing \u2014 refresh weekly",
+        "stall": "Pipeline coverage below ~3\u00d7 target \u2192 rebalance time toward prospecting."
       },
       {
         "n": 2,
         "name": "Connect",
         "goal": "Earn a first conversation (cold call, email, referral, event).",
         "exit": "A scheduled discovery call or demo.",
-        "healthy": "1–3 weeks (one full 22-day cadence)",
-        "stall": "Cadence exhausted with no conversation → move to nurture; don't let it sit in Connect."
+        "healthy": "1\u20133 weeks (one full 22-day cadence)",
+        "stall": "Cadence exhausted with no conversation \u2192 move to nurture; don't let it sit in Connect."
       },
       {
         "n": 3,
         "name": "Discover",
         "goal": "Understand their systems, pain, priorities, and buying process.",
         "exit": "Confirmed pain, decision-makers, timeline, and rough budget path.",
-        "healthy": "1–2 weeks",
-        "stall": "3+ weeks without confirmed pain and decision-makers → re-run FIT or escalate to your manager."
+        "healthy": "1\u20132 weeks",
+        "stall": "3+ weeks without confirmed pain and decision-makers \u2192 re-run FIT or escalate to your manager."
       },
       {
         "n": 4,
         "name": "Demo",
         "goal": "Show the specific workflow that solves their stated pain.",
         "exit": "Champion confirms fit and names remaining stakeholders.",
-        "healthy": "1–2 weeks from discovery",
-        "stall": "2+ weeks and the demo won't schedule → re-engage the champion with two specific times and a deadline."
+        "healthy": "1\u20132 weeks from discovery",
+        "stall": "2+ weeks and the demo won't schedule \u2192 re-engage the champion with two specific times and a deadline."
       },
       {
         "n": 5,
         "name": "Propose",
         "goal": "Deliver pricing/quote and implementation picture.",
         "exit": "Proposal reviewed; objections surfaced; next step to decision set.",
-        "healthy": "2–4 weeks",
-        "stall": "30+ days without movement → manager touch; re-anchor to their budget window."
+        "healthy": "2\u20134 weeks",
+        "stall": "30+ days without movement \u2192 manager touch; re-anchor to their budget window."
       },
       {
         "n": 6,
         "name": "Close",
         "goal": "Navigate approval (budget, PO, procurement) and sign.",
         "exit": "Signed agreement / PO issued.",
-        "healthy": "4–8 weeks (procurement + board calendars)",
-        "stall": "60+ days or a missed board date → reconfirm the procurement path; reset to the next board meeting."
+        "healthy": "4\u20138 weeks (procurement + board calendars)",
+        "stall": "60+ days or a missed board date \u2192 reconfirm the procurement path; reset to the next board meeting."
       },
       {
         "n": 7,
         "name": "Onboard & Expand",
         "goal": "Fast, successful rollout; then grow (more campuses, second product).",
         "exit": "Live usage + a named expansion or renewal path.",
-        "healthy": "Live usage within 30–60 days",
-        "stall": "No named expansion or renewal path by day 90 → schedule the growth conversation."
+        "healthy": "Live usage within 30\u201360 days",
+        "stall": "No named expansion or renewal path by day 90 \u2192 schedule the growth conversation."
       }
     ],
-    "cycleNote": "A healthy end-to-end cycle runs roughly 3–6 months. Spring deals close for a fall start; fall deals usually close in the spring budget cycle. Rule of thumb: a deal that has doubled its stage benchmark is stalled — act on it, don't wait on it.",
-    "timingNote": "K-12 buying runs on budget cycles and procurement rules everywhere we sell. Spring (planning next year) and late summer are prime; know the district's fiscal year and its purchasing path — ESCs and purchasing co-ops in Texas, ESCs in Ohio, RESAs in Georgia — and whether a specific approval path applies.",
+    "cycleNote": "A healthy end-to-end cycle runs roughly 3\u20136 months. Spring deals close for a fall start; fall deals usually close in the spring budget cycle. Rule of thumb: a deal that has doubled its stage benchmark is stalled \u2014 act on it, don't wait on it.",
+    "timingNote": "K-12 buying runs on budget cycles and procurement rules everywhere we sell. Spring (planning next year) and late summer are prime; know the district's fiscal year and its purchasing path \u2014 ESCs and purchasing co-ops in Texas, ESCs in Ohio, RESAs in Georgia \u2014 and whether a specific approval path applies.",
     "qualification": {
       "name": "FIT",
       "items": [
@@ -428,7 +428,7 @@
     },
     "discoveryShared": [
       "What are your top academic priorities this year, and how are you measuring progress?",
-      "What systems do teachers already use for curriculum, assessment, and data? What's working — and where does it break down?",
+      "What systems do teachers already use for curriculum, assessment, and data? What's working \u2014 and where does it break down?",
       "Where does the most teacher time get lost right now?",
       "Who's involved in a decision like this, and what does your approval process look like?"
     ],
@@ -461,7 +461,7 @@
       {
         "day": "Day 15",
         "channel": "Email",
-        "action": "'Am I aimed at the right person?' — ask for a referral to the correct owner."
+        "action": "'Am I aimed at the right person?' \u2014 ask for a referral to the correct owner."
       },
       {
         "day": "Day 22",
@@ -470,26 +470,26 @@
       }
     ],
     "demoTips": [
-      "Open with their stated pain in their words — then show the one workflow that solves it. Don't tour every feature.",
+      "Open with their stated pain in their words \u2014 then show the one workflow that solves it. Don't tour every feature.",
       "Use a scenario that matches their grade band/subject (multiplication reteach for Crystal; an ECR prompt for LoneStar CR).",
-      "Show the teacher time saved and the student experience — that's what champions repeat to leadership.",
+      "Show the teacher time saved and the student experience \u2014 that's what champions repeat to leadership.",
       "Confirm fit out loud and ask who else needs to see it."
     ],
     "closeSteps": [
       "Recap the pain and the specific value shown; send a tailored one-pager + recap email same day.",
       "Deliver the quote/proposal with a clear implementation picture and start options (pilot campus, grade band).",
       "Identify the procurement path (PO, board approval, purchasing co-op/ESC) and remove friction.",
-      "Set the next step with a date every time — never leave a call without one.",
+      "Set the next step with a date every time \u2014 never leave a call without one.",
       "On win: warm handoff to onboarding; on stall: return to nurture timed to the budget cycle."
     ],
     "sharedObjections": [
       {
         "objection": "We already have a platform for that.",
-        "response": "Great — we work alongside what you own; we're not asking you to replace it. We make that investment work harder by closing the gap between data and action. Worth 20 minutes to see where we fit?"
+        "response": "Great \u2014 we work alongside what you own; we're not asking you to replace it. We make that investment work harder by closing the gap between data and action. Worth 20 minutes to see where we fit?"
       },
       {
         "objection": "Teachers are already overwhelmed with tools.",
-        "response": "That's exactly why we built this to remove work, not add it — less grading, less prep, faster next steps. Can I show you the teacher workflow in a short demo?"
+        "response": "That's exactly why we built this to remove work, not add it \u2014 less grading, less prep, faster next steps. Can I show you the teacher workflow in a short demo?"
       },
       {
         "objection": "No budget right now.",
@@ -497,7 +497,7 @@
       },
       {
         "objection": "Just send me information.",
-        "response": "Happy to — I'll send a one-pager. It'll land better if I tailor it to your priority; is it more instructional response or STAAR writing? A 15-minute call beats a PDF every time."
+        "response": "Happy to \u2014 I'll send a one-pager. It'll land better if I tailor it to your priority; is it more instructional response or STAAR writing? A 15-minute call beats a PDF every time."
       }
     ]
   },
@@ -514,8 +514,8 @@
       "oneLiner": "The instructional response partner for Texas classrooms.",
       "cardBlurb": "Instructional tools that turn insight into action.",
       "marketTagline": "Teach. See. Respond.",
-      "mission": "Helping teachers turn student performance into instructional action — in real time and without extra work.",
-      "positioning": "Crystal Instruction is the instructional response teachers use to support student growth based on assessment and classroom data — without extra work. It works alongside a school's existing curriculum, assessments, and MTSS systems to help teachers respond faster to student needs across Math, ELAR, and Science.",
+      "mission": "Helping teachers turn student performance into instructional action \u2014 in real time and without extra work.",
+      "positioning": "Crystal Instruction is the instructional response teachers use to support student growth based on assessment and classroom data \u2014 without extra work. It works alongside a school's existing curriculum, assessments, and MTSS systems to help teachers respond faster to student needs across Math, ELAR, and Science.",
       "colors": {
         "primary": "#D81BB8",
         "accent": "#8E7CE8",
@@ -523,7 +523,7 @@
         "gray": "#565A5C",
         "primaryLight": "#FBE6F7"
       },
-      "voice": "Bold, energetic, and confident — the magenta personality. Crystal talks in verbs and speed: identify, respond, reteach, act. It validates the district's existing investments, then raises the bar on what teachers can do faster because Crystal exists.",
+      "voice": "Bold, energetic, and confident \u2014 the magenta personality. Crystal talks in verbs and speed: identify, respond, reteach, act. It validates the district's existing investments, then raises the bar on what teachers can do faster because Crystal exists.",
       "valuePillars": [
         {
           "title": "Faster instructional response",
@@ -546,7 +546,7 @@
           "body": "Less analyzing, regrouping, and reteach planning."
         }
       ],
-      "problem": "Schools already have curriculum, assessments, intervention systems, and dashboards. The challenge is no longer collecting data or accessing resources — it's instructional response. Teachers still struggle to identify gaps quickly, know what to reteach, respond immediately, and connect data to immediate action.",
+      "problem": "Schools already have curriculum, assessments, intervention systems, and dashboards. The challenge is no longer collecting data or accessing resources \u2014 it's instructional response. Teachers still struggle to identify gaps quickly, know what to reteach, respond immediately, and connect data to immediate action.",
       "problemTagline": "The challenge isn't data. It's being able to implement next steps with ease.",
       "model": {
         "name": "Teach. See. Respond.",
@@ -557,7 +557,7 @@
           },
           {
             "name": "Teach",
-            "body": "Teachers launch targeted, TEKS-aligned support based on that data — without the prep."
+            "body": "Teachers launch targeted, TEKS-aligned support based on that data \u2014 without the prep."
           },
           {
             "name": "See",
@@ -574,8 +574,8 @@
         ]
       },
       "isIsnt": {
-        "is": "Instructional response infrastructure that connects assessment data, standard-aligned instruction, real-time insight, and targeted next steps into one streamlined workflow — supporting Tier 1, MTSS, small groups, and intervention.",
-        "isnt": "A curriculum replacement, a supplemental-content library, a practice/worksheet platform, or an MTSS platform. We support MTSS — we don't become it."
+        "is": "Instructional response infrastructure that connects assessment data, standard-aligned instruction, real-time insight, and targeted next steps into one streamlined workflow \u2014 supporting Tier 1, MTSS, small groups, and intervention.",
+        "isnt": "A curriculum replacement, a supplemental-content library, a practice/worksheet platform, or an MTSS platform. We support MTSS \u2014 we don't become it."
       },
       "paletteMeta": [
         {
@@ -596,13 +596,13 @@
         {
           "name": "Slate Gray",
           "hex": "#565A5C",
-          "use": "Body text, “Instruction” wordmark"
+          "use": "Body text, \u201cInstruction\u201d wordmark"
         }
       ],
       "logoRules": [
-        "The gem mark may appear on white or on black; keep magenta vivid — never muddy or pastel it.",
-        "“Crystal” is magenta; “Instruction” is gray. Don't recolor the wordmark.",
-        "Endorse with ClearK12: “Crystal Instruction, a ClearK12 product.”"
+        "The gem mark may appear on white or on black; keep magenta vivid \u2014 never muddy or pastel it.",
+        "\u201cCrystal\u201d is magenta; \u201cInstruction\u201d is gray. Don't recolor the wordmark.",
+        "Endorse with ClearK12: \u201cCrystal Instruction, a ClearK12 product.\u201d"
       ],
       "tools": [
         "ClearLessons (TEKS-aligned instruction)",
@@ -618,7 +618,7 @@
             "Clear next steps",
             "Small-group support"
           ],
-          "leadMessage": "Know what to do next — in real time, without extra work."
+          "leadMessage": "Know what to do next \u2014 in real time, without extra work."
         },
         {
           "audience": "campus",
@@ -638,13 +638,13 @@
             "Tier 1 effectiveness",
             "Growth outcomes (T-TESS, SLO, TIA)"
           ],
-          "leadMessage": "Turn student performance into instructional action — at scale, inside your current ecosystem."
+          "leadMessage": "Turn student performance into instructional action \u2014 at scale, inside your current ecosystem."
         }
       ],
       "sayThis": [
-        "We work alongside your existing curriculum…",
+        "We work alongside your existing curriculum\u2026",
         "Helps teachers respond before gaps become bigger problems.",
-        "Instructional response — not more content.",
+        "Instructional response \u2014 not more content.",
         "Supports MTSS and Tier 1.",
         "No grading required to see understanding."
       ],
@@ -657,41 +657,200 @@
       ],
       "bestFitSignals": [
         "Active MTSS/RTI focus, Tier 1 or reteach initiatives, or a data-to-action gap.",
-        "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards — but next steps are cumbersome, inconsistent, and often independent.",
+        "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards \u2014 but next steps are cumbersome, inconsistent, and often independent.",
         "Growth-goal pressure: T-TESS, SLOs, TIA, or accountability improvement."
       ],
       "discoveryQuestions": [
         "After a benchmark or unit assessment, what happens next in a typical classroom? How long until students get targeted support?",
         "How consistent is instructional response and reteach from classroom to classroom?",
-        "How is MTSS/Tier 1 going — where does execution slip?"
+        "How is MTSS/Tier 1 going \u2014 where does execution slip?"
       ],
       "hook": "Crystal Instruction helps teachers respond before learning gaps become bigger problems.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Instruction. The quick reason I'm calling is that we help Texas schools respond to learning gaps faster — before they become bigger problems. Most programs either give assessment data or put students into independent practice. Crystal is different. We work alongside your curriculum to help teachers quickly identify gaps, monitor understanding in real time, and respond with targeted instruction and support. Campuses use Crystal to strengthen Tier 1 instruction, improve small groups, support MTSS, and reduce teacher planning and grading burden. Would it be worth a quick 20-minute demo to see how this could fit on your campus?",
+        "coldCall": "Hi, this is ___ with Crystal Instruction. The quick reason I'm calling is that we help Texas schools respond to learning gaps faster \u2014 before they become bigger problems. Most programs either give assessment data or put students into independent practice. Crystal is different. We work alongside your curriculum to help teachers quickly identify gaps, monitor understanding in real time, and respond with targeted instruction and support. Campuses use Crystal to strengthen Tier 1 instruction, improve small groups, support MTSS, and reduce teacher planning and grading burden. Would it be worth a quick 20-minute demo to see how this could fit on your campus?",
         "coldEmail": {
           "subject": "Responding faster to learning gaps at [District]",
-          "body": "Hi [Name] — schools already have curriculum, benchmarks, and dashboards. The hard part is what happens next: identifying exactly what students missed and responding before the gap grows.\n\nCrystal Instruction is the instructional response partner for Texas classrooms. It works alongside what you already use to help teachers reteach the right TEKS, check understanding live (no grading), and act immediately — supporting Tier 1 and MTSS while saving teacher time.\n\nOpen to a 20-minute look at how this fits [District]? — [Rep]"
+          "body": "Hi [Name] \u2014 schools already have curriculum, benchmarks, and dashboards. The hard part is what happens next: identifying exactly what students missed and responding before the gap grows.\n\nCrystal Instruction is the instructional response partner for Texas classrooms. It works alongside what you already use to help teachers reteach the right TEKS, check understanding live (no grading), and act immediately \u2014 supporting Tier 1 and MTSS while saving teacher time.\n\nOpen to a 20-minute look at how this fits [District]? \u2014 [Rep]"
         },
         "pitchOutline": [
-          "Problem (45s): schools have data and resources; the gap is instructional response — turning performance into immediate action.",
-          "Who we are (45s): the instructional response partner; we work alongside existing curriculum — additive, not a replacement.",
+          "Problem (45s): schools have data and resources; the gap is instructional response \u2014 turning performance into immediate action.",
+          "Who we are (45s): the instructional response partner; we work alongside existing curriculum \u2014 additive, not a replacement.",
           "Teach. See. Respond. (1 min): launch targeted support, see understanding live, respond with the next move.",
-          "Scenario (75s): 3rd-grade multiplication — 12 students struggle; Crystal identifies TEKS gaps instantly and launches targeted support without building from scratch.",
+          "Scenario (75s): 3rd-grade multiplication \u2014 12 students struggle; Crystal identifies TEKS gaps instantly and launches targeted support without building from scratch.",
           "District & campus impact (1 min): faster response, consistency across classrooms, MTSS support, T-TESS/TIA growth goals.",
-          "Close (15s): most programs stop at content, practice, or assessment; Crystal helps teachers know what to do next — in real time."
+          "Close (15s): most programs stop at content, practice, or assessment; Crystal helps teachers know what to do next \u2014 in real time."
         ]
       },
       "objections": [
         {
           "objection": "Is this a curriculum replacement?",
-          "response": "No — Crystal works alongside your curriculum and assessments to help teachers respond faster. We support MTSS; we don't replace it."
+          "response": "No \u2014 Crystal works alongside your curriculum and assessments to help teachers respond faster. We support MTSS; we don't replace it."
         },
         {
           "objection": "How is this different from our data dashboard?",
-          "response": "Dashboards show what happened. Crystal helps teachers act on it immediately — launch targeted reteach, check understanding live, and move on with confidence."
+          "response": "Dashboards show what happened. Crystal helps teachers act on it immediately \u2014 launch targeted reteach, check understanding live, and move on with confidence."
         }
       ],
-      "logo": "assets/crystal-logo.png"
+      "logo": "assets/crystal-logo.png",
+      "outreachCadence": {
+        "persona": "campus",
+        "personaLabel": "Campus leaders (principals)",
+        "leadMessage": "Consistent, visible instructional response in every classroom.",
+        "tonePrinciple": "Confident, collaborative partner \u2014 never salesy or pushy. We respect that principals know their campus better than we do. We offer, we don't corner: every touch has a low-friction ask and a graceful out. No assumptive closes, no pressure, no hype.",
+        "summary": "7-touch, 22-day sequence tuned for principals. Every touch leads with a challenge principals recognize \u2014 inconsistent reteach and limited visibility after benchmarks \u2014 framed as a partnership, not a pitch. Placeholders: [Name], [Campus], [District], [Rep], [number], [link].",
+        "coachingNotes": [
+          "Tone is partner, not vendor. We're confident collaborators who assume the principal is the expert on their campus. Invite their perspective before offering ours.",
+          "Lead with consistency and visibility, not features. Principals care about the outcome of every classroom responding the same way.",
+          "Always reinforce 'works alongside your curriculum' and 'in partnership with your teachers' \u2014 never another disruptive rollout, never around the teacher.",
+          "Give a graceful out in every ask ('if it's useful', 'you're the best judge', 'no pressure'). Offering beats cornering.",
+          "Most calls hit voicemail; the voicemail + email pairing is the real play. Try early mornings and right after dismissal.",
+          "Keep the guardrails: never say all-in-one, never say replaces your curriculum, never say we are your MTSS platform."
+        ],
+        "steps": [
+          {
+            "day": "Day 1",
+            "channel": "Call + Email",
+            "purpose": "First touch. Attempt a live call; leave a voicemail; send the email same day so they can consider it on their own time.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Cold call script",
+                "body": "Hi [Name], this is [Rep] with Crystal Instruction \u2014 I'll keep this short out of respect for your time. I partner with Texas principals on something you know better than anyone: after a benchmark, how consistently each classroom responds to what the data shows. Some teachers reteach the right TEKS right away, others take longer. Crystal Instruction helps every teacher respond faster \u2014 targeted, TEKS-aligned reteach and live checks for understanding, no grading \u2014 and it works alongside the curriculum you already use, so it's not another thing to roll out. I'd genuinely like to hear how your campus handles that today, and show you what we do if it's useful. Would a 20-minute conversation be worthwhile?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], this is [Rep] with Crystal Instruction. We partner with Texas campuses to make instructional response more consistent across classrooms \u2014 faster reteach after assessments, without more work for teachers. I'll follow up by email so you can look on your own time; if it's helpful to talk, I'm at [number]. Thanks, [Name]."
+              },
+              {
+                "type": "gatekeeper",
+                "label": "Gatekeeper / front office",
+                "body": "Hi, I'm hoping you can help me \u2014 I'm trying to reach [Name] about supporting your teachers' reteach and intervention after benchmarks. Is there a good way to get 20 minutes on their calendar, or is there someone on the instructional side you'd suggest I start with?"
+              },
+              {
+                "type": "email",
+                "label": "Fallback email",
+                "subjectVariants": [
+                  "Consistent reteach in every classroom at [Campus]",
+                  "After the benchmark \u2014 how consistent is the response?",
+                  "A partner for your teachers' reteach (not another platform)"
+                ],
+                "body": "Hi [Name] \u2014 you know your campus better than anyone, so you've likely already felt this: after a benchmark, the gap usually isn't the data, it's how consistently each classroom responds to it. Some teachers reteach the right TEKS right away, others take a week.\n\nCrystal Instruction helps every teacher respond faster \u2014 targeted, TEKS-aligned reteach, live checks for understanding (no grading), and a clear next step \u2014 while working alongside the curriculum you already use. We see ourselves as a partner to your instructional team, not another platform to manage.\n\nIf it's useful, I'd like to learn how your campus approaches this and share what we've seen work elsewhere. Open to a 20-minute conversation?\n\u2014 [Rep]",
+                "variant": {
+                  "label": "A/B \u2014 short version",
+                  "subject": "A quick question about reteach at [Campus]",
+                  "body": "Hi [Name] \u2014 quick one, no pitch. When a benchmark comes back, how consistent is the reteach from classroom to classroom? That's the challenge we help campuses work through \u2014 alongside your current curriculum and in partnership with your teachers, without adding to their plates. If it's worth a short conversation, I'd welcome it.\n\u2014 [Rep]"
+                }
+              }
+            ]
+          },
+          {
+            "day": "Day 3",
+            "channel": "Email",
+            "purpose": "Value follow-up. Make it concrete with one believable classroom scenario, then leave the decision with them.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Value email",
+                "subjectVariants": [
+                  "The week after a benchmark",
+                  "One less thing on your teachers' plates",
+                  "From data to reteach in the same day"
+                ],
+                "body": "Hi [Name] \u2014 a concrete example of what I meant, and then I'll leave it with you. A 3rd-grade teacher finishes a unit and 12 students miss key TEKS. Normally that's hours of analyzing, regrouping, and hunting for reteach. With Crystal, those gaps surface right away and the teacher can respond the same day \u2014 without building anything from scratch.\n\nAcross a campus, that's more consistent response in every room and teachers who feel supported rather than buried. If that fits where you're headed this year, I'd enjoy walking your team through it \u2014 20 minutes, whenever suits you.\n\u2014 [Rep]",
+                "variant": {
+                  "label": "A/B \u2014 outcome-led",
+                  "subject": "What consistent reteach could look like at [Campus]",
+                  "body": "Hi [Name] \u2014 picture walking any classroom the week after a benchmark and seeing the same thing everywhere: teachers already reteaching the exact TEKS students missed and checking understanding live. That consistency is what we help campuses build \u2014 alongside your current curriculum, and in partnership with your teachers, not around them. Happy to show you if it's useful; you're the best judge of the fit.\n\u2014 [Rep]"
+                }
+              }
+            ]
+          },
+          {
+            "day": "Day 5",
+            "channel": "Call",
+            "purpose": "Second call attempt. Reference the emails, invite their perspective, and offer to work around their schedule \u2014 no assumptive close.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], [Rep] with Crystal Instruction \u2014 I sent a couple of notes about consistent instructional response after benchmarks. I'd genuinely value your perspective: is that something your campus is working on this year? [pause and listen] If it's useful, I'd like to show your team how it works and hear how you're approaching it now. I can fit a 20-minute conversation whenever works best for you \u2014 what does your calendar look like over the next couple of weeks?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], [Rep] with Crystal Instruction following up. No pressure at all \u2014 if it's useful, I'd like to show you how campuses build more consistent reteach across classrooms, in about 20 minutes. I'll resend my email, or I'm at [number]. Thanks, [Name]."
+              }
+            ]
+          },
+          {
+            "day": "Day 8",
+            "channel": "Email",
+            "purpose": "Lower the effort. Share a short overview so they can self-qualify on their own time; offer a walkthrough only if worthwhile.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Show-don't-tell email",
+                "subjectVariants": [
+                  "2-minute look at Crystal (for [Campus])",
+                  "Something to look at on your own time",
+                  "How other Texas campuses handle reteach"
+                ],
+                "body": "Hi [Name] \u2014 figured it's easier to show than tell, and this way you can look whenever suits you. Here's a 2-minute overview of how Crystal helps teachers turn assessment results into targeted reteach: [link].\n\nCampuses in [similar Texas district/ESC] use it to keep instructional response consistent from classroom to classroom. If it looks relevant, I'd be glad to walk through it with your team, tailored to your grade bands \u2014 only if it's worth your time.\n\u2014 [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Day 12",
+            "channel": "Call",
+            "purpose": "Third call. Try early morning or right after dismissal; tie to an upcoming window and make it easy to say 'not now.'",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], [Rep] with Crystal Instruction. I know your mornings are about the only quiet moment, so I'll be brief. I think there could be a real fit here for supporting your teachers' response after assessments \u2014 but you're the best judge of that. If you're open to it, I'd welcome a 20-minute conversation before your next benchmark window, on your schedule. And if the timing isn't right, just say so and I'll step back."
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], [Rep] again with Crystal Instruction \u2014 trying you early since afternoons are full. Same idea: more consistent instructional response across classrooms, in partnership with your teachers and without more work for them. I'm at [number] if it's useful \u2014 and no worries at all if now isn't the time. Thanks, [Name]."
+              }
+            ]
+          },
+          {
+            "day": "Day 15",
+            "channel": "Email",
+            "purpose": "Referral pivot. Offer an easy out and ask to be pointed to the right owner \u2014 follow their lead on timing.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Referral email",
+                "subjectVariants": [
+                  "Am I aimed at the right person?",
+                  "Happy to follow your lead here"
+                ],
+                "body": "Hi [Name] \u2014 I don't want to keep filling your inbox, and I may simply have this pointed at the wrong person. If instructional response and reteach across classrooms sits more with your C&I or assessment lead, I'd be grateful for a pointer their way.\n\nAnd if it is you but the timing's just off, tell me when to circle back \u2014 I'm happy to follow your lead. Either way, thank you for reading.\n\u2014 [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Day 22",
+            "channel": "Email",
+            "purpose": "Step back gracefully. Close the loop with warmth, leave the door open, and seed the spring planning window.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Step-back email",
+                "subjectVariants": [
+                  "Stepping back for now \u2014 door's open",
+                  "Closing the loop"
+                ],
+                "body": "Hi [Name] \u2014 I'll pause here so I'm not a distraction during a busy stretch. If it's ever useful: Crystal Instruction helps campuses make reteach faster and more consistent across every classroom, in partnership with your teachers and alongside what you already use.\n\nSpring is when a lot of campuses plan for next year, so I'll plan to check back around then unless you'd like to talk sooner. Whatever you decide, I'm rooting for you and your teachers this year.\n\u2014 [Rep]"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "lonestar",
@@ -707,8 +866,8 @@
       "oneLiner": "The constructed-response writing partner for Texas classrooms.",
       "cardBlurb": "Writing practice and instant scoring built for STAAR growth.",
       "marketTagline": "A system for developing strong writers.",
-      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
-      "positioning": "LoneStar CR is the constructed-response writing partner for Texas classrooms. Using advanced AI, teachers create standards-aligned ECR and SCR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built exclusively for TEKS and Texas writing.",
+      "mission": "Helping teachers grow confident writers \u2014 by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "LoneStar CR is the constructed-response writing partner for Texas classrooms. Using advanced AI, teachers create standards-aligned ECR and SCR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback \u2014 built exclusively for TEKS and Texas writing.",
       "colors": {
         "primary": "#0C3A4B",
         "accent": "#2FB4CC",
@@ -716,7 +875,7 @@
         "gray": "#565A5C",
         "primaryLight": "#E4F5F8"
       },
-      "voice": "Confident, credible, and Texas-proud — the same energy as Crystal, in teal. LoneStar CR leans on evidence: it pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine. It speaks plainly to the grading pain teachers feel every week and to the STAAR outcomes leaders own.",
+      "voice": "Confident, credible, and Texas-proud \u2014 the same energy as Crystal, in teal. LoneStar CR leans on evidence: it pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine. It speaks plainly to the grading pain teachers feel every week and to the STAAR outcomes leaders own.",
       "valuePillars": [
         {
           "title": "More writing practice",
@@ -739,8 +898,8 @@
           "body": "Teachers stop hand-grading every response."
         }
       ],
-      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
-      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness \u2014 it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort \u2014 it's grading time.",
       "model": {
         "name": "Write. Score. Grow.",
         "steps": [
@@ -754,7 +913,7 @@
           },
           {
             "name": "Score",
-            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+            "body": "AI scores every response instantly and returns personalized, actionable feedback \u2014 no manual grading."
           },
           {
             "name": "Revise & Grow",
@@ -789,9 +948,9 @@
         }
       ],
       "logoRules": [
-        "Lead with the Texas-outline mark; keep the star/state silhouette recognizable — don't crop it.",
+        "Lead with the Texas-outline mark; keep the star/state silhouette recognizable \u2014 don't crop it.",
         "Use the white/blue reversed logo on deep-teal backgrounds; full color on white.",
-        "Endorse with ClearK12: “LoneStar CR, a ClearK12 product.”"
+        "Endorse with ClearK12: \u201cLoneStar CR, a ClearK12 product.\u201d"
       ],
       "tools": [
         "Unlimited assignment creation",
@@ -810,7 +969,7 @@
             "Fast, useful feedback",
             "Reaching every level"
           ],
-          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+          "leadMessage": "Assign more writing, grade none of it \u2014 and give every student instant feedback."
         },
         {
           "audience": "campus",
@@ -821,7 +980,7 @@
             "Evidence of growth",
             "Increased capacity"
           ],
-          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+          "leadMessage": "More writing practice in every classroom \u2014 with visible, tracked growth."
         },
         {
           "audience": "district",
@@ -854,7 +1013,7 @@
         "Grades 3-8 and EOC English focus; interest in AI that's TEKS-specific and Texas-built."
       ],
       "discoveryQuestions": [
-        "How is constructed response (ECR/SCR) going on STAAR — and in daily practice?",
+        "How is constructed response (ECR/SCR) going on STAAR \u2014 and in daily practice?",
         "Realistically, how often do students write, and how long until they get feedback?",
         "How much time are ELAR teachers spending grading writing each week?"
       ],
@@ -866,30 +1025,30 @@
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
       "productClaims": "Instant scoring and personalized feedback on every response, built exclusively for TEKS and Texas writing, grounded in the peer-reviewed research above.",
-      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "hook": "Assign more writing, grade none of it \u2014 and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with LoneStar CR. The quick reason I'm calling is that the redesigned STAAR made constructed-response writing central — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. LoneStar CR is built exclusively for TEKS and Texas writing. Teachers create ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELAR teachers?",
+        "coldCall": "Hi, this is ___ with LoneStar CR. The quick reason I'm calling is that the redesigned STAAR made constructed-response writing central \u2014 and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. LoneStar CR is built exclusively for TEKS and Texas writing. Teachers create ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback \u2014 so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELAR teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — STAAR now leans hard on constructed response (ECR/SCR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nLoneStar CR is the constructed-response writing partner for Texas classrooms. Built for TEKS, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] \u2014 STAAR now leans hard on constructed response (ECR/SCR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nLoneStar CR is the constructed-response writing partner for Texas classrooms. Built for TEKS, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks \u2014 so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? \u2014 [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): STAAR made ECR/SCR central; practice is capped by grading time; feedback comes days late.",
-          "Who we are (45s): the constructed-response writing partner, built exclusively for TEKS and Texas writing — a specialist, not a curriculum.",
+          "Who we are (45s): the constructed-response writing partner, built exclusively for TEKS and Texas writing \u2014 a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
           "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
-          "Close (15s): more writing, none of the grading — the fastest path to better Texas writers."
+          "Close (15s): more writing, none of the grading \u2014 the fastest path to better Texas writers."
         ]
       },
       "objections": [
         {
           "objection": "Can AI really grade writing accurately?",
-          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control \u2014 you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
         },
         {
           "objection": "Is this just an essay checker like the free tools?",
-          "response": "No — it's built exclusively for TEKS and Texas ECR/SCR, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what STAAR requires."
+          "response": "No \u2014 it's built exclusively for TEKS and Texas ECR/SCR, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what STAAR requires."
         }
       ],
       "logo": "assets/lonestar-logo.png"
@@ -898,7 +1057,7 @@
   "crossSell": {
     "leadWithCrystal": "Overall instructional response, MTSS/Tier 1, reteach, and multi-subject data-to-action (Math, ELAR, Science).",
     "leadWithLonestar": "STAAR writing performance, constructed response (ECR/SCR), the ELAR grading burden, or writing practice volume.",
-    "combinedStory": "ClearK12 helps your teachers respond faster to what students need — across every subject with Crystal Instruction, and specifically on the writing that STAAR now demands with LoneStar CR. Both are built for Texas, both save teachers time, and both work alongside what you already own."
+    "combinedStory": "ClearK12 helps your teachers respond faster to what students need \u2014 across every subject with Crystal Instruction, and specifically on the writing that STAAR now demands with LoneStar CR. Both are built for Texas, both save teachers time, and both work alongside what you already own."
   },
   "writingStates": [
     {
@@ -914,8 +1073,8 @@
       },
       "oneLiner": "The constructed-response writing partner for Ohio classrooms.",
       "marketTagline": "A system for developing strong writers.",
-      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
-      "positioning": "Crystal Writing is the constructed-response writing partner for Ohio classrooms. Using advanced AI, teachers create standards-aligned ECR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specifically for Ohio's Learning Standards and Ohio writing expectations.",
+      "mission": "Helping teachers grow confident writers \u2014 by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "Crystal Writing is the constructed-response writing partner for Ohio classrooms. Using advanced AI, teachers create standards-aligned ECR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback \u2014 built specifically for Ohio's Learning Standards and Ohio writing expectations.",
       "colors": {
         "primary": "#1A2B4C",
         "accent": "#57B4E5",
@@ -923,7 +1082,7 @@
         "gray": "#565A5C",
         "primaryLight": "#E9F5FC"
       },
-      "voice": "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to Ohio's Learning Standards and the OST. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      "voice": "Confident, credible, and evidence-led \u2014 Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to Ohio's Learning Standards and the OST. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
       "valuePillars": [
         {
           "title": "More writing practice",
@@ -946,8 +1105,8 @@
           "body": "Teachers stop hand-grading every response."
         }
       ],
-      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
-      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness \u2014 it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort \u2014 it's grading time.",
       "model": {
         "name": "Write. Score. Grow.",
         "steps": [
@@ -961,7 +1120,7 @@
           },
           {
             "name": "Score",
-            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+            "body": "AI scores every response instantly and returns personalized, actionable feedback \u2014 no manual grading."
           },
           {
             "name": "Revise & Grow",
@@ -990,7 +1149,7 @@
             "Fast, useful feedback",
             "Reaching every level"
           ],
-          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+          "leadMessage": "Assign more writing, grade none of it \u2014 and give every student instant feedback."
         },
         {
           "audience": "campus",
@@ -1001,7 +1160,7 @@
             "Evidence of growth",
             "Increased capacity"
           ],
-          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+          "leadMessage": "More writing practice in every classroom \u2014 with visible, tracked growth."
         },
         {
           "audience": "district",
@@ -1031,10 +1190,10 @@
       "bestFitSignals": [
         "OST writing/constructed-response performance is a named priority (ECR).",
         "ELA teachers overloaded with writing grading; low writing-practice volume.",
-        "Grades 3–8 and high school English focus; interest in AI that's built specifically to Ohio's standards."
+        "Grades 3\u20138 and high school English focus; interest in AI that's built specifically to Ohio's standards."
       ],
       "discoveryQuestions": [
-        "How is constructed response (ECR) going on the OST — and in daily practice?",
+        "How is constructed response (ECR) going on the OST \u2014 and in daily practice?",
         "Realistically, how often do students write, and how long until they get feedback?",
         "How much time are ELA teachers spending grading writing each week?"
       ],
@@ -1046,30 +1205,30 @@
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
       "productClaims": "Instant scoring and personalized feedback on every response, built specifically for Ohio's Learning Standards and Ohio writing expectations, grounded in the peer-reviewed research above.",
-      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "hook": "Assign more writing, grade none of it \u2014 and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that Ohio's state ELA tests lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for Ohio's Learning Standards and Ohio writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that Ohio's state ELA tests lean hard on constructed-response writing \u2014 and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for Ohio's Learning Standards and Ohio writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback \u2014 so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — the OST leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Ohio classrooms. Built for Ohio's Learning Standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] \u2014 the OST leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Ohio classrooms. Built for Ohio's Learning Standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks \u2014 so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? \u2014 [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): the OST made constructed response central; practice is capped by grading time; feedback comes days late.",
-          "Who we are (45s): the constructed-response writing partner, built specifically for Ohio's Learning Standards and Ohio writing expectations — a specialist, not a curriculum.",
+          "Who we are (45s): the constructed-response writing partner, built specifically for Ohio's Learning Standards and Ohio writing expectations \u2014 a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
           "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
-          "Close (15s): more writing, none of the grading — the fastest path to better Ohio writers."
+          "Close (15s): more writing, none of the grading \u2014 the fastest path to better Ohio writers."
         ]
       },
       "objections": [
         {
           "objection": "Can AI really grade writing accurately?",
-          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control \u2014 you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
         },
         {
           "objection": "Is this just an essay checker like the free tools?",
-          "response": "No — it's built exclusively for Ohio's standards and OST constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what the OST requires."
+          "response": "No \u2014 it's built exclusively for Ohio's standards and OST constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what the OST requires."
         }
       ]
     },
@@ -1086,8 +1245,8 @@
       },
       "oneLiner": "The constructed-response writing partner for Georgia classrooms.",
       "marketTagline": "A system for developing strong writers.",
-      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
-      "positioning": "Crystal Writing is the constructed-response writing partner for Georgia classrooms. Using advanced AI, teachers create standards-aligned ECR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
+      "mission": "Helping teachers grow confident writers \u2014 by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "Crystal Writing is the constructed-response writing partner for Georgia classrooms. Using advanced AI, teachers create standards-aligned ECR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback \u2014 built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
       "colors": {
         "primary": "#1A2B4C",
         "accent": "#57B4E5",
@@ -1095,7 +1254,7 @@
         "gray": "#565A5C",
         "primaryLight": "#E9F5FC"
       },
-      "voice": "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to the Georgia Standards of Excellence and Georgia Milestones. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      "voice": "Confident, credible, and evidence-led \u2014 Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to the Georgia Standards of Excellence and Georgia Milestones. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
       "valuePillars": [
         {
           "title": "More writing practice",
@@ -1118,8 +1277,8 @@
           "body": "Teachers stop hand-grading every response."
         }
       ],
-      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
-      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness \u2014 it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort \u2014 it's grading time.",
       "model": {
         "name": "Write. Score. Grow.",
         "steps": [
@@ -1133,7 +1292,7 @@
           },
           {
             "name": "Score",
-            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+            "body": "AI scores every response instantly and returns personalized, actionable feedback \u2014 no manual grading."
           },
           {
             "name": "Revise & Grow",
@@ -1162,7 +1321,7 @@
             "Fast, useful feedback",
             "Reaching every level"
           ],
-          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+          "leadMessage": "Assign more writing, grade none of it \u2014 and give every student instant feedback."
         },
         {
           "audience": "campus",
@@ -1173,7 +1332,7 @@
             "Evidence of growth",
             "Increased capacity"
           ],
-          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+          "leadMessage": "More writing practice in every classroom \u2014 with visible, tracked growth."
         },
         {
           "audience": "district",
@@ -1203,10 +1362,10 @@
       "bestFitSignals": [
         "Georgia Milestones writing/constructed-response performance is a named priority (ECR).",
         "ELA teachers overloaded with writing grading; low writing-practice volume.",
-        "Grades 3–8 and high school ELA focus; interest in AI that's built specifically to Georgia's standards."
+        "Grades 3\u20138 and high school ELA focus; interest in AI that's built specifically to Georgia's standards."
       ],
       "discoveryQuestions": [
-        "How is constructed response (ECR) going on Georgia Milestones — and in daily practice?",
+        "How is constructed response (ECR) going on Georgia Milestones \u2014 and in daily practice?",
         "Realistically, how often do students write, and how long until they get feedback?",
         "How much time are ELA teachers spending grading writing each week?"
       ],
@@ -1218,30 +1377,30 @@
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
       "productClaims": "Instant scoring and personalized feedback on every response, built specifically for the Georgia Standards of Excellence and Georgia writing expectations, grounded in the peer-reviewed research above.",
-      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "hook": "Assign more writing, grade none of it \u2014 and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that the Georgia Milestones ELA assessment leans hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for the Georgia Standards of Excellence and Georgia writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that the Georgia Milestones ELA assessment leans hard on constructed-response writing \u2014 and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for the Georgia Standards of Excellence and Georgia writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback \u2014 so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — Georgia Milestones leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Georgia classrooms. Built for the Georgia Standards of Excellence, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] \u2014 Georgia Milestones leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Georgia classrooms. Built for the Georgia Standards of Excellence, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks \u2014 so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? \u2014 [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): Georgia Milestones made constructed response central; practice is capped by grading time; feedback comes days late.",
-          "Who we are (45s): the constructed-response writing partner, built specifically for the Georgia Standards of Excellence and Georgia writing expectations — a specialist, not a curriculum.",
+          "Who we are (45s): the constructed-response writing partner, built specifically for the Georgia Standards of Excellence and Georgia writing expectations \u2014 a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
           "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
-          "Close (15s): more writing, none of the grading — the fastest path to better Georgia writers."
+          "Close (15s): more writing, none of the grading \u2014 the fastest path to better Georgia writers."
         ]
       },
       "objections": [
         {
           "objection": "Can AI really grade writing accurately?",
-          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control \u2014 you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
         },
         {
           "objection": "Is this just an essay checker like the free tools?",
-          "response": "No — it's built exclusively for the GSE and Milestones constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what Georgia Milestones requires."
+          "response": "No \u2014 it's built exclusively for the GSE and Milestones constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what Georgia Milestones requires."
         }
       ]
     }
