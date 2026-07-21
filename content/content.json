@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.4",
+    "version": "1.5",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
@@ -14,23 +14,28 @@
     "brandPrinciples": [
       {
         "title": "State standard-built",
-        "body": "Everything is designed around state standards and the realities of classrooms and accountability — not repackaged national content."
+        "takeaway": "Built around your state's standards.",
+        "body": "Designed for real classrooms and accountability — not repackaged national content."
       },
       {
         "title": "Teacher-first",
-        "body": "We reduce prep, planning, and grading. We never add work to a teacher's plate to use us."
+        "takeaway": "We remove work from teachers' plates.",
+        "body": "Less prep, planning, and grading — never more."
       },
       {
         "title": "Additive, not disruptive",
-        "body": "We work alongside what districts already own. We are not a rip-and-replace."
+        "takeaway": "We work alongside what districts already own.",
+        "body": "Not a rip-and-replace."
       },
       {
         "title": "Speed to action",
-        "body": "Data and standards are everywhere; the value is responding faster. We compress the time between 'what happened' and 'what to do next.'"
+        "takeaway": "We compress the time between “what happened” and “what to do next.”",
+        "body": "Data is everywhere; the value is responding faster."
       },
       {
         "title": "Plain-spoken",
-        "body": "We name the buyer's real pain in their words. No edtech jargon, no buzzword soup."
+        "takeaway": "Name the buyer's real pain in their words.",
+        "body": "No edtech jargon, no buzzword soup."
       }
     ],
     "voice": "Confident, warm, and practical. We sound like an experienced educator who respects the buyer's time and knows the classroom. We are optimistic without overpromising, and specific without drowning people in features. Sentences are short. Claims are concrete.",

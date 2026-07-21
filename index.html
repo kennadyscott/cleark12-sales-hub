@@ -108,6 +108,17 @@
   .nav a.active { color: var(--ink); border-bottom-color: var(--accent); }
   .nav a .ndot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; }
 
+  .internal-pill {
+    display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0; cursor: help;
+    font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: #8A5400; background: color-mix(in srgb, #F0A828 16%, var(--surface));
+    border: 1px solid color-mix(in srgb, #F0A828 48%, var(--border));
+    border-radius: 999px; padding: 4px 10px;
+  }
+  :root[data-theme="dark"] .internal-pill { color: #F0BE68; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .internal-pill { color: #F0BE68; } }
+  :root[data-theme="light"] .internal-pill { color: #8A5400; }
+
   .top-right { margin-left: auto; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .icon-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface-2); color: var(--ink-2); display: grid; place-items: center; }
   .icon-btn:hover { border-color: var(--border-strong); color: var(--ink); }
@@ -402,6 +413,10 @@
       <span id="brandGem"></span>
       <span class="brand-name">ClearK12 <span>Sales Hub</span></span>
     </a>
+    <span class="internal-pill" title="Internal sales enablement — not customer-facing. Don't screen-share this hub or paste talk tracks directly into customer materials.">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      Internal
+    </span>
     <nav class="nav" id="nav">
       <a href="#/home" data-nav="#/home">Home</a>
       <a href="#/crystal" data-nav="#/crystal"><span class="ndot" style="background:#D81BB8"></span>Crystal</a>
@@ -444,11 +459,11 @@ const DATA = {
     positioning: "ClearK12 is an educational technology company built for the realities of today's classrooms. We make the day-to-day work of teaching measurably easier — turning student data and required standards into fast, confident instructional action. Our products sit alongside the curriculum, assessments, and systems districts already own; we make those investments work harder rather than asking schools to rip and replace.",
     promise: "Educational technology that helps teachers do their best work — with less friction.",
     brandPrinciples: [
-      { title: "State standard-built", body: "Everything is designed around state standards and the realities of classrooms and accountability — not repackaged national content." },
-      { title: "Teacher-first", body: "We reduce prep, planning, and grading. We never add work to a teacher's plate to use us." },
-      { title: "Additive, not disruptive", body: "We work alongside what districts already own. We are not a rip-and-replace." },
-      { title: "Speed to action", body: "Data and standards are everywhere; the value is responding faster. We compress the time between 'what happened' and 'what to do next.'" },
-      { title: "Plain-spoken", body: "We name the buyer's real pain in their words. No edtech jargon, no buzzword soup." }
+      { title: "State standard-built", takeaway: "Built around your state's standards.", body: "Designed for real classrooms and accountability — not repackaged national content." },
+      { title: "Teacher-first", takeaway: "We remove work from teachers' plates.", body: "Less prep, planning, and grading — never more." },
+      { title: "Additive, not disruptive", takeaway: "We work alongside what districts already own.", body: "Not a rip-and-replace." },
+      { title: "Speed to action", takeaway: "We compress the time between “what happened” and “what to do next.”", body: "Data is everywhere; the value is responding faster." },
+      { title: "Plain-spoken", takeaway: "Name the buyer's real pain in their words.", body: "No edtech jargon, no buzzword soup." }
     ],
     voice: "Confident, warm, and practical. We sound like an experienced educator who respects the buyer's time and knows the classroom. We are optimistic without overpromising, and specific without drowning people in features. Sentences are short. Claims are concrete.",
     goldenRule: "Lead with the problem the buyer feels, not the features we ship. Features prove the story — they are never the opening line.",
@@ -965,7 +980,9 @@ function vHome(){
   <div class="section">
     <div class="sec-title"><h2>Brand principles</h2><span class="rule"></span></div>
     <div class="grid g2">
-      ${c.brandPrinciples.map((b,i)=>`<div class="pillar"><div class="pn">${String(i+1).padStart(2,'0')}</div><h4>${esc(b.title)}</h4><p>${esc(b.body)}</p></div>`).join('')}
+      ${c.brandPrinciples.map((b,i)=>`<div class="pillar"><div class="pn">${String(i+1).padStart(2,'0')}</div><h4>${esc(b.title)}</h4>
+        <p style="font-size:14px;font-weight:700;color:var(--ink);margin:4px 0 3px;line-height:1.45">${esc(b.takeaway)}</p>
+        <p>${esc(b.body)}</p></div>`).join('')}
     </div>
   </div>
 
@@ -973,18 +990,6 @@ function vHome(){
     <div class="sec-title"><h2>Who we sell to</h2><span class="rule"></span></div>
     <div class="grid g3">
       ${DATA.audiences.map(a=>`<div class="pillar"><h4>${esc(a.label)}</h4><p>${esc(a.note)}</p></div>`).join('')}
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title"><h2>The combined story</h2><span class="rule"></span></div>
-    <div class="card pad"><p class="lede" style="font-size:15.5px">${esc(DATA.crossSell.combinedStory)}</p>
-      <div class="grid g2" style="margin-top:16px">
-        <div class="pillar"><div class="eyebrow" style="color:#D81BB8">Lead with Crystal when</div><p style="margin-top:6px">${esc(DATA.crossSell.leadWithCrystal)}</p></div>
-        <div class="pillar"><div class="eyebrow" style="color:#2FB4CC">Lead with the writing product when</div><p style="margin-top:6px">${esc(DATA.crossSell.leadWithLonestar)}</p></div>
-      </div>
-      <p style="font-size:13.5px;color:var(--muted);margin-top:16px">${esc(DATA.company.familyNote)}
-        <button class="bchip" data-route data-hash="#/writing" style="--bc:#57B4E5;margin-left:8px;padding:3px 10px;font-size:12px">Crystal Writing — TX · OH · GA →</button></p>
     </div>
   </div>
 
