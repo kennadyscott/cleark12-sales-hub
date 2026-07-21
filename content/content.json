@@ -1,10 +1,10 @@
 {
   "meta": {
-    "version": "1.5",
+    "version": "1.6",
     "title": "ClearK12 Sales Hub",
-    "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Ohio & Georgia).",
+    "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
-    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0)"
+    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0). Stage benchmarks + nurture motion and OH/GA state editions are drafts pending sales-enablement approval."
   },
   "company": {
     "name": "ClearK12",
@@ -90,7 +90,7 @@
         "standards": "TEKS",
         "test": "STAAR (ECR/SCR)",
         "hash": "#/lonestar",
-        "note": "Built exclusively for TEKS and Texas writing. Full messaging and playbook ready."
+        "note": "Built exclusively for TEKS and Texas writing. Full messaging and playbook."
       },
       {
         "id": "ohio",
@@ -99,7 +99,7 @@
         "standards": "Ohio's Learning Standards",
         "test": "OST",
         "hash": "#/writing/ohio",
-        "note": "Standards-aligned response tasks built to Ohio's writing expectations."
+        "note": "Built to Ohio's writing expectations. Full messaging and playbook."
       },
       {
         "id": "georgia",
@@ -108,10 +108,15 @@
         "standards": "Georgia Standards of Excellence",
         "test": "Georgia Milestones",
         "hash": "#/writing/georgia",
-        "note": "Standards-aligned response tasks built to Georgia's writing expectations."
+        "note": "Built to Georgia's writing expectations. Full messaging and playbook."
       }
     ],
-    "stateNote": "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; Ohio and Georgia sell as Crystal Writing. Adapt the Texas scripts to your state's standards language; approved state-specific script variants come from sales enablement.",
+    "stateNote": "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; every other state sells as Crystal Writing. Each state below has its own overview, messaging, and playbook.",
+    "bestFitSignals": [
+      "State-test writing / constructed-response performance is a named priority.",
+      "ELA teachers overloaded with writing grading; low writing-practice volume.",
+      "Grades 3–8 and high-school English focus; interest in AI built to the state's standards."
+    ],
     "logo": "assets/crystal-writing-logo.png"
   },
   "audiences": [
@@ -142,53 +147,84 @@
     "icp": "Both products serve public school districts and campuses. Primary buyers are district administrators (curriculum/C&I, academics, assessment, MTSS, and technology leaders) and campus leaders (principals and APs). Teachers are the users and powerful internal champions.",
     "fitNote": "Before investing in a full demo cycle, confirm FIT. If two or more are unclear, stay in discovery.",
     "discoveryIntro": "Discovery is where deals are won. Ask, listen, and mirror their words back in the demo. Start shared, then go product-specific.",
-    "cadenceNote": "Re-enter engaged-but-not-ready contacts into a lighter nurture (monthly value touch) and re-time around their budget/planning cycle.",
+    "cadenceNote": "Re-enter engaged-but-not-ready contacts into the long-tail nurture below and re-time around their budget/planning cycle.",
+    "nurture": {
+      "intro": "Most K-12 deals die on timing, not fit. After the Day-22 break-up email, engaged-but-not-ready contacts move into nurture — treat it as a real pipeline stage with its own motion, not a graveyard.",
+      "rhythm": [
+        "Monthly value touch — rotate formats: a research stat, a win from a similar district, a new-feature note, or a state-assessment news item. Never 'just checking in.'",
+        "Quarterly personal touch — a short call or personalized email tied to something real: their scores, their board agenda, a leadership change.",
+        "Every touch gets logged with a next-trigger date in the CRM — nurture only works if the next action has a date."
+      ],
+      "triggers": [
+        "Budget planning window (roughly Jan–Apr for the next school year) — re-open the conversation before budgets lock.",
+        "State test results release (STAAR early summer; OST and Georgia Milestones over the summer) — a writing or growth dip is a natural re-entry.",
+        "Back-to-school priority reset (Aug–Sep) — new initiatives get named; map ours to theirs.",
+        "Leadership change — a new superintendent, C&I lead, or principal resets the conversation; champions who move districts take us with them.",
+        "New money — grants, Title reallocations, or a board-approved initiative that names our pain."
+      ],
+      "rule": "Engaged-but-not-ready is a stage, not a dead end. The rep who is already present when budget season opens wins the re-entry."
+    },
     "livingNote": "This is a living document. Bring what's working (and the objections you can't beat) to sales enablement so we improve it together.",
     "stages": [
       {
         "n": 1,
         "name": "Prospect",
-        "goal": "Build a targeted list of Texas districts/campuses that fit.",
-        "exit": "Named contact + a hypothesis for why this account has the pain."
+        "goal": "Build a targeted list of districts/campuses in your state that fit.",
+        "exit": "Named contact + a hypothesis for why this account has the pain.",
+        "healthy": "Ongoing — refresh weekly",
+        "stall": "Pipeline coverage below ~3× target → rebalance time toward prospecting."
       },
       {
         "n": 2,
         "name": "Connect",
         "goal": "Earn a first conversation (cold call, email, referral, event).",
-        "exit": "A scheduled discovery call or demo."
+        "exit": "A scheduled discovery call or demo.",
+        "healthy": "1–3 weeks (one full 22-day cadence)",
+        "stall": "Cadence exhausted with no conversation → move to nurture; don't let it sit in Connect."
       },
       {
         "n": 3,
         "name": "Discover",
         "goal": "Understand their systems, pain, priorities, and buying process.",
-        "exit": "Confirmed pain, decision-makers, timeline, and rough budget path."
+        "exit": "Confirmed pain, decision-makers, timeline, and rough budget path.",
+        "healthy": "1–2 weeks",
+        "stall": "3+ weeks without confirmed pain and decision-makers → re-run FIT or escalate to your manager."
       },
       {
         "n": 4,
         "name": "Demo",
         "goal": "Show the specific workflow that solves their stated pain.",
-        "exit": "Champion confirms fit and names remaining stakeholders."
+        "exit": "Champion confirms fit and names remaining stakeholders.",
+        "healthy": "1–2 weeks from discovery",
+        "stall": "2+ weeks and the demo won't schedule → re-engage the champion with two specific times and a deadline."
       },
       {
         "n": 5,
         "name": "Propose",
         "goal": "Deliver pricing/quote and implementation picture.",
-        "exit": "Proposal reviewed; objections surfaced; next step to decision set."
+        "exit": "Proposal reviewed; objections surfaced; next step to decision set.",
+        "healthy": "2–4 weeks",
+        "stall": "30+ days without movement → manager touch; re-anchor to their budget window."
       },
       {
         "n": 6,
         "name": "Close",
         "goal": "Navigate approval (budget, PO, procurement) and sign.",
-        "exit": "Signed agreement / PO issued."
+        "exit": "Signed agreement / PO issued.",
+        "healthy": "4–8 weeks (procurement + board calendars)",
+        "stall": "60+ days or a missed board date → reconfirm the procurement path; reset to the next board meeting."
       },
       {
         "n": 7,
         "name": "Onboard & Expand",
         "goal": "Fast, successful rollout; then grow (more campuses, second product).",
-        "exit": "Live usage + a named expansion or renewal path."
+        "exit": "Live usage + a named expansion or renewal path.",
+        "healthy": "Live usage within 30–60 days",
+        "stall": "No named expansion or renewal path by day 90 → schedule the growth conversation."
       }
     ],
-    "texasNote": "K-12 buying runs on budget cycles and procurement rules. Spring (planning next year) and late summer are prime; know the district's fiscal year and whether ESC/co-op purchasing or a specific approval path applies.",
+    "cycleNote": "A healthy end-to-end cycle runs roughly 3–6 months. Spring deals close for a fall start; fall deals usually close in the spring budget cycle. Rule of thumb: a deal that has doubled its stage benchmark is stalled — act on it, don't wait on it.",
+    "timingNote": "K-12 buying runs on budget cycles and procurement rules everywhere we sell. Spring (planning next year) and late summer are prime; know the district's fiscal year and its purchasing path — ESCs and purchasing co-ops in Texas, ESCs in Ohio, RESAs in Georgia — and whether a specific approval path applies.",
     "qualification": {
       "name": "FIT",
       "items": [
@@ -480,6 +516,7 @@
       "id": "lonestar",
       "name": "LoneStar CR",
       "endorsement": "a ClearK12 product",
+      "stateCrumb": "Texas",
       "updated": {
         "scripts": "2026-07-21",
         "objections": "2026-07-21",
@@ -681,5 +718,351 @@
     "leadWithCrystal": "Overall instructional response, MTSS/Tier 1, reteach, and multi-subject data-to-action (Math, ELAR, Science).",
     "leadWithLonestar": "STAAR writing performance, constructed response (ECR/SCR), the ELAR grading burden, or writing practice volume.",
     "combinedStory": "ClearK12 helps your teachers respond faster to what students need — across every subject with Crystal Instruction, and specifically on the writing that STAAR now demands with LoneStar CR. Both are built for Texas, both save teachers time, and both work alongside what you already own."
-  }
+  },
+  "writingStates": [
+    {
+      "id": "writing/ohio",
+      "name": "Crystal Writing",
+      "endorsement": "a ClearK12 product",
+      "stateCrumb": "Ohio",
+      "updated": {
+        "scripts": "2026-07-21",
+        "objections": "2026-07-21",
+        "messaging": "2026-07-21",
+        "proof": "2026-07-21"
+      },
+      "oneLiner": "The constructed-response writing partner for Ohio classrooms.",
+      "marketTagline": "A system for developing strong writers.",
+      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "Crystal Writing is the constructed-response writing partner for Ohio classrooms. Using advanced AI, teachers create standards-aligned ECR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specifically for Ohio's Learning Standards and Ohio writing expectations.",
+      "colors": {
+        "primary": "#1A2B4C",
+        "accent": "#57B4E5",
+        "dark": "#1A2B4C",
+        "gray": "#565A5C",
+        "primaryLight": "#E9F5FC"
+      },
+      "voice": "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to Ohio's Learning Standards and the OST. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      "valuePillars": [
+        {
+          "title": "More writing practice",
+          "body": "Up to 10x more student writing reps."
+        },
+        {
+          "title": "Instant scoring & feedback",
+          "body": "Students get a grade and personalized feedback immediately; teachers stop hand-grading."
+        },
+        {
+          "title": "Built for standards",
+          "body": "ECR aligned to what the state actually requires."
+        },
+        {
+          "title": "Automated, multi-tiered scaffolding",
+          "body": "Support auto-adjusts to each student's level."
+        },
+        {
+          "title": "Time back for teachers",
+          "body": "Up to 2 hours saved per assignment."
+        }
+      ],
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "model": {
+        "name": "Write. Score. Grow.",
+        "steps": [
+          {
+            "name": "Assign",
+            "body": "Teachers access unlimited standards-aligned ECR tasks in seconds, with strategy anchors like RACE built in."
+          },
+          {
+            "name": "Write",
+            "body": "Students write with automated scaffolding matched to their level, plus self-paced lessons on writing fundamentals."
+          },
+          {
+            "name": "Score",
+            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+          },
+          {
+            "name": "Revise & Grow",
+            "body": "Students revise across drafts (where the research shows the biggest gains) while teachers watch growth in Crystal-Clear reports."
+          }
+        ]
+      },
+      "isIsnt": {
+        "is": "A specialist writing-practice and instant-scoring tool that dramatically increases practice volume and returns teacher time.",
+        "isnt": "A full ELA curriculum, a general essay checker, or a replacement for the teacher's judgment. The teacher stays in control of instruction; Crystal Writing removes the grading bottleneck."
+      },
+      "tools": [
+        "Unlimited assignment creation",
+        "Instant grading & feedback",
+        "Automated scaffolding (multi-tiered)",
+        "Strategy anchors (RACE, TAG)",
+        "Self-paced interactive lessons",
+        "Integrated data & analytics (Crystal-Clear reports)"
+      ],
+      "audienceMessaging": [
+        {
+          "audience": "teacher",
+          "care": [
+            "Grading load",
+            "Not enough writing time",
+            "Fast, useful feedback",
+            "Reaching every level"
+          ],
+          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+        },
+        {
+          "audience": "campus",
+          "care": [
+            "State test writing performance",
+            "Instructional consistency",
+            "Teacher time & morale",
+            "Evidence of growth",
+            "Increased capacity"
+          ],
+          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+        },
+        {
+          "audience": "district",
+          "care": [
+            "State test/accountability outcomes",
+            "Standard alignment",
+            "Scalable, research-backed approach",
+            "Return on teacher time"
+          ],
+          "leadMessage": "An Ohio-built, research-backed way to raise constructed-response scores at scale."
+        }
+      ],
+      "sayThis": [
+        "Built specifically for Ohio's Learning Standards and Ohio writing expectations.",
+        "Assign more writing, grade none of it.",
+        "Up to 10x more writing practice.",
+        "Instant, personalized feedback on every response.",
+        "Research-backed writing growth in daily routines."
+      ],
+      "notThis": [
+        "Just an AI essay grader",
+        "Replaces your ELA curriculum",
+        "A generic, one-size-fits-every-state writing tool",
+        "Grades like a human, so no need to review",
+        "A worksheet generator"
+      ],
+      "bestFitSignals": [
+        "OST writing/constructed-response performance is a named priority (ECR).",
+        "ELA teachers overloaded with writing grading; low writing-practice volume.",
+        "Grades 3–8 and high school English focus; interest in AI that's built specifically to Ohio's standards."
+      ],
+      "discoveryQuestions": [
+        "How is constructed response (ECR) going on the OST — and in daily practice?",
+        "Realistically, how often do students write, and how long until they get feedback?",
+        "How much time are ELA teachers spending grading writing each week?"
+      ],
+      "proofIntro": "Frequent writing, explicit strategies, and instant feedback across drafts map directly to the research base. Use these to substantiate claims; cite responsibly.",
+      "proofPoints": [
+        "Strategy-rich writing instruction improved achievement by up to +1.14 SD (Graham & Perin, Writing Next, 2007).",
+        "Automated writing evaluation produced a +0.86 SD effect, strongest when students revised across drafts (Zhai & Ma, 2023).",
+        "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
+        "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
+      ],
+      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built specifically for Ohio's Learning Standards and Ohio writing expectations.",
+      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "scripts": {
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that Ohio's state ELA tests lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for Ohio's Learning Standards and Ohio writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldEmail": {
+          "subject": "More writing practice, zero grading, at [District]",
+          "body": "Hi [Name] — the OST leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Ohio classrooms. Built for Ohio's Learning Standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+        },
+        "pitchOutline": [
+          "Problem (45s): the OST made constructed response central; practice is capped by grading time; feedback comes days late.",
+          "Who we are (45s): the constructed-response writing partner, built specifically for Ohio's Learning Standards and Ohio writing expectations — a specialist, not a curriculum.",
+          "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
+          "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
+          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Close (15s): more writing, none of the grading — the fastest path to better Ohio writers."
+        ]
+      },
+      "objections": [
+        {
+          "objection": "Can AI really grade writing accurately?",
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+        },
+        {
+          "objection": "Is this just an essay checker like the free tools?",
+          "response": "No — it's built exclusively for Ohio's standards and OST constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what the OST requires."
+        }
+      ]
+    },
+    {
+      "id": "writing/georgia",
+      "name": "Crystal Writing",
+      "endorsement": "a ClearK12 product",
+      "stateCrumb": "Georgia",
+      "updated": {
+        "scripts": "2026-07-21",
+        "objections": "2026-07-21",
+        "messaging": "2026-07-21",
+        "proof": "2026-07-21"
+      },
+      "oneLiner": "The constructed-response writing partner for Georgia classrooms.",
+      "marketTagline": "A system for developing strong writers.",
+      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "Crystal Writing is the constructed-response writing partner for Georgia classrooms. Using advanced AI, teachers create standards-aligned ECR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
+      "colors": {
+        "primary": "#1A2B4C",
+        "accent": "#57B4E5",
+        "dark": "#1A2B4C",
+        "gray": "#565A5C",
+        "primaryLight": "#E9F5FC"
+      },
+      "voice": "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to the Georgia Standards of Excellence and Georgia Milestones. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      "valuePillars": [
+        {
+          "title": "More writing practice",
+          "body": "Up to 10x more student writing reps."
+        },
+        {
+          "title": "Instant scoring & feedback",
+          "body": "Students get a grade and personalized feedback immediately; teachers stop hand-grading."
+        },
+        {
+          "title": "Built for standards",
+          "body": "ECR aligned to what the state actually requires."
+        },
+        {
+          "title": "Automated, multi-tiered scaffolding",
+          "body": "Support auto-adjusts to each student's level."
+        },
+        {
+          "title": "Time back for teachers",
+          "body": "Up to 2 hours saved per assignment."
+        }
+      ],
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "model": {
+        "name": "Write. Score. Grow.",
+        "steps": [
+          {
+            "name": "Assign",
+            "body": "Teachers access unlimited standards-aligned ECR tasks in seconds, with strategy anchors like RACE built in."
+          },
+          {
+            "name": "Write",
+            "body": "Students write with automated scaffolding matched to their level, plus self-paced lessons on writing fundamentals."
+          },
+          {
+            "name": "Score",
+            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+          },
+          {
+            "name": "Revise & Grow",
+            "body": "Students revise across drafts (where the research shows the biggest gains) while teachers watch growth in Crystal-Clear reports."
+          }
+        ]
+      },
+      "isIsnt": {
+        "is": "A specialist writing-practice and instant-scoring tool that dramatically increases practice volume and returns teacher time.",
+        "isnt": "A full ELA curriculum, a general essay checker, or a replacement for the teacher's judgment. The teacher stays in control of instruction; Crystal Writing removes the grading bottleneck."
+      },
+      "tools": [
+        "Unlimited assignment creation",
+        "Instant grading & feedback",
+        "Automated scaffolding (multi-tiered)",
+        "Strategy anchors (RACE, TAG)",
+        "Self-paced interactive lessons",
+        "Integrated data & analytics (Crystal-Clear reports)"
+      ],
+      "audienceMessaging": [
+        {
+          "audience": "teacher",
+          "care": [
+            "Grading load",
+            "Not enough writing time",
+            "Fast, useful feedback",
+            "Reaching every level"
+          ],
+          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+        },
+        {
+          "audience": "campus",
+          "care": [
+            "State test writing performance",
+            "Instructional consistency",
+            "Teacher time & morale",
+            "Evidence of growth",
+            "Increased capacity"
+          ],
+          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+        },
+        {
+          "audience": "district",
+          "care": [
+            "State test/accountability outcomes",
+            "Standard alignment",
+            "Scalable, research-backed approach",
+            "Return on teacher time"
+          ],
+          "leadMessage": "A Georgia-built, research-backed way to raise constructed-response scores at scale."
+        }
+      ],
+      "sayThis": [
+        "Built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
+        "Assign more writing, grade none of it.",
+        "Up to 10x more writing practice.",
+        "Instant, personalized feedback on every response.",
+        "Research-backed writing growth in daily routines."
+      ],
+      "notThis": [
+        "Just an AI essay grader",
+        "Replaces your ELA curriculum",
+        "A generic, one-size-fits-every-state writing tool",
+        "Grades like a human, so no need to review",
+        "A worksheet generator"
+      ],
+      "bestFitSignals": [
+        "Georgia Milestones writing/constructed-response performance is a named priority (ECR).",
+        "ELA teachers overloaded with writing grading; low writing-practice volume.",
+        "Grades 3–8 and high school ELA focus; interest in AI that's built specifically to Georgia's standards."
+      ],
+      "discoveryQuestions": [
+        "How is constructed response (ECR) going on Georgia Milestones — and in daily practice?",
+        "Realistically, how often do students write, and how long until they get feedback?",
+        "How much time are ELA teachers spending grading writing each week?"
+      ],
+      "proofIntro": "Frequent writing, explicit strategies, and instant feedback across drafts map directly to the research base. Use these to substantiate claims; cite responsibly.",
+      "proofPoints": [
+        "Strategy-rich writing instruction improved achievement by up to +1.14 SD (Graham & Perin, Writing Next, 2007).",
+        "Automated writing evaluation produced a +0.86 SD effect, strongest when students revised across drafts (Zhai & Ma, 2023).",
+        "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
+        "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
+      ],
+      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
+      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "scripts": {
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that the Georgia Milestones ELA assessment leans hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for the Georgia Standards of Excellence and Georgia writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldEmail": {
+          "subject": "More writing practice, zero grading, at [District]",
+          "body": "Hi [Name] — Georgia Milestones leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Georgia classrooms. Built for the Georgia Standards of Excellence, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+        },
+        "pitchOutline": [
+          "Problem (45s): Georgia Milestones made constructed response central; practice is capped by grading time; feedback comes days late.",
+          "Who we are (45s): the constructed-response writing partner, built specifically for the Georgia Standards of Excellence and Georgia writing expectations — a specialist, not a curriculum.",
+          "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
+          "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
+          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Close (15s): more writing, none of the grading — the fastest path to better Georgia writers."
+        ]
+      },
+      "objections": [
+        {
+          "objection": "Can AI really grade writing accurately?",
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+        },
+        {
+          "objection": "Is this just an essay checker like the free tools?",
+          "response": "No — it's built exclusively for the GSE and Milestones constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what Georgia Milestones requires."
+        }
+      ]
+    }
+  ]
 }

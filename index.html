@@ -316,6 +316,31 @@
   .seg button:hover { color: var(--ink); }
   .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 
+  /* sticky in-page jump bar (Sales Process) */
+  .jumpbar {
+    position: sticky; top: 64px; z-index: 30;
+    display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none;
+    margin: 20px 0 6px; padding: 6px;
+    background: color-mix(in srgb, var(--surface) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px);
+    border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow);
+  }
+  .jumpbar::-webkit-scrollbar { display: none; }
+  .jumpbar a {
+    text-decoration: none; font-size: 13px; font-weight: 650; color: var(--muted);
+    padding: 6px 12px; border-radius: 8px; white-space: nowrap; transition: background .12s, color .12s;
+  }
+  .jumpbar a:hover { color: var(--ink); background: var(--surface-2); }
+  .jumpbar a.active { background: color-mix(in srgb, var(--accent) 13%, var(--surface)); color: var(--accent-strong); }
+  @media (max-width: 720px) { .jumpbar { top: 58px; } }
+
+  .stage-body h4 .bench { margin-left: 8px; font-size: 11px; vertical-align: 2px; color: var(--muted); }
+  .stall { font-size: 12.5px; margin-top: 5px; color: #8A5400; }
+  .stall b { font-weight: 750; }
+  :root[data-theme="dark"] .stall { color: #F0BE68; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stall { color: #F0BE68; } }
+  :root[data-theme="light"] .stall { color: #8A5400; }
+
   .stages { display: flex; flex-direction: column; }
   .stage { display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding: 4px 0; }
   .stage-rail { display: flex; flex-direction: column; align-items: center; }
@@ -502,13 +527,18 @@ const DATA = {
     mission: "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
     states: [
       { id:"texas", name:"Texas", product:"LoneStar CR", standards:"TEKS", test:"STAAR (ECR/SCR)", hash:"#/lonestar",
-        note:"Built exclusively for TEKS and Texas writing. Full messaging and playbook ready." },
+        note:"Built exclusively for TEKS and Texas writing. Full messaging and playbook." },
       { id:"ohio", name:"Ohio", product:"Crystal Writing", standards:"Ohio's Learning Standards", test:"OST", hash:"#/writing/ohio",
-        note:"Standards-aligned response tasks built to Ohio's writing expectations." },
+        note:"Built to Ohio's writing expectations. Full messaging and playbook." },
       { id:"georgia", name:"Georgia", product:"Crystal Writing", standards:"Georgia Standards of Excellence", test:"Georgia Milestones", hash:"#/writing/georgia",
-        note:"Standards-aligned response tasks built to Georgia's writing expectations." }
+        note:"Built to Georgia's writing expectations. Full messaging and playbook." }
     ],
-    stateNote: "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; Ohio and Georgia sell as Crystal Writing. Adapt the Texas scripts to your state's standards language; approved state-specific script variants come from sales enablement."
+    stateNote: "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; every other state sells as Crystal Writing. Each state below has its own overview, messaging, and playbook.",
+    bestFitSignals: [
+      "State-test writing / constructed-response performance is a named priority.",
+      "ELA teachers overloaded with writing grading; low writing-practice volume.",
+      "Grades 3–8 and high-school English focus; interest in AI built to the state's standards."
+    ]
   },
   audiences: [
     { id: "district", label: "District administrators", note: "Superintendents, C&I / academics, assessment, MTSS, and technology leaders. Primary economic buyer." },
@@ -522,18 +552,42 @@ const DATA = {
     icp: "Both products serve public school districts and campuses. Primary buyers are district administrators (curriculum/C&I, academics, assessment, MTSS, and technology leaders) and campus leaders (principals and APs). Teachers are the users and powerful internal champions.",
     fitNote: "Before investing in a full demo cycle, confirm FIT. If two or more are unclear, stay in discovery.",
     discoveryIntro: "Discovery is where deals are won. Ask, listen, and mirror their words back in the demo. Start shared, then go product-specific.",
-    cadenceNote: "Re-enter engaged-but-not-ready contacts into a lighter nurture (monthly value touch) and re-time around their budget/planning cycle.",
+    cadenceNote: "Re-enter engaged-but-not-ready contacts into the long-tail nurture below and re-time around their budget/planning cycle.",
+    nurture: {
+      intro: "Most K-12 deals die on timing, not fit. After the Day-22 break-up email, engaged-but-not-ready contacts move into nurture — treat it as a real pipeline stage with its own motion, not a graveyard.",
+      rhythm: [
+        "Monthly value touch — rotate formats: a research stat, a win from a similar district, a new-feature note, or a state-assessment news item. Never 'just checking in.'",
+        "Quarterly personal touch — a short call or personalized email tied to something real: their scores, their board agenda, a leadership change.",
+        "Every touch gets logged with a next-trigger date in the CRM — nurture only works if the next action has a date."
+      ],
+      triggers: [
+        "Budget planning window (roughly Jan–Apr for the next school year) — re-open the conversation before budgets lock.",
+        "State test results release (STAAR early summer; OST and Georgia Milestones over the summer) — a writing or growth dip is a natural re-entry.",
+        "Back-to-school priority reset (Aug–Sep) — new initiatives get named; map ours to theirs.",
+        "Leadership change — a new superintendent, C&I lead, or principal resets the conversation; champions who move districts take us with them.",
+        "New money — grants, Title reallocations, or a board-approved initiative that names our pain."
+      ],
+      rule: "Engaged-but-not-ready is a stage, not a dead end. The rep who is already present when budget season opens wins the re-entry."
+    },
     livingNote: "This is a living document. Bring what's working (and the objections you can't beat) to sales enablement so we improve it together.",
     stages: [
-      { n:1, name:"Prospect", goal:"Build a targeted list of Texas districts/campuses that fit.", exit:"Named contact + a hypothesis for why this account has the pain." },
-      { n:2, name:"Connect", goal:"Earn a first conversation (cold call, email, referral, event).", exit:"A scheduled discovery call or demo." },
-      { n:3, name:"Discover", goal:"Understand their systems, pain, priorities, and buying process.", exit:"Confirmed pain, decision-makers, timeline, and rough budget path." },
-      { n:4, name:"Demo", goal:"Show the specific workflow that solves their stated pain.", exit:"Champion confirms fit and names remaining stakeholders." },
-      { n:5, name:"Propose", goal:"Deliver pricing/quote and implementation picture.", exit:"Proposal reviewed; objections surfaced; next step to decision set." },
-      { n:6, name:"Close", goal:"Navigate approval (budget, PO, procurement) and sign.", exit:"Signed agreement / PO issued." },
-      { n:7, name:"Onboard & Expand", goal:"Fast, successful rollout; then grow (more campuses, second product).", exit:"Live usage + a named expansion or renewal path." }
+      { n:1, name:"Prospect", goal:"Build a targeted list of districts/campuses in your state that fit.", exit:"Named contact + a hypothesis for why this account has the pain.",
+        healthy:"Ongoing — refresh weekly", stall:"Pipeline coverage below ~3× target → rebalance time toward prospecting." },
+      { n:2, name:"Connect", goal:"Earn a first conversation (cold call, email, referral, event).", exit:"A scheduled discovery call or demo.",
+        healthy:"1–3 weeks (one full 22-day cadence)", stall:"Cadence exhausted with no conversation → move to nurture; don't let it sit in Connect." },
+      { n:3, name:"Discover", goal:"Understand their systems, pain, priorities, and buying process.", exit:"Confirmed pain, decision-makers, timeline, and rough budget path.",
+        healthy:"1–2 weeks", stall:"3+ weeks without confirmed pain and decision-makers → re-run FIT or escalate to your manager." },
+      { n:4, name:"Demo", goal:"Show the specific workflow that solves their stated pain.", exit:"Champion confirms fit and names remaining stakeholders.",
+        healthy:"1–2 weeks from discovery", stall:"2+ weeks and the demo won't schedule → re-engage the champion with two specific times and a deadline." },
+      { n:5, name:"Propose", goal:"Deliver pricing/quote and implementation picture.", exit:"Proposal reviewed; objections surfaced; next step to decision set.",
+        healthy:"2–4 weeks", stall:"30+ days without movement → manager touch; re-anchor to their budget window." },
+      { n:6, name:"Close", goal:"Navigate approval (budget, PO, procurement) and sign.", exit:"Signed agreement / PO issued.",
+        healthy:"4–8 weeks (procurement + board calendars)", stall:"60+ days or a missed board date → reconfirm the procurement path; reset to the next board meeting." },
+      { n:7, name:"Onboard & Expand", goal:"Fast, successful rollout; then grow (more campuses, second product).", exit:"Live usage + a named expansion or renewal path.",
+        healthy:"Live usage within 30–60 days", stall:"No named expansion or renewal path by day 90 → schedule the growth conversation." }
     ],
-    texasNote: "K-12 buying runs on budget cycles and procurement rules. Spring (planning next year) and late summer are prime; know the district's fiscal year and whether ESC/co-op purchasing or a specific approval path applies.",
+    cycleNote: "A healthy end-to-end cycle runs roughly 3–6 months. Spring deals close for a fall start; fall deals usually close in the spring budget cycle. Rule of thumb: a deal that has doubled its stage benchmark is stalled — act on it, don't wait on it.",
+    timingNote: "K-12 buying runs on budget cycles and procurement rules everywhere we sell. Spring (planning next year) and late summer are prime; know the district's fiscal year and its purchasing path — ESCs and purchasing co-ops in Texas, ESCs in Ohio, RESAs in Georgia — and whether a specific approval path applies.",
     qualification: {
       name: "FIT",
       items: [
@@ -659,7 +713,7 @@ const DATA = {
       ]
     },
     {
-      id:"lonestar", name:"LoneStar CR", endorsement:"a ClearK12 product",
+      id:"lonestar", name:"LoneStar CR", endorsement:"a ClearK12 product", stateCrumb:"Texas",
       updated: { scripts: "2026-07-21", objections: "2026-07-21", messaging: "2026-07-21", proof: "2026-07-21" },
       oneLiner:"The constructed-response writing partner for Texas classrooms.",
       cardBlurb:"Writing practice and instant scoring built for STAAR growth.",
@@ -753,13 +807,104 @@ const DATA = {
   }
 };
 
+/* ---- State editions of the writing product ----
+   Ohio & Georgia mirror the LoneStar CR structure with state-specific standards,
+   test names, and phrasing. Ordered phrase pairs: most-specific first. */
+function makeStateWriting(cfg){
+  const base = JSON.parse(JSON.stringify(DATA.products.find(p => p.id === 'lonestar')));
+  delete base.paletteMeta; delete base.logoRules; delete base.cardBlurb;
+  const walk = v =>
+    typeof v === 'string' ? cfg.pairs.reduce((s,[a,b]) => s.split(a).join(b), v)
+    : Array.isArray(v) ? v.map(walk)
+    : (v && typeof v === 'object') ? Object.fromEntries(Object.entries(v).map(([k,x]) => [k, walk(x)]))
+    : v;
+  return Object.assign(walk(base), cfg.overrides);
+}
+const CW_STATE_COMMON = {
+  marketTagline: "A system for developing strong writers.",
+  name: "Crystal Writing",
+  colors: { primary:"#1A2B4C", accent:"#57B4E5", dark:"#1A2B4C", gray:"#565A5C", primaryLight:"#E9F5FC" }
+};
+DATA.writingStates = [
+  makeStateWriting({
+    pairs: [
+      ["LoneStar CR","Crystal Writing"],
+      ["built exclusively for TEKS and Texas writing","built specifically for Ohio's Learning Standards and Ohio writing expectations"],
+      ["Built exclusively for TEKS and Texas writing.","Built specifically for Ohio's Learning Standards and Ohio writing expectations."],
+      ["the redesigned STAAR made constructed-response writing central","Ohio's state ELA tests lean hard on constructed-response writing"],
+      ["STAAR now leans hard on constructed response (ECR/SCR)","the OST leans hard on constructed response (ECR)"],
+      ["STAAR made ECR/SCR central","the OST made constructed response central"],
+      ["TEKS and Texas ECR/SCR","Ohio's standards and OST constructed response"],
+      ["TEKS-specific and Texas-built","built specifically to Ohio's standards"],
+      ["Grades 3-8 and EOC English","Grades 3–8 and high school English"],
+      ["aligned to what STAAR requires","aligned to what the OST requires"],
+      ["STAAR writing/constructed-response performance","OST writing/constructed-response performance"],
+      ["ELAR","ELA"],
+      ["on STAAR","on the OST"],
+      ["Built for TEKS","Built for Ohio's Learning Standards"],
+      ["STAAR-style","OST-style"],
+      ["ECR and SCR tasks","ECR tasks"],
+      ["(ECR/SCR)","(ECR)"],
+      ["ECR/SCR","ECR"],
+      ["STAAR","the OST"],
+      ["TEKS","Ohio's Learning Standards"],
+      ["Texas classrooms","Ohio classrooms"],
+      ["Texas writers","Ohio writers"],
+      ["Texas districts","Ohio districts"],
+      ["A Texas-built","An Ohio-built"],
+      ["Texas","Ohio"]
+    ],
+    overrides: Object.assign({}, CW_STATE_COMMON, {
+      id: "writing/ohio", stateCrumb: "Ohio",
+      voice: "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to Ohio's Learning Standards and the OST. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      notThis: ["Just an AI essay grader","Replaces your ELA curriculum","A generic, one-size-fits-every-state writing tool","Grades like a human, so no need to review","A worksheet generator"]
+    })
+  }),
+  makeStateWriting({
+    pairs: [
+      ["LoneStar CR","Crystal Writing"],
+      ["built exclusively for TEKS and Texas writing","built specifically for the Georgia Standards of Excellence and Georgia writing expectations"],
+      ["Built exclusively for TEKS and Texas writing.","Built specifically for the Georgia Standards of Excellence and Georgia writing expectations."],
+      ["the redesigned STAAR made constructed-response writing central","the Georgia Milestones ELA assessment leans hard on constructed-response writing"],
+      ["STAAR now leans hard on constructed response (ECR/SCR)","Georgia Milestones leans hard on constructed response (ECR)"],
+      ["STAAR made ECR/SCR central","Georgia Milestones made constructed response central"],
+      ["TEKS and Texas ECR/SCR","the GSE and Milestones constructed response"],
+      ["TEKS-specific and Texas-built","built specifically to Georgia's standards"],
+      ["Grades 3-8 and EOC English","Grades 3–8 and high school ELA"],
+      ["aligned to what STAAR requires","aligned to what Georgia Milestones requires"],
+      ["ELAR","ELA"],
+      ["on STAAR","on Georgia Milestones"],
+      ["Built for TEKS","Built for the Georgia Standards of Excellence"],
+      ["STAAR-style","Milestones-style"],
+      ["ECR and SCR tasks","ECR tasks"],
+      ["(ECR/SCR)","(ECR)"],
+      ["ECR/SCR","ECR"],
+      ["STAAR","Georgia Milestones"],
+      ["TEKS","the Georgia Standards of Excellence"],
+      ["Texas classrooms","Georgia classrooms"],
+      ["Texas writers","Georgia writers"],
+      ["Texas districts","Georgia districts"],
+      ["A Texas-built","A Georgia-built"],
+      ["Texas","Georgia"]
+    ],
+    overrides: Object.assign({}, CW_STATE_COMMON, {
+      id: "writing/georgia", stateCrumb: "Georgia",
+      voice: "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to the Georgia Standards of Excellence and Georgia Milestones. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      notThis: ["Just an AI essay grader","Replaces your ELA curriculum","A generic, one-size-fits-every-state writing tool","Grades like a human, so no need to review","A worksheet generator"]
+    })
+  })
+];
+/* __END_CONTENT__ */
+
 const AUD = Object.fromEntries(DATA.audiences.map(a => [a.id, a.label]));
-const prod = id => DATA.products.find(p => p.id === id);
+const prod = id => DATA.products.find(p => p.id === id) || DATA.writingStates.find(p => p.id === id);
 const PROD_META = {
   clark12:  { label:"ClearK12", short:"ClearK12", color:"#1F9BE0" },
   crystal:  { label:"Crystal Instruction", short:"Crystal", color:"#D81BB8" },
   lonestar: { label:"LoneStar CR", short:"LoneStar CR", color:"#2FB4CC" },
-  writing:  { label:"Crystal Writing", short:"Crystal Writing", color:"#57B4E5" }
+  writing:  { label:"Crystal Writing", short:"Crystal Writing", color:"#57B4E5" },
+  "writing/ohio":    { label:"Crystal Writing — Ohio", short:"CW Ohio", color:"#57B4E5" },
+  "writing/georgia": { label:"Crystal Writing — Georgia", short:"CW Georgia", color:"#57B4E5" }
 };
 
 /* ============================ HELPERS ============================ */
@@ -788,7 +933,7 @@ function logoImg(id, h){
     return `<img src="${LOGOS.clark12}" alt="ClearK12" style="height:${h}px;width:${h}px;border-radius:50%;object-fit:cover;flex-shrink:0" />`;
   if (id === 'crystal')
     return `<span class="logo-swap" style="display:inline-flex;align-items:center"><img class="lg-light" src="${LOGOS.crystal}" alt="Crystal Instruction" style="height:${h}px" /><img class="lg-dark" src="${LOGOS.crystalWhite}" alt="Crystal Instruction" style="height:${h}px" /></span>`;
-  if (id === 'writing')
+  if (id === 'writing' || id.startsWith('writing/'))
     return `<span class="cw-tile"><img src="${LOGOS.writing}" alt="Crystal Writing" style="height:${h}px;display:block" /></span>`;
   return `<span class="ls-tile"><img src="${LOGOS.lonestar}" alt="LoneStar CR" style="height:${h}px;display:block" /></span>`;
 }
@@ -892,8 +1037,8 @@ function tabs(id, active){
   return `<nav class="tabs">${t.map(x=>`<a href="${x.hash}" class="${x.key===active?'active':''}">${x.label}</a>`).join('')}</nav>`;
 }
 function prodHead(p){
-  const crumb = p.id === 'lonestar'
-    ? `<a class="crumb" href="#/writing">‹ Crystal Writing family · Texas</a>` : '';
+  const crumb = p.stateCrumb
+    ? `<a class="crumb" href="#/writing">‹ Crystal Writing family · ${esc(p.stateCrumb)}</a>` : '';
   return `${crumb}<div class="prod-head">
     ${logoImg(p.id, p.id === 'crystal' ? 58 : 52)}
     <div>
@@ -1063,10 +1208,10 @@ function vProduct(id){
     <div class="callout" style="margin-top:16px"><b>Cleared claims only.</b> ${esc(p.productClaims)}</div></div>
   </div>` : ''}
 
-  ${id==='lonestar' ? `
+  ${p.stateCrumb ? `
   <div class="section">
     <div class="callout">${esc(DATA.company.familyNote)}
-      <div style="margin-top:12px"><button class="bchip" data-route data-hash="#/writing" style="--bc:#57B4E5">Selling outside Texas? Open Crystal Writing →</button></div>
+      <div style="margin-top:12px"><button class="bchip" data-route data-hash="#/writing" style="--bc:#57B4E5">Selling in another state? Open the Crystal Writing family →</button></div>
     </div>
   </div>` : ''}`;
 }
@@ -1212,53 +1357,6 @@ function vWriting(){
   </div>`;
 }
 
-function vWritingState(stateId){
-  const cw = DATA.crystalWriting;
-  const s = cw.states.find(x=>x.id===stateId);
-  const ls = prod('lonestar');
-  return `
-  <a class="crumb" href="#/writing">‹ Crystal Writing family</a>
-  <div class="prod-head" style="margin-top:10px">
-    ${logoImg('writing', 48)}
-    <div>
-      <h1 style="font-size:clamp(24px,3.4vw,36px)">${esc(s.name)}</h1>
-      <div class="en">${esc(cw.name)} · ${esc(cw.endorsement)}</div>
-    </div>
-  </div>
-
-  <div style="display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px">
-    <span class="chip accent">${esc(s.standards)}</span>
-    <span class="chip accent">${esc(s.test)}</span>
-  </div>
-
-  <div class="card pad">
-    <div class="eyebrow">Positioning</div>
-    <p style="color:var(--ink-2);margin-top:10px">${esc(cw.positioning)}</p>
-    <p style="font-size:13.5px;color:var(--muted);margin-top:12px">${esc(s.note)}</p>
-  </div>
-
-  <div class="section">
-    <div class="sec-title"><h2>What's in the platform</h2><span class="rule"></span></div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px">${ls.tools.map(t=>`<span class="chip accent">${esc(t)}</span>`).join('')}</div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title"><h2>Selling in ${esc(s.name)}</h2><span class="rule"></span></div>
-    <div class="callout">
-      <b>Use the Texas playbook as your base.</b> The pain, the model, and the proof are identical — swap STAAR/TEKS language for ${esc(s.standards)} and ${esc(s.test)}. Approved ${esc(s.name)}-specific scripts come from sales enablement.
-      <div style="margin-top:12px"><button class="bchip" data-route data-hash="#/lonestar/playbook" style="--bc:#2FB4CC">Open the Texas playbook →</button></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-title"><h2>Proof points</h2><span class="rule"></span>${stamp(ls.updated?.proof)}</div>
-    <div class="card pad">
-      <p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">State-agnostic research base — safe to cite in ${esc(s.name)}.</p>
-      ${ls.proofPoints.map(pp=>`<div class="proof">${esc(pp)}</div>`).join('')}
-    </div>
-  </div>`;
-}
-
 function vProcess(){
   const pr = DATA.process;
   return `
@@ -1270,33 +1368,43 @@ function vProcess(){
 
   <div class="callout" style="margin-top:0"><b>The motion.</b> ${esc(pr.principle)}</div>
 
-  <div class="section">
+  <nav class="jumpbar" id="jumpbar" aria-label="On this page">
+    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#objection-finder","Objections"],["#sec-cadence","Cadence"],["#sec-nurture","Nurture"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
+  </nav>
+
+  <div class="section" id="sec-stages">
     <div class="sec-title"><h2>Seven stages</h2><span class="rule"></span></div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.stagesIntro)}</p>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.stagesIntro)} Benchmarks below are guidance — tune them with sales enablement as real cycle data comes in.</p>
     <div class="card pad">
       <div class="stages">
         ${pr.stages.map(s=>`
           <div class="stage">
             <div class="stage-rail"><span class="stage-n">${s.n}</span><span class="stage-line"></span></div>
-            <div class="stage-body"><h4>${esc(s.name)}</h4><p class="goal">${esc(s.goal)}</p><p class="exit"><b>Exit:</b> ${esc(s.exit)}</p></div>
+            <div class="stage-body"><h4>${esc(s.name)} <span class="bench chip">${esc(s.healthy)}</span></h4>
+              <p class="goal">${esc(s.goal)}</p>
+              <p class="exit"><b>Exit:</b> ${esc(s.exit)}</p>
+              <p class="stall"><b>Stalled?</b> ${esc(s.stall)}</p>
+            </div>
           </div>`).join('')}
       </div>
     </div>
-    <div class="callout" style="margin-top:16px"><b>Texas timing.</b> ${esc(pr.texasNote)}</div>
+    <div class="callout" style="margin-top:16px"><b>Cycle length.</b> ${esc(pr.cycleNote)}</div>
+    <div class="callout" style="margin-top:12px"><b>Timing & procurement.</b> ${esc(pr.timingNote)}</div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec-icp">
     <div class="sec-title"><h2>Who we target</h2><span class="rule"></span></div>
     <div class="card pad">
       <p style="color:var(--ink-2)">${esc(pr.icp)}</p>
       <div class="grid g2" style="margin-top:16px">
         <div class="pillar"><div class="eyebrow" style="color:#D81BB8">Best fit — Crystal Instruction</div><div style="margin-top:10px">${rows(prod('crystal').bestFitSignals)}</div></div>
-        <div class="pillar"><div class="eyebrow" style="color:#2FB4CC">Best fit — LoneStar CR</div><div style="margin-top:10px">${rows(prod('lonestar').bestFitSignals)}</div></div>
+        <div class="pillar"><div class="eyebrow" style="color:#57B4E5">Best fit — Crystal Writing (LoneStar CR in Texas)</div><div style="margin-top:10px">${rows(DATA.crystalWriting.bestFitSignals)}</div></div>
       </div>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:14px">State-specific writing signals live on each state's playbook: <a href="#/lonestar/playbook" style="font-weight:600;color:var(--accent-strong)">Texas</a> · <a href="#/writing/ohio/playbook" style="font-weight:600;color:var(--accent-strong)">Ohio</a> · <a href="#/writing/georgia/playbook" style="font-weight:600;color:var(--accent-strong)">Georgia</a></p>
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec-fit">
     <div class="sec-title"><h2>FIT qualification</h2><span class="rule"></span></div>
     <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.fitNote)}</p>
     <div class="fit">
@@ -1316,23 +1424,23 @@ function vProcess(){
         <button data-mix="all" aria-pressed="true">All</button>
         <button data-mix="shared" aria-pressed="false">Shared</button>
         <button data-mix="crystal" aria-pressed="false">Crystal</button>
-        <button data-mix="lonestar" aria-pressed="false">LoneStar CR</button>
+        <button data-mix="writing" aria-pressed="false">Writing</button>
       </div>
     </div>
     <div id="objResults"></div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec-discovery">
     <div class="sec-title"><h2>Discovery & demo</h2><span class="rule"></span>${stamp(pr.updated?.discovery)}</div>
     <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.discoveryIntro)}</p>
     <div class="grid g2">
       <div class="card pad"><div class="eyebrow">Shared discovery questions</div><div style="margin-top:12px">${rows(pr.discoveryShared)}</div></div>
       <div class="card pad"><div class="eyebrow">Demo tips</div><div style="margin-top:12px">${rows(pr.demoTips)}</div></div>
     </div>
-    <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Product-specific discovery questions live on each <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> and <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">LoneStar CR</a> playbook.</p>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Product-specific discovery questions live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec-cadence">
     <div class="sec-title"><h2>Outreach cadence</h2><span class="rule"></span>${stamp(pr.updated?.cadence)}</div>
     <div class="tbl-wrap">
       <table><thead><tr><th>When</th><th>Channel</th><th>Action</th></tr></thead>
@@ -1341,7 +1449,17 @@ function vProcess(){
     <div class="callout" style="margin-top:16px"><b>After Day 22.</b> ${esc(pr.cadenceNote)}</div>
   </div>
 
-  <div class="section">
+  <div class="section" id="sec-nurture">
+    <div class="sec-title"><h2>Long-tail nurture</h2><span class="rule"></span></div>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.nurture.intro)}</p>
+    <div class="grid g2" style="align-items:start">
+      <div class="card pad"><div class="eyebrow">The rhythm</div><div style="margin-top:12px">${rows(pr.nurture.rhythm)}</div></div>
+      <div class="card pad"><div class="eyebrow">Re-entry triggers — watch for these</div><div style="margin-top:12px">${rows(pr.nurture.triggers)}</div></div>
+    </div>
+    <div class="callout" style="margin-top:16px"><b>The rule.</b> ${esc(pr.nurture.rule)}</div>
+  </div>
+
+  <div class="section" id="sec-close">
     <div class="sec-title"><h2>Close steps</h2><span class="rule"></span></div>
     <div class="card pad">${rows(pr.closeSteps)}</div>
     <p style="font-size:12.5px;color:var(--muted);margin-top:14px">${esc(pr.livingNote)}</p>
@@ -1351,14 +1469,15 @@ function vProcess(){
 let objMix = 'all';
 function renderObjFinder(){
   const box = $('#objResults'); if (!box) return;
+  const withSrc = p => p.objections.map(o => ({...o, src:PROD_META[p.id].short}));
+  const writingAll = [prod('lonestar'), ...DATA.writingStates].flatMap(withSrc);
   let merged = DATA.process.sharedObjections.map(o => ({...o, src:'Shared'}));
   if (objMix === 'all'){
-    DATA.products.forEach(p => merged.push(...p.objections.map(o => ({...o, src:PROD_META[p.id].short}))));
-  } else if (objMix !== 'shared'){
-    merged = [
-      ...DATA.process.sharedObjections.map(o => ({...o, src:'Shared'})),
-      ...prod(objMix).objections.map(o => ({...o, src:PROD_META[objMix].short}))
-    ];
+    merged.push(...withSrc(prod('crystal')), ...writingAll);
+  } else if (objMix === 'crystal'){
+    merged.push(...withSrc(prod('crystal')));
+  } else if (objMix === 'writing'){
+    merged.push(...writingAll);
   }
   const q = ($('#objFilter')?.value || '').toLowerCase().trim();
   const list = q ? merged.filter(o => (o.objection+' '+o.response).toLowerCase().includes(q)) : merged;
@@ -1436,9 +1555,13 @@ const ROUTES = {
   '#/crystal':            { prod:'crystal',  nav:'#/crystal',  view:()=>vProduct('crystal') },
   '#/crystal/messaging':  { prod:'crystal',  nav:'#/crystal',  view:()=>vMessaging('crystal') },
   '#/crystal/playbook':   { prod:'crystal',  nav:'#/crystal',  view:()=>vPlaybook('crystal') },
-  '#/writing':            { prod:'writing',  nav:'#/writing',  view:vWriting },
-  '#/writing/ohio':       { prod:'writing',  nav:'#/writing',  view:()=>vWritingState('ohio') },
-  '#/writing/georgia':    { prod:'writing',  nav:'#/writing',  view:()=>vWritingState('georgia') },
+  '#/writing':                    { prod:'writing', nav:'#/writing', view:vWriting },
+  '#/writing/ohio':               { prod:'writing', nav:'#/writing', view:()=>vProduct('writing/ohio') },
+  '#/writing/ohio/messaging':     { prod:'writing', nav:'#/writing', view:()=>vMessaging('writing/ohio') },
+  '#/writing/ohio/playbook':      { prod:'writing', nav:'#/writing', view:()=>vPlaybook('writing/ohio') },
+  '#/writing/georgia':            { prod:'writing', nav:'#/writing', view:()=>vProduct('writing/georgia') },
+  '#/writing/georgia/messaging':  { prod:'writing', nav:'#/writing', view:()=>vMessaging('writing/georgia') },
+  '#/writing/georgia/playbook':   { prod:'writing', nav:'#/writing', view:()=>vPlaybook('writing/georgia') },
   '#/lonestar':           { prod:'lonestar', nav:'#/writing',  view:()=>vProduct('lonestar') },
   '#/lonestar/messaging': { prod:'lonestar', nav:'#/writing',  view:()=>vMessaging('lonestar') },
   '#/lonestar/playbook':  { prod:'lonestar', nav:'#/writing',  view:()=>vPlaybook('lonestar') }
@@ -1464,6 +1587,20 @@ function route(){
     });
   }
   if (hash === '#/process'){
+    // jump bar: intercept clicks (plain anchors would fight the hash router) + scrollspy
+    const links = [...document.querySelectorAll('#jumpbar a')];
+    links.forEach(a => a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(a.dataset.jump)?.scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+    const spy = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting){
+          links.forEach(a => a.classList.toggle('active', a.dataset.jump === '#'+en.target.id));
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    links.forEach(a => { const t = document.querySelector(a.dataset.jump); if (t) spy.observe(t); });
     renderObjFinder();
     $('#objFilter')?.addEventListener('input', renderObjFinder);
     $('#objMix')?.querySelectorAll('button').forEach(b =>
@@ -1519,7 +1656,7 @@ function showToast(msg){
 /* ============================ SEARCH ============================ */
 function buildIndex(){
   const idx = [];
-  DATA.products.forEach(p => {
+  [...DATA.products, ...DATA.writingStates].forEach(p => {
     idx.push({ tag:PROD_META[p.id].short+' · Cold call', title:'Cold call script', text:p.scripts.coldCall, hash:`#/${p.id}/playbook` });
     idx.push({ tag:PROD_META[p.id].short+' · Email', title:p.scripts.coldEmail.subject, text:p.scripts.coldEmail.body, hash:`#/${p.id}/playbook` });
     idx.push({ tag:PROD_META[p.id].short+' · Pitch', title:'Pitch outline', text:p.scripts.pitchOutline.join(' '), hash:`#/${p.id}/playbook` });
