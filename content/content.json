@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.3",
+    "version": "1.4",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
@@ -127,6 +127,11 @@
     }
   ],
   "process": {
+    "updated": {
+      "objections": "2026-07-21",
+      "cadence": "2026-07-21",
+      "discovery": "2026-07-21"
+    },
     "principle": "Sell the way districts buy: validate what they own, name the pain they feel, and prove we make their people's week easier.",
     "stagesIntro": "Seven stages, from first touch to expansion. Don't advance a deal until it meets the exit criteria — that's how we keep the pipeline honest.",
     "icp": "Both products serve public school districts and campuses. Primary buyers are district administrators (curriculum/C&I, academics, assessment, MTSS, and technology leaders) and campus leaders (principals and APs). Teachers are the users and powerful internal champions.",
@@ -279,6 +284,11 @@
       "id": "crystal",
       "name": "Crystal Instruction",
       "endorsement": "a ClearK12 product",
+      "updated": {
+        "scripts": "2026-07-21",
+        "objections": "2026-07-21",
+        "messaging": "2026-07-21"
+      },
       "oneLiner": "The instructional response partner for Texas classrooms.",
       "cardBlurb": "Instructional tools that turn insight into action.",
       "marketTagline": "Teach. See. Respond.",
@@ -465,6 +475,12 @@
       "id": "lonestar",
       "name": "LoneStar CR",
       "endorsement": "a ClearK12 product",
+      "updated": {
+        "scripts": "2026-07-21",
+        "objections": "2026-07-21",
+        "messaging": "2026-07-21",
+        "proof": "2026-07-21"
+      },
       "oneLiner": "The constructed-response writing partner for Texas classrooms.",
       "cardBlurb": "Writing practice and instant scoring built for STAAR growth.",
       "marketTagline": "A system for developing strong writers.",
