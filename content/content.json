@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.6",
+    "version": "1.7",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
@@ -117,6 +117,178 @@
       "ELA teachers overloaded with writing grading; low writing-practice volume.",
       "Grades 3–8 and high-school English focus; interest in AI built to the state's standards."
     ],
+    "shared": {
+      "id": "writing-shared",
+      "name": "Crystal Writing",
+      "endorsement": "a ClearK12 product",
+      "stateCrumb": "",
+      "updated": {
+        "scripts": "2026-07-21",
+        "objections": "2026-07-21",
+        "messaging": "2026-07-21",
+        "proof": "2026-07-21"
+      },
+      "oneLiner": "The constructed-response writing partner for classrooms.",
+      "marketTagline": "A system for developing strong writers.",
+      "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      "positioning": "Crystal Writing is the constructed-response writing partner for classrooms. Using advanced AI, teachers create standards-aligned constructed-response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specifically to each state's standards and writing expectations.",
+      "colors": {
+        "primary": "#1A2B4C",
+        "accent": "#57B4E5",
+        "dark": "#1A2B4C",
+        "gray": "#565A5C",
+        "primaryLight": "#E9F5FC"
+      },
+      "voice": "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to each state's standards and assessments. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own.",
+      "valuePillars": [
+        {
+          "title": "More writing practice",
+          "body": "Up to 10x more student writing reps."
+        },
+        {
+          "title": "Instant scoring & feedback",
+          "body": "Students get a grade and personalized feedback immediately; teachers stop hand-grading."
+        },
+        {
+          "title": "Built for standards",
+          "body": "Constructed response aligned to what the state actually requires."
+        },
+        {
+          "title": "Automated, multi-tiered scaffolding",
+          "body": "Support auto-adjusts to each student's level."
+        },
+        {
+          "title": "Time back for teachers",
+          "body": "Up to 2 hours saved per assignment."
+        }
+      ],
+      "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
+      "problemTagline": "The bottleneck to better writing isn't effort — it's grading time.",
+      "model": {
+        "name": "Write. Score. Grow.",
+        "steps": [
+          {
+            "name": "Assign",
+            "body": "Teachers access unlimited standards-aligned constructed-response tasks in seconds, with strategy anchors like RACE built in."
+          },
+          {
+            "name": "Write",
+            "body": "Students write with automated scaffolding matched to their level, plus self-paced lessons on writing fundamentals."
+          },
+          {
+            "name": "Score",
+            "body": "AI scores every response instantly and returns personalized, actionable feedback — no manual grading."
+          },
+          {
+            "name": "Revise & Grow",
+            "body": "Students revise across drafts (where the research shows the biggest gains) while teachers watch growth in Crystal-Clear reports."
+          }
+        ]
+      },
+      "isIsnt": {
+        "is": "A specialist writing-practice and instant-scoring tool that dramatically increases practice volume and returns teacher time.",
+        "isnt": "A full ELA curriculum, a general essay checker, or a replacement for the teacher's judgment. The teacher stays in control of instruction; Crystal Writing removes the grading bottleneck."
+      },
+      "tools": [
+        "Unlimited assignment creation",
+        "Instant grading & feedback",
+        "Automated scaffolding (multi-tiered)",
+        "Strategy anchors (RACE, TAG)",
+        "Self-paced interactive lessons",
+        "Integrated data & analytics (Crystal-Clear reports)"
+      ],
+      "audienceMessaging": [
+        {
+          "audience": "teacher",
+          "care": [
+            "Grading load",
+            "Not enough writing time",
+            "Fast, useful feedback",
+            "Reaching every level"
+          ],
+          "leadMessage": "Assign more writing, grade none of it — and give every student instant feedback."
+        },
+        {
+          "audience": "campus",
+          "care": [
+            "State test writing performance",
+            "Instructional consistency",
+            "Teacher time & morale",
+            "Evidence of growth",
+            "Increased capacity"
+          ],
+          "leadMessage": "More writing practice in every classroom — with visible, tracked growth."
+        },
+        {
+          "audience": "district",
+          "care": [
+            "State test/accountability outcomes",
+            "Standard alignment",
+            "Scalable, research-backed approach",
+            "Return on teacher time"
+          ],
+          "leadMessage": "A research-backed way to raise constructed-response scores at scale."
+        }
+      ],
+      "sayThis": [
+        "Built specifically to each state's standards and writing expectations.",
+        "Assign more writing, grade none of it.",
+        "Up to 10x more writing practice.",
+        "Instant, personalized feedback on every response.",
+        "Research-backed writing growth in daily routines."
+      ],
+      "notThis": [
+        "Just an AI essay grader",
+        "Replaces your ELA curriculum",
+        "Works for any state / any test",
+        "Grades like a human, so no need to review",
+        "A worksheet generator"
+      ],
+      "bestFitSignals": [
+        "State-test writing/constructed-response performance is a named priority (ECR).",
+        "ELA teachers overloaded with writing grading; low writing-practice volume.",
+        "Grades 3–8 and high school English focus; interest in AI that's built to the state's standards."
+      ],
+      "discoveryQuestions": [
+        "How is constructed response (ECR) going on the state test — and in daily practice?",
+        "Realistically, how often do students write, and how long until they get feedback?",
+        "How much time are ELA teachers spending grading writing each week?"
+      ],
+      "proofIntro": "Frequent writing, explicit strategies, and instant feedback across drafts map directly to the research base. Use these to substantiate claims; cite responsibly.",
+      "proofPoints": [
+        "Strategy-rich writing instruction improved achievement by up to +1.14 SD (Graham & Perin, Writing Next, 2007).",
+        "Automated writing evaluation produced a +0.86 SD effect, strongest when students revised across drafts (Zhai & Ma, 2023).",
+        "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
+        "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
+      ],
+      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built specifically to each state's standards and writing expectations.",
+      "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
+      "scripts": {
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that state ELA assessments lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically to each state's standards and writing expectations. Teachers create constructed-response tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldEmail": {
+          "subject": "More writing practice, zero grading, at [District]",
+          "body": "Hi [Name] — state tests lean hard on constructed response, but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for classrooms. Built to state standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+        },
+        "pitchOutline": [
+          "Problem (45s): state tests made constructed response central; practice is capped by grading time; feedback comes days late.",
+          "Who we are (45s): the constructed-response writing partner, built specifically to each state's standards and writing expectations — a specialist, not a curriculum.",
+          "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
+          "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
+          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Close (15s): more writing, none of the grading — the fastest path to better writers."
+        ]
+      },
+      "objections": [
+        {
+          "objection": "Can AI really grade writing accurately?",
+          "response": "It scores instantly and consistently against the rubric, and teachers stay in control — you can review and adjust. The win is volume and speed of feedback, where the research shows the biggest gains."
+        },
+        {
+          "objection": "Is this just an essay checker like the free tools?",
+          "response": "No — it's built exclusively for each state's standards and constructed response, with auto-scaffolding, strategy anchors like RACE/TAG, and district analytics. Generic tools aren't aligned to what the state test requires."
+        }
+      ]
+    },
     "logo": "assets/crystal-writing-logo.png"
   },
   "audiences": [

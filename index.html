@@ -894,6 +894,44 @@ DATA.writingStates = [
     })
   })
 ];
+/* State-neutral edition for the shared Crystal Writing hub — no Texas, no STAAR,
+   no LoneStar branding. Same transform machinery so it tracks the approved copy. */
+DATA.crystalWriting.shared = makeStateWriting({
+  pairs: [
+    ["LoneStar CR","Crystal Writing"],
+    ["built exclusively for TEKS and Texas writing","built specifically to each state's standards and writing expectations"],
+    ["Built exclusively for TEKS and Texas writing.","Built specifically to each state's standards and writing expectations."],
+    ["the redesigned STAAR made constructed-response writing central","state ELA assessments lean hard on constructed-response writing"],
+    ["STAAR now leans hard on constructed response (ECR/SCR)","state tests lean hard on constructed response"],
+    ["STAAR made ECR/SCR central","state tests made constructed response central"],
+    ["TEKS and Texas ECR/SCR","each state's standards and constructed response"],
+    ["TEKS-specific and Texas-built","built to the state's standards"],
+    ["Grades 3-8 and EOC English","Grades 3–8 and high school English"],
+    ["aligned to what STAAR requires","aligned to what the state test requires"],
+    ["STAAR writing/constructed-response performance","State-test writing/constructed-response performance"],
+    ["ELAR","ELA"],
+    ["on STAAR","on the state test"],
+    ["Built for TEKS","Built to state standards"],
+    ["STAAR-style","state-test-style"],
+    ["ECR and SCR tasks","constructed-response tasks"],
+    ["ECR/SCR tasks","constructed-response tasks"],
+    ["ECR/SCR aligned to what the state actually requires.","Constructed response aligned to what the state actually requires."],
+    ["(ECR/SCR)","(ECR)"],
+    ["ECR/SCR","constructed response"],
+    ["better Texas writers","better writers"],
+    ["A Texas-built, research-backed","A research-backed"],
+    ["STAAR","the state test"],
+    ["TEKS","state standards"],
+    ["Texas classrooms","classrooms"],
+    ["Texas writers","writers"],
+    ["Texas districts","districts"],
+    ["Texas","your state"]
+  ],
+  overrides: Object.assign({}, CW_STATE_COMMON, {
+    id: "writing-shared", stateCrumb: "",
+    voice: "Confident, credible, and evidence-led — Crystal Writing pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine, adapted to each state's standards and assessments. It speaks plainly to the grading pain teachers feel every week and to the state-test outcomes leaders own."
+  })
+});
 /* __END_CONTENT__ */
 
 const AUD = Object.fromEntries(DATA.audiences.map(a => [a.id, a.label]));
@@ -1290,7 +1328,7 @@ function vPlaybook(id){
 
 function vWriting(){
   const cw = DATA.crystalWriting;
-  const ls = prod('lonestar');
+  const ls = cw.shared; // state-neutral edition — no Texas/STAAR/LoneStar branding
   return `
   <div class="prod-head" style="margin-top:48px">
     ${logoImg('writing', 54)}
