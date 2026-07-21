@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "1.2",
+    "version": "1.3",
     "title": "ClearK12 Sales Hub",
-    "description": "Sales enablement content for ClearK12: Crystal Instruction, LoneStar CR, and Crystal Writing.",
+    "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
     "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0)"
   },
@@ -71,9 +71,43 @@
   },
   "crystalWriting": {
     "name": "Crystal Writing",
+    "endorsement": "a ClearK12 product",
+    "tagline": "A system for developing strong writers.",
     "blurb": "The writing development hub that provides scaffolding and support to help students build the skills to become strong writers.",
-    "availability": "Available in Ohio and Georgia",
-    "positioning": "Crystal Writing is the writing partner for classrooms. Using advanced AI, teachers create standards-aligned response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specific to state standards and grade-level writing expectations."
+    "availability": "Available in Texas, Ohio, and Georgia",
+    "positioning": "Crystal Writing is the writing partner for classrooms. Using advanced AI, teachers create standards-aligned response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specific to state standards and grade-level writing expectations.",
+    "mission": "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
+    "states": [
+      {
+        "id": "texas",
+        "name": "Texas",
+        "product": "LoneStar CR",
+        "standards": "TEKS",
+        "test": "STAAR (ECR/SCR)",
+        "hash": "#/lonestar",
+        "note": "Built exclusively for TEKS and Texas writing. Full messaging and playbook ready."
+      },
+      {
+        "id": "ohio",
+        "name": "Ohio",
+        "product": "Crystal Writing",
+        "standards": "Ohio's Learning Standards",
+        "test": "OST",
+        "hash": "#/writing/ohio",
+        "note": "Standards-aligned response tasks built to Ohio's writing expectations."
+      },
+      {
+        "id": "georgia",
+        "name": "Georgia",
+        "product": "Crystal Writing",
+        "standards": "Georgia Standards of Excellence",
+        "test": "Georgia Milestones",
+        "hash": "#/writing/georgia",
+        "note": "Standards-aligned response tasks built to Georgia's writing expectations."
+      }
+    ],
+    "stateNote": "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; Ohio and Georgia sell as Crystal Writing. Adapt the Texas scripts to your state's standards language; approved state-specific script variants come from sales enablement.",
+    "logo": "assets/crystal-writing-logo.png"
   },
   "audiences": [
     {
