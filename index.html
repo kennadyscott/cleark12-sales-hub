@@ -459,6 +459,13 @@ const DATA = {
     { id: "teacher", label: "Teachers", note: "The users and the most persuasive internal champions." }
   ],
   process: {
+    principle: "Sell the way districts buy: validate what they own, name the pain they feel, and prove we make their people's week easier.",
+    stagesIntro: "Seven stages, from first touch to expansion. Don't advance a deal until it meets the exit criteria — that's how we keep the pipeline honest.",
+    icp: "Both products serve public school districts and campuses. Primary buyers are district administrators (curriculum/C&I, academics, assessment, MTSS, and technology leaders) and campus leaders (principals and APs). Teachers are the users and powerful internal champions.",
+    fitNote: "Before investing in a full demo cycle, confirm FIT. If two or more are unclear, stay in discovery.",
+    discoveryIntro: "Discovery is where deals are won. Ask, listen, and mirror their words back in the demo. Start shared, then go product-specific.",
+    cadenceNote: "Re-enter engaged-but-not-ready contacts into a lighter nurture (monthly value touch) and re-time around their budget/planning cycle.",
+    livingNote: "This is a living document. Bring what's working (and the objections you can't beat) to sales enablement so we improve it together.",
     stages: [
       { n:1, name:"Prospect", goal:"Build a targeted list of Texas districts/campuses that fit.", exit:"Named contact + a hypothesis for why this account has the pain." },
       { n:2, name:"Connect", goal:"Earn a first conversation (cold call, email, referral, event).", exit:"A scheduled discovery call or demo." },
@@ -563,7 +570,7 @@ const DATA = {
       notThis:["All-in-one platform","One connected system / complete workflow platform","Replaces your curriculum","We are your MTSS platform","Teachers run instruction through Crystal"],
       bestFitSignals:[
         "Active MTSS/RTI focus, Tier 1 or reteach initiatives, or a data-to-action gap.",
-        "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards — but teachers still struggle to respond.",
+        "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards — but next steps are cumbersome, inconsistent, and often independent.",
         "Growth-goal pressure: T-TESS, SLOs, TIA, or accountability improvement."
       ],
       discoveryQuestions:[
@@ -1079,18 +1086,14 @@ function vProcess(){
   <div class="page-head">
     <div class="eyebrow">Shared Playbook</div>
     <h1>The ClearK12 sales process</h1>
-    <p class="lede">One process for both products: qualify with FIT, work the seven stages, and lean on the objection finder in the room.</p>
+    <p class="lede">One process for both products — what changes is the pain we lead with and the proof we bring. Use the messaging pages for the words; use this for the moves.</p>
   </div>
 
-  <div class="section" style="margin-top:0">
-    <div class="sec-title"><h2>FIT qualification</h2><span class="rule"></span></div>
-    <div class="fit">
-      ${pr.qualification.items.map(i=>`<div class="fit-card"><div class="fit-l">${i.letter}</div><h4>${esc(i.title)}</h4><p>${esc(i.body)}</p></div>`).join('')}
-    </div>
-  </div>
+  <div class="callout" style="margin-top:0"><b>The motion.</b> ${esc(pr.principle)}</div>
 
   <div class="section">
     <div class="sec-title"><h2>Seven stages</h2><span class="rule"></span></div>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.stagesIntro)}</p>
     <div class="card pad">
       <div class="stages">
         ${pr.stages.map(s=>`
@@ -1101,6 +1104,25 @@ function vProcess(){
       </div>
     </div>
     <div class="callout" style="margin-top:16px"><b>Texas timing.</b> ${esc(pr.texasNote)}</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>Who we target</h2><span class="rule"></span></div>
+    <div class="card pad">
+      <p style="color:var(--ink-2)">${esc(pr.icp)}</p>
+      <div class="grid g2" style="margin-top:16px">
+        <div class="pillar"><div class="eyebrow" style="color:#D81BB8">Best fit — Crystal Instruction</div><div style="margin-top:10px">${rows(prod('crystal').bestFitSignals)}</div></div>
+        <div class="pillar"><div class="eyebrow" style="color:#2FB4CC">Best fit — LoneStar CR</div><div style="margin-top:10px">${rows(prod('lonestar').bestFitSignals)}</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>FIT qualification</h2><span class="rule"></span></div>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.fitNote)}</p>
+    <div class="fit">
+      ${pr.qualification.items.map(i=>`<div class="fit-card"><div class="fit-l">${i.letter}</div><h4>${esc(i.title)}</h4><p>${esc(i.body)}</p></div>`).join('')}
+    </div>
   </div>
 
   <div class="section" id="objection-finder">
@@ -1122,10 +1144,13 @@ function vProcess(){
   </div>
 
   <div class="section">
+    <div class="sec-title"><h2>Discovery & demo</h2><span class="rule"></span></div>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.discoveryIntro)}</p>
     <div class="grid g2">
       <div class="card pad"><div class="eyebrow">Shared discovery questions</div><div style="margin-top:12px">${rows(pr.discoveryShared)}</div></div>
       <div class="card pad"><div class="eyebrow">Demo tips</div><div style="margin-top:12px">${rows(pr.demoTips)}</div></div>
     </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Product-specific discovery questions live on each <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> and <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">LoneStar CR</a> playbook.</p>
   </div>
 
   <div class="section">
@@ -1134,11 +1159,13 @@ function vProcess(){
       <table><thead><tr><th>When</th><th>Channel</th><th>Action</th></tr></thead>
       <tbody>${pr.cadence.map(c=>`<tr><td class="day num">${esc(c.day)}</td><td><span class="chip" style="font-size:11px">${esc(c.channel)}</span></td><td>${esc(c.action)}</td></tr>`).join('')}</tbody></table>
     </div>
+    <div class="callout" style="margin-top:16px"><b>After Day 22.</b> ${esc(pr.cadenceNote)}</div>
   </div>
 
   <div class="section">
     <div class="sec-title"><h2>Close steps</h2><span class="rule"></span></div>
     <div class="card pad">${rows(pr.closeSteps)}</div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:14px">${esc(pr.livingNote)}</p>
   </div>`;
 }
 

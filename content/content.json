@@ -1,10 +1,10 @@
 {
   "meta": {
-    "version": "1.1",
+    "version": "1.2",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction, LoneStar CR, and Crystal Writing.",
     "lastUpdated": "2026-07-21",
-    "source": "Synced from ClearK12 Sales Brand & Messaging Guide (Word, v1.0)"
+    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0)"
   },
   "company": {
     "name": "ClearK12",
@@ -93,6 +93,13 @@
     }
   ],
   "process": {
+    "principle": "Sell the way districts buy: validate what they own, name the pain they feel, and prove we make their people's week easier.",
+    "stagesIntro": "Seven stages, from first touch to expansion. Don't advance a deal until it meets the exit criteria — that's how we keep the pipeline honest.",
+    "icp": "Both products serve public school districts and campuses. Primary buyers are district administrators (curriculum/C&I, academics, assessment, MTSS, and technology leaders) and campus leaders (principals and APs). Teachers are the users and powerful internal champions.",
+    "fitNote": "Before investing in a full demo cycle, confirm FIT. If two or more are unclear, stay in discovery.",
+    "discoveryIntro": "Discovery is where deals are won. Ask, listen, and mirror their words back in the demo. Start shared, then go product-specific.",
+    "cadenceNote": "Re-enter engaged-but-not-ready contacts into a lighter nurture (monthly value touch) and re-time around their budget/planning cycle.",
+    "livingNote": "This is a living document. Bring what's working (and the objections you can't beat) to sales enablement so we improve it together.",
     "stages": [
       {
         "n": 1,
@@ -384,7 +391,7 @@
       ],
       "bestFitSignals": [
         "Active MTSS/RTI focus, Tier 1 or reteach initiatives, or a data-to-action gap.",
-        "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards — but teachers still struggle to respond.",
+        "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards — but next steps are cumbersome, inconsistent, and often independent.",
         "Growth-goal pressure: T-TESS, SLOs, TIA, or accountability improvement."
       ],
       "discoveryQuestions": [
