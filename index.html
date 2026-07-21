@@ -123,7 +123,6 @@
   .search input { border: 0; background: transparent; color: var(--ink); width: 100%; outline: none; font-size: 14.5px; }
   .search svg { flex-shrink: 0; color: var(--faint); }
   .search kbd { font-size: 10.5px; color: var(--faint); border: 1px solid var(--border-strong); border-radius: 5px; padding: 2px 6px; font-family: inherit; white-space: nowrap; }
-  .search-wrap.compact { display: none; }
   .search-wrap.compact .search { padding: 7px 12px; border-radius: 9px; width: 210px; background: var(--surface-2); border-color: var(--border); }
   .search-wrap.compact input { font-size: 13px; }
 
@@ -353,11 +352,13 @@
     .topnav-in { gap: 14px; padding: 0 16px; height: 58px; }
     .brand-name span { display: none; }
     .nav a { padding: 18px 9px 15px; font-size: 13.5px; }
+    .search-wrap.compact .search { width: 150px; padding: 7px 10px; }
     .main { padding: 0 16px 80px; }
     .g2, .g3, .palette { grid-template-columns: 1fr; }
     .hero h1 { font-size: 32px; }
   }
-  @media (min-width: 721px) { .search-wrap.compact { display: block; } }
+  /* one search entry point per page: the hero box owns Home, the nav search owns everything else */
+  body.on-home .search-wrap.compact { display: none; }
   /* logo theming */
   .logo-swap .lg-dark { display: none; }
   :root[data-theme="dark"] .logo-swap .lg-light { display: none; }
@@ -1406,6 +1407,7 @@ function route(){
   let hash = location.hash || '#/home';
   const r = ROUTES[hash] || ROUTES['#/home'];
   if (!ROUTES[hash]) hash = '#/home';
+  document.body.classList.toggle('on-home', hash === '#/home');
   setContext(r.prod);
   const app = $('#app');
   app.innerHTML = r.view();
