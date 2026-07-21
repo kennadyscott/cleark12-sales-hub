@@ -334,6 +334,24 @@
   .jumpbar a.active { background: color-mix(in srgb, var(--accent) 13%, var(--surface)); color: var(--accent-strong); }
   @media (max-width: 720px) { .jumpbar { top: 58px; } }
 
+  .status-badge {
+    display: inline-flex; align-items: center; gap: 5px; cursor: help; margin-top: 8px;
+    font-size: 10.5px; font-weight: 750; letter-spacing: .05em; text-transform: uppercase;
+    border-radius: 999px; padding: 3px 10px; border: 1px solid;
+  }
+  .status-badge.ready {
+    color: var(--good); background: color-mix(in srgb, var(--good) 10%, var(--surface));
+    border-color: color-mix(in srgb, var(--good) 35%, var(--border));
+  }
+  .status-badge.ready::before { content: "✓"; font-weight: 900; }
+  .status-badge.draft {
+    color: #8A5400; background: color-mix(in srgb, #F0A828 14%, var(--surface));
+    border-color: color-mix(in srgb, #F0A828 45%, var(--border));
+  }
+  :root[data-theme="dark"] .status-badge.draft { color: #F0BE68; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .status-badge.draft { color: #F0BE68; } }
+  :root[data-theme="light"] .status-badge.draft { color: #8A5400; }
+
   .stage-body h4 .bench { margin-left: 8px; font-size: 11px; vertical-align: 2px; color: var(--muted); }
   .stall { font-size: 12.5px; margin-top: 5px; color: #8A5400; }
   .stall b { font-weight: 750; }
@@ -527,11 +545,17 @@ const DATA = {
     mission: "Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
     states: [
       { id:"texas", name:"Texas", product:"LoneStar CR", standards:"TEKS", test:"STAAR (ECR/SCR)", hash:"#/lonestar",
-        note:"Built exclusively for TEKS and Texas writing. Full messaging and playbook." },
+        status:"ready", statusLabel:"Playbook: ready",
+        statusTip:"Approved source content from the Brand & Messaging Guide and Sales Playbook.",
+        note:"Built exclusively for TEKS and Texas writing." },
       { id:"ohio", name:"Ohio", product:"Crystal Writing", standards:"Ohio's Learning Standards", test:"OST", hash:"#/writing/ohio",
-        note:"Built to Ohio's writing expectations. Full messaging and playbook." },
+        status:"draft", statusLabel:"Playbook: draft — in review",
+        statusTip:"Full messaging and playbook adapted from the approved Texas copy; pending sales-enablement sign-off.",
+        note:"Built to Ohio's writing expectations." },
       { id:"georgia", name:"Georgia", product:"Crystal Writing", standards:"Georgia Standards of Excellence", test:"Georgia Milestones", hash:"#/writing/georgia",
-        note:"Built to Georgia's writing expectations. Full messaging and playbook." }
+        status:"draft", statusLabel:"Playbook: draft — in review",
+        statusTip:"Full messaging and playbook adapted from the approved Texas copy; pending sales-enablement sign-off.",
+        note:"Built to Georgia's writing expectations." }
     ],
     stateNote: "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; every other state sells as Crystal Writing. Each state below has its own overview, messaging, and playbook.",
     bestFitSignals: [
@@ -723,11 +747,11 @@ const DATA = {
       colors:{ primary:"#0C3A4B", accent:"#2FB4CC", dark:"#0C3A4B", gray:"#565A5C", primaryLight:"#E4F5F8" },
       voice:"Confident, credible, and Texas-proud — the same energy as Crystal, in teal. LoneStar CR leans on evidence: it pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine. It speaks plainly to the grading pain teachers feel every week and to the STAAR outcomes leaders own.",
       valuePillars:[
-        { title:"More writing practice", body:"Up to 10x more student writing reps." },
+        { title:"More writing practice", body:"Students write far more when every response no longer waits on hand-grading." },
         { title:"Instant scoring & feedback", body:"Students get a grade and personalized feedback immediately; teachers stop hand-grading." },
         { title:"Built for standards", body:"ECR/SCR aligned to what the state actually requires." },
         { title:"Automated, multi-tiered scaffolding", body:"Support auto-adjusts to each student's level." },
-        { title:"Time back for teachers", body:"Up to 2 hours saved per assignment." }
+        { title:"Time back for teachers", body:"Teachers stop hand-grading every response." }
       ],
       problem:"It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
       problemTagline:"The bottleneck to better writing isn't effort — it's grading time.",
@@ -758,7 +782,7 @@ const DATA = {
         { audience:"campus", care:["State test writing performance","Instructional consistency","Teacher time & morale","Evidence of growth","Increased capacity"], leadMessage:"More writing practice in every classroom — with visible, tracked growth." },
         { audience:"district", care:["State test/accountability outcomes","Standard alignment","Scalable, research-backed approach","Return on teacher time"], leadMessage:"A Texas-built, research-backed way to raise constructed-response scores at scale." }
       ],
-      sayThis:["Built exclusively for TEKS and Texas writing.","Assign more writing, grade none of it.","Up to 10x more writing practice.","Instant, personalized feedback on every response.","Research-backed writing growth in daily routines."],
+      sayThis:["Built exclusively for TEKS and Texas writing.","Assign more writing, grade none of it.","More writing practice, without more grading.","Instant, personalized feedback on every response.","Research-backed writing growth in daily routines."],
       notThis:["Just an AI essay grader","Replaces your ELAR curriculum","Works for any state / any test","Grades like a human, so no need to review","A worksheet generator"],
       bestFitSignals:[
         "STAAR writing/constructed-response performance is a named priority (ECR/SCR).",
@@ -777,20 +801,20 @@ const DATA = {
         "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
-      productClaims:"Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built exclusively for TEKS and Texas writing.",
+      productClaims:"Instant scoring and personalized feedback on every response, built exclusively for TEKS and Texas writing, grounded in the peer-reviewed research above.",
       hook:"Assign more writing, grade none of it — and give every student instant feedback.",
       scripts:{
-        coldCall:"Hi, this is ___ with LoneStar CR. The quick reason I'm calling is that the redesigned STAAR made constructed-response writing central — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. LoneStar CR is built exclusively for TEKS and Texas writing. Teachers create ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELAR teachers?",
+        coldCall:"Hi, this is ___ with LoneStar CR. The quick reason I'm calling is that the redesigned STAAR made constructed-response writing central — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. LoneStar CR is built exclusively for TEKS and Texas writing. Teachers create ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELAR teachers?",
         coldEmail:{
           subject:"More writing practice, zero grading, at [District]",
-          body:"Hi [Name] — STAAR now leans hard on constructed response (ECR/SCR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nLoneStar CR is the constructed-response writing partner for Texas classrooms. Built for TEKS, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          body:"Hi [Name] — STAAR now leans hard on constructed response (ECR/SCR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nLoneStar CR is the constructed-response writing partner for Texas classrooms. Built for TEKS, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
         },
         pitchOutline:[
           "Problem (45s): STAAR made ECR/SCR central; practice is capped by grading time; feedback comes days late.",
           "Who we are (45s): the constructed-response writing partner, built exclusively for TEKS and Texas writing — a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
-          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
           "Close (15s): more writing, none of the grading — the fastest path to better Texas writers."
         ]
       },
@@ -1354,6 +1378,7 @@ function vWriting(){
         <button class="prod-card" data-route data-hash="${s.hash}" style="padding:22px">
           <div class="eyebrow" style="color:var(--faint)">${esc(s.name)}</div>
           <h3 style="margin:8px 0 4px;font-size:19px;color:${s.id==='texas'?'#2FB4CC':'#57B4E5'}">${esc(s.product)}</h3>
+          <span class="status-badge ${s.status}" title="${esc(s.statusTip)}">${esc(s.statusLabel)}</span>
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px">
             <span class="chip">${esc(s.standards)}</span>
             <span class="chip">${esc(s.test)}</span>

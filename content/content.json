@@ -1,10 +1,10 @@
 {
   "meta": {
-    "version": "1.7",
+    "version": "1.8",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
-    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0). Stage benchmarks + nurture motion and OH/GA state editions are drafts pending sales-enablement approval."
+    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0). Stage benchmarks + nurture motion and OH/GA state editions are drafts pending sales-enablement approval. Unverifiable 10x/2-hour claims removed 2026-07-21."
   },
   "company": {
     "name": "ClearK12",
@@ -90,7 +90,10 @@
         "standards": "TEKS",
         "test": "STAAR (ECR/SCR)",
         "hash": "#/lonestar",
-        "note": "Built exclusively for TEKS and Texas writing. Full messaging and playbook."
+        "status": "ready",
+        "statusLabel": "Playbook: ready",
+        "statusTip": "Approved source content from the Brand & Messaging Guide and Sales Playbook.",
+        "note": "Built exclusively for TEKS and Texas writing."
       },
       {
         "id": "ohio",
@@ -99,7 +102,10 @@
         "standards": "Ohio's Learning Standards",
         "test": "OST",
         "hash": "#/writing/ohio",
-        "note": "Built to Ohio's writing expectations. Full messaging and playbook."
+        "status": "draft",
+        "statusLabel": "Playbook: draft — in review",
+        "statusTip": "Full messaging and playbook adapted from the approved Texas copy; pending sales-enablement sign-off.",
+        "note": "Built to Ohio's writing expectations."
       },
       {
         "id": "georgia",
@@ -108,7 +114,10 @@
         "standards": "Georgia Standards of Excellence",
         "test": "Georgia Milestones",
         "hash": "#/writing/georgia",
-        "note": "Built to Georgia's writing expectations. Full messaging and playbook."
+        "status": "draft",
+        "statusLabel": "Playbook: draft — in review",
+        "statusTip": "Full messaging and playbook adapted from the approved Texas copy; pending sales-enablement sign-off.",
+        "note": "Built to Georgia's writing expectations."
       }
     ],
     "stateNote": "The writing story is the same everywhere — the standards, test names, and product name change by state. Texas sells as LoneStar CR; every other state sells as Crystal Writing. Each state below has its own overview, messaging, and playbook.",
@@ -143,7 +152,7 @@
       "valuePillars": [
         {
           "title": "More writing practice",
-          "body": "Up to 10x more student writing reps."
+          "body": "Students write far more when every response no longer waits on hand-grading."
         },
         {
           "title": "Instant scoring & feedback",
@@ -159,7 +168,7 @@
         },
         {
           "title": "Time back for teachers",
-          "body": "Up to 2 hours saved per assignment."
+          "body": "Teachers stop hand-grading every response."
         }
       ],
       "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
@@ -233,7 +242,7 @@
       "sayThis": [
         "Built specifically to each state's standards and writing expectations.",
         "Assign more writing, grade none of it.",
-        "Up to 10x more writing practice.",
+        "More writing practice, without more grading.",
         "Instant, personalized feedback on every response.",
         "Research-backed writing growth in daily routines."
       ],
@@ -261,20 +270,20 @@
         "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
-      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built specifically to each state's standards and writing expectations.",
+      "productClaims": "Instant scoring and personalized feedback on every response, built specifically to each state's standards and writing expectations, grounded in the peer-reviewed research above.",
       "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that state ELA assessments lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically to each state's standards and writing expectations. Teachers create constructed-response tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that state ELA assessments lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically to each state's standards and writing expectations. Teachers create constructed-response tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — state tests lean hard on constructed response, but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for classrooms. Built to state standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] — state tests lean hard on constructed response, but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for classrooms. Built to state standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): state tests made constructed response central; practice is capped by grading time; feedback comes days late.",
           "Who we are (45s): the constructed-response writing partner, built specifically to each state's standards and writing expectations — a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
-          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
           "Close (15s): more writing, none of the grading — the fastest path to better writers."
         ]
       },
@@ -711,7 +720,7 @@
       "valuePillars": [
         {
           "title": "More writing practice",
-          "body": "Up to 10x more student writing reps."
+          "body": "Students write far more when every response no longer waits on hand-grading."
         },
         {
           "title": "Instant scoring & feedback",
@@ -727,7 +736,7 @@
         },
         {
           "title": "Time back for teachers",
-          "body": "Up to 2 hours saved per assignment."
+          "body": "Teachers stop hand-grading every response."
         }
       ],
       "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
@@ -828,7 +837,7 @@
       "sayThis": [
         "Built exclusively for TEKS and Texas writing.",
         "Assign more writing, grade none of it.",
-        "Up to 10x more writing practice.",
+        "More writing practice, without more grading.",
         "Instant, personalized feedback on every response.",
         "Research-backed writing growth in daily routines."
       ],
@@ -856,20 +865,20 @@
         "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
-      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built exclusively for TEKS and Texas writing.",
+      "productClaims": "Instant scoring and personalized feedback on every response, built exclusively for TEKS and Texas writing, grounded in the peer-reviewed research above.",
       "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with LoneStar CR. The quick reason I'm calling is that the redesigned STAAR made constructed-response writing central — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. LoneStar CR is built exclusively for TEKS and Texas writing. Teachers create ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELAR teachers?",
+        "coldCall": "Hi, this is ___ with LoneStar CR. The quick reason I'm calling is that the redesigned STAAR made constructed-response writing central — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. LoneStar CR is built exclusively for TEKS and Texas writing. Teachers create ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELAR teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — STAAR now leans hard on constructed response (ECR/SCR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nLoneStar CR is the constructed-response writing partner for Texas classrooms. Built for TEKS, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] — STAAR now leans hard on constructed response (ECR/SCR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nLoneStar CR is the constructed-response writing partner for Texas classrooms. Built for TEKS, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): STAAR made ECR/SCR central; practice is capped by grading time; feedback comes days late.",
           "Who we are (45s): the constructed-response writing partner, built exclusively for TEKS and Texas writing — a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
-          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
           "Close (15s): more writing, none of the grading — the fastest path to better Texas writers."
         ]
       },
@@ -918,7 +927,7 @@
       "valuePillars": [
         {
           "title": "More writing practice",
-          "body": "Up to 10x more student writing reps."
+          "body": "Students write far more when every response no longer waits on hand-grading."
         },
         {
           "title": "Instant scoring & feedback",
@@ -934,7 +943,7 @@
         },
         {
           "title": "Time back for teachers",
-          "body": "Up to 2 hours saved per assignment."
+          "body": "Teachers stop hand-grading every response."
         }
       ],
       "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
@@ -1008,7 +1017,7 @@
       "sayThis": [
         "Built specifically for Ohio's Learning Standards and Ohio writing expectations.",
         "Assign more writing, grade none of it.",
-        "Up to 10x more writing practice.",
+        "More writing practice, without more grading.",
         "Instant, personalized feedback on every response.",
         "Research-backed writing growth in daily routines."
       ],
@@ -1036,20 +1045,20 @@
         "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
-      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built specifically for Ohio's Learning Standards and Ohio writing expectations.",
+      "productClaims": "Instant scoring and personalized feedback on every response, built specifically for Ohio's Learning Standards and Ohio writing expectations, grounded in the peer-reviewed research above.",
       "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that Ohio's state ELA tests lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for Ohio's Learning Standards and Ohio writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that Ohio's state ELA tests lean hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for Ohio's Learning Standards and Ohio writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — the OST leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Ohio classrooms. Built for Ohio's Learning Standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] — the OST leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Ohio classrooms. Built for Ohio's Learning Standards, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): the OST made constructed response central; practice is capped by grading time; feedback comes days late.",
           "Who we are (45s): the constructed-response writing partner, built specifically for Ohio's Learning Standards and Ohio writing expectations — a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
-          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
           "Close (15s): more writing, none of the grading — the fastest path to better Ohio writers."
         ]
       },
@@ -1090,7 +1099,7 @@
       "valuePillars": [
         {
           "title": "More writing practice",
-          "body": "Up to 10x more student writing reps."
+          "body": "Students write far more when every response no longer waits on hand-grading."
         },
         {
           "title": "Instant scoring & feedback",
@@ -1106,7 +1115,7 @@
         },
         {
           "title": "Time back for teachers",
-          "body": "Up to 2 hours saved per assignment."
+          "body": "Teachers stop hand-grading every response."
         }
       ],
       "problem": "It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
@@ -1180,7 +1189,7 @@
       "sayThis": [
         "Built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
         "Assign more writing, grade none of it.",
-        "Up to 10x more writing practice.",
+        "More writing practice, without more grading.",
         "Instant, personalized feedback on every response.",
         "Research-backed writing growth in daily routines."
       ],
@@ -1208,20 +1217,20 @@
         "Immediate automated feedback improved writing performance by +0.55 SD across grade levels (Fleckenstein et al., 2023).",
         "Daily argument writing raised scores +0.21 on a 1-6 rubric across 47 districts (SRI, C3WP, 2017)."
       ],
-      "productClaims": "Up to 10x more writing practice, up to 2 hours saved per assignment, instant scoring and feedback, built specifically for the Georgia Standards of Excellence and Georgia writing expectations.",
+      "productClaims": "Instant scoring and personalized feedback on every response, built specifically for the Georgia Standards of Excellence and Georgia writing expectations, grounded in the peer-reviewed research above.",
       "hook": "Assign more writing, grade none of it — and give every student instant feedback.",
       "scripts": {
-        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that the Georgia Milestones ELA assessment leans hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for the Georgia Standards of Excellence and Georgia writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write up to 10x more and teachers save around two hours per assignment. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
+        "coldCall": "Hi, this is ___ with Crystal Writing. The quick reason I'm calling is that the Georgia Milestones ELA assessment leans hard on constructed-response writing — and it's the hardest thing to practice at volume, because every response a teacher assigns is another stack to grade. Crystal Writing is built specifically for the Georgia Standards of Excellence and Georgia writing expectations. Teachers create ECR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so students write far more, and teachers get their grading time back. Would it be worth a quick 20-minute demo to see how this could work for your ELA teachers?",
         "coldEmail": {
           "subject": "More writing practice, zero grading, at [District]",
-          "body": "Hi [Name] — Georgia Milestones leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Georgia classrooms. Built for the Georgia Standards of Excellence, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and returns up to two hours per assignment to teachers. Districts use it to raise writing practice up to 10x.\n\nWorth a 20-minute look for [District]? — [Rep]"
+          "body": "Hi [Name] — Georgia Milestones leans hard on constructed response (ECR), but students can only write as much as teachers can grade. That's the bottleneck.\n\nCrystal Writing is the constructed-response writing partner for Georgia classrooms. Built for the Georgia Standards of Excellence, it lets teachers generate unlimited writing tasks, gives students instant AI scoring and personalized feedback (with RACE/TAG strategy anchors and auto-scaffolding), and takes the grading stack off teachers' desks — so students can write far more, far more often.\n\nWorth a 20-minute look for [District]? — [Rep]"
         },
         "pitchOutline": [
           "Problem (45s): Georgia Milestones made constructed response central; practice is capped by grading time; feedback comes days late.",
           "Who we are (45s): the constructed-response writing partner, built specifically for the Georgia Standards of Excellence and Georgia writing expectations — a specialist, not a curriculum.",
           "Write. Score. Grow. (1 min): assign in seconds, students write with scaffolding, instant scoring + feedback, revise across drafts.",
           "Proof (1 min): frequent writing, explicit strategies, and instant feedback are the research-backed levers (Writing Next; AWE meta-analyses).",
-          "Impact (1 min): up to 10x more practice, ~2 hours saved per assignment, tracked growth in Crystal-Clear reports.",
+          "Impact (1 min): dramatically more practice, grading time returned to teachers, tracked growth in Crystal-Clear reports.",
           "Close (15s): more writing, none of the grading — the fastest path to better Georgia writers."
         ]
       },

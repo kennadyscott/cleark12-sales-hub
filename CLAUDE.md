@@ -32,5 +32,5 @@ src/
 
 ## Provenance / editing notes
 - Crystal Instruction content is adapted from the client's existing Brand Positioning & Messaging Framework — treat it as approved.
-- LoneStar CR content was derived from the product website (lonestarcr.ai) and is a **first-draft positioning** — the model name "Write. Score. Grow." and the mission line are proposals open to revision. Keep product claims to: up to 10x more writing practice, ~2 hours saved per assignment, instant scoring/feedback, built for TEKS/Texas writing, plus the cited research effect sizes.
+- LoneStar CR content was derived from the product website (lonestarcr.ai) and is a **first-draft positioning** — the model name "Write. Score. Grow." and the mission line are proposals open to revision. Keep product claims to: instant scoring/feedback, built for TEKS/Texas writing, plus the cited research effect sizes. **Do NOT reintroduce the "up to 10x more writing practice" / "up to 2 hours saved per assignment" numbers — removed 2026-07-21 as unverifiable (no pilot data or methodology to cite).**
 - Companion source docs (Word): ClearK12 Sales Brand & Messaging Guide, ClearK12 Sales Playbook.
