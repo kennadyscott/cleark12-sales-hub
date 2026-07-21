@@ -407,18 +407,38 @@ const DATA = {
   company: {
     name: "ClearK12",
     tagline: "Educational Technology",
-    positioning: "ClearK12 is an educational technology company built for Texas classrooms. We make the day-to-day work of teaching measurably easier — turning student data and required standards into fast, confident instructional action.",
-    promise: "Educational technology that helps Texas teachers do their best work — with less friction.",
+    positioning: "ClearK12 is an educational technology company built for the realities of today's classrooms. We make the day-to-day work of teaching measurably easier — turning student data and required standards into fast, confident instructional action. Our products sit alongside the curriculum, assessments, and systems districts already own; we make those investments work harder rather than asking schools to rip and replace.",
+    promise: "Educational technology that helps teachers do their best work — with less friction.",
     brandPrinciples: [
-      { title: "Texas-built", body: "Everything is designed around TEKS and the realities of Texas classrooms and accountability — not repackaged national content." },
+      { title: "State standard-built", body: "Everything is designed around state standards and the realities of classrooms and accountability — not repackaged national content." },
       { title: "Teacher-first", body: "We reduce prep, planning, and grading. We never add work to a teacher's plate to use us." },
       { title: "Additive, not disruptive", body: "We work alongside what districts already own. We are not a rip-and-replace." },
       { title: "Speed to action", body: "Data and standards are everywhere; the value is responding faster. We compress the time between 'what happened' and 'what to do next.'" },
       { title: "Plain-spoken", body: "We name the buyer's real pain in their words. No edtech jargon, no buzzword soup." }
     ],
-    voice: "Confident, warm, and practical. We sound like an experienced Texas educator who respects the buyer's time and knows the classroom. Optimistic without overpromising, specific without drowning people in features. Short sentences. Concrete claims.",
+    voice: "Confident, warm, and practical. We sound like an experienced educator who respects the buyer's time and knows the classroom. We are optimistic without overpromising, and specific without drowning people in features. Sentences are short. Claims are concrete.",
     goldenRule: "Lead with the problem the buyer feels, not the features we ship. Features prove the story — they are never the opening line.",
-    colors: { navy: "#10305C", blue: "#1F9BE0", gray: "#565A5C", lightGray: "#EEF1F4" }
+    colors: { navy: "#10305C", blue: "#1F9BE0", gray: "#565A5C", lightGray: "#EEF1F4" },
+    paletteMeta: [
+      { name:"ClearK12 Navy", hex:"#10305C", use:"Headlines, primary text, logo mark" },
+      { name:"ClearK12 Blue", hex:"#1F9BE0", use:"Accents, links, chart highlights" },
+      { name:"Slate Gray", hex:"#565A5C", use:"Body text, captions, “Educational Technology”" }
+    ],
+    logoRules: [
+      "Keep clear space around the logo equal to the height of the “K12” mark; never crowd it.",
+      "Place the full-color logo on white or very light backgrounds; use a reversed (white) logo on navy.",
+      "Do not stretch, recolor, add effects, or place the logo on busy photos."
+    ],
+    paletteNote: "Use the ClearK12 palette for corporate materials, capabilities decks that span both products, contracts, and the company signature line. Product materials lead with the product palette and carry ClearK12 as the endorsing parent (“a ClearK12 product”).",
+    emailSignature: "First Name Last Name | Title\ncleark12.com\nP: phone number",
+    introLine: "Hi, I'm _______ with ClearK12. I'd like to share one of our programs with you, Crystal Instruction.",
+    familyNote: "The platforms are complementary, not competing. Crystal Instruction is about instructional response across Math, ELAR, and Science; Crystal Writing, including LoneStar CR, is a specialist in the single hardest-to-grade skill. Many districts are strong candidates for both."
+  },
+  crystalWriting: {
+    name: "Crystal Writing",
+    blurb: "The writing development hub that provides scaffolding and support to help students build the skills to become strong writers.",
+    availability: "Available in Ohio and Georgia",
+    positioning: "Crystal Writing is the writing partner for classrooms. Using advanced AI, teachers create standards-aligned response tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built specific to state standards and grade-level writing expectations."
   },
   audiences: [
     { id: "district", label: "District administrators", note: "Superintendents, C&I / academics, assessment, MTSS, and technology leaders. Primary economic buyer." },
@@ -496,8 +516,8 @@ const DATA = {
         { title:"Targeted support", body:"Reteach pathways, SNAP Lessons, and ClearSheets for differentiation." },
         { title:"Reduced teacher workload", body:"Less analyzing, regrouping, and reteach planning." }
       ],
-      problem:"Schools already have curriculum, assessments, intervention systems, and dashboards. The challenge is no longer collecting data or accessing resources — it's instructional response. Teachers still struggle to identify gaps quickly, know what to reteach, respond immediately, and connect data to action.",
-      problemTagline:"The challenge isn't data. It's responding fast enough.",
+      problem:"Schools already have curriculum, assessments, intervention systems, and dashboards. The challenge is no longer collecting data or accessing resources — it's instructional response. Teachers still struggle to identify gaps quickly, know what to reteach, respond immediately, and connect data to immediate action.",
+      problemTagline:"The challenge isn't data. It's being able to implement next steps with ease.",
       model:{ name:"Teach. See. Respond.", steps:[
         { name:"Identify the gap", body:"Assessment data (Benchmark, Interim, MAP, STAAR, curriculum) reveals where students need support." },
         { name:"Teach", body:"Teachers launch targeted, TEKS-aligned support based on that data — without the prep." },
@@ -506,9 +526,20 @@ const DATA = {
         { name:"Better outcomes", body:"Gaps close before they grow; teachers move on confident students are ready." }
       ]},
       isIsnt:{
-        is:"Instructional response infrastructure that connects assessment data, TEKS-aligned instruction, real-time insight, and targeted next steps into one streamlined workflow — supporting Tier 1, MTSS, small groups, and intervention.",
-        isnt:"A curriculum replacement, a supplemental-content library, a practice/worksheet platform, an MTSS platform, or an 'all-in-one' system. We support MTSS — we don't become it."
+        is:"Instructional response infrastructure that connects assessment data, standard-aligned instruction, real-time insight, and targeted next steps into one streamlined workflow — supporting Tier 1, MTSS, small groups, and intervention.",
+        isnt:"A curriculum replacement, a supplemental-content library, a practice/worksheet platform, or an MTSS platform. We support MTSS — we don't become it."
       },
+      paletteMeta: [
+        { name:"Crystal Magenta", hex:"#D81BB8", use:"Primary brand, headlines, CTAs" },
+        { name:"Crystal Purple", hex:"#8E7CE8", use:"Secondary accent, positioning lines" },
+        { name:"Near Black", hex:"#1A1A1A", use:"High-impact section backgrounds" },
+        { name:"Slate Gray", hex:"#565A5C", use:"Body text, “Instruction” wordmark" }
+      ],
+      logoRules: [
+        "The gem mark may appear on white or on black; keep magenta vivid — never muddy or pastel it.",
+        "“Crystal” is magenta; “Instruction” is gray. Don't recolor the wordmark.",
+        "Endorse with ClearK12: “Crystal Instruction, a ClearK12 product.”"
+      ],
       tools:["ClearLessons (TEKS-aligned instruction)","Checkpoints & Crystal Analysis (real-time visibility)","Pathways, SNAP Lessons, ClearSheets (targeted reteach & differentiation)"],
       audienceMessaging:[
         { audience:"teacher", care:["Less prep & grading","Faster reteach","Clear next steps","Small-group support"], leadMessage:"Know what to do next — in real time, without extra work." },
@@ -552,35 +583,46 @@ const DATA = {
       id:"lonestar", name:"LoneStar CR", endorsement:"a ClearK12 product",
       oneLiner:"The constructed-response writing partner for Texas classrooms.",
       cardBlurb:"Writing practice and instant scoring built for STAAR growth.",
-      marketTagline:"Write Smarter, Learn Faster.",
-      mission:"Helping Texas teachers grow confident writers — by making constructed-response practice frequent, scaffolded, and instantly scored, without the grading burden.",
+      marketTagline:"A system for developing strong writers.",
+      mission:"Helping teachers grow confident writers — by making writing practice frequent, scaffolded, and instantly scored, without the grading burden.",
       positioning:"LoneStar CR is the constructed-response writing partner for Texas classrooms. Using advanced AI, teachers create standards-aligned ECR and SCR tasks in seconds, students write with individualized scaffolding, and every response is scored instantly with personalized feedback — built exclusively for TEKS and Texas writing.",
       colors:{ primary:"#0C3A4B", accent:"#2FB4CC", dark:"#0C3A4B", gray:"#565A5C", primaryLight:"#E4F5F8" },
       voice:"Confident, credible, and Texas-proud — the same energy as Crystal, in teal. LoneStar CR leans on evidence: it pairs bold, benefit-led claims ('Write smarter, learn faster') with a strong research spine. It speaks plainly to the grading pain teachers feel every week and to the STAAR outcomes leaders own.",
       valuePillars:[
         { title:"More writing practice", body:"Up to 10x more student writing reps." },
         { title:"Instant scoring & feedback", body:"Students get a grade and personalized feedback immediately; teachers stop hand-grading." },
-        { title:"Built for TEKS & Texas writing", body:"ECR/SCR aligned to what the state actually requires." },
+        { title:"Built for standards", body:"ECR/SCR aligned to what the state actually requires." },
         { title:"Automated, multi-tiered scaffolding", body:"Support auto-adjusts to each student's level." },
         { title:"Time back for teachers", body:"Up to 2 hours saved per assignment." }
       ],
-      problem:"The redesigned STAAR made written constructed response (ECR and SCR) central — and it's the single hardest thing to teach at volume. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
+      problem:"It is unsustainable for teachers to grade writing and provide feedback in a way that is timely and meaningful for students. Students need far more writing reps than they get, because every response a teacher assigns is another stack to grade by hand. So practice stays low, feedback comes days late, and writing scores lag. The bottleneck isn't willingness — it's grading time.",
       problemTagline:"The bottleneck to better writing isn't effort — it's grading time.",
       model:{ name:"Write. Score. Grow.", steps:[
-        { name:"Assign", body:"Teachers generate unlimited TEKS-aligned ECR/SCR tasks in seconds, with strategy anchors like RACE or TAG built in." },
+        { name:"Assign", body:"Teachers access unlimited standards-aligned ECR/SCR tasks in seconds, with strategy anchors like RACE built in." },
         { name:"Write", body:"Students write with automated scaffolding matched to their level, plus self-paced lessons on writing fundamentals." },
         { name:"Score", body:"AI scores every response instantly and returns personalized, actionable feedback — no manual grading." },
         { name:"Revise & Grow", body:"Students revise across drafts (where the research shows the biggest gains) while teachers watch growth in Crystal-Clear reports." }
       ]},
       isIsnt:{
-        is:"A specialist writing-practice and instant-scoring tool for STAAR-style constructed response, built for TEKS — that dramatically increases practice volume and returns teacher time.",
+        is:"A specialist writing-practice and instant-scoring tool that dramatically increases practice volume and returns teacher time.",
         isnt:"A full ELAR curriculum, a general essay checker, or a replacement for the teacher's judgment. The teacher stays in control of instruction; LoneStar CR removes the grading bottleneck."
       },
+      paletteMeta: [
+        { name:"LoneStar Deep Teal", hex:"#0C3A4B", use:"Primary brand, headlines, backgrounds" },
+        { name:"LoneStar Bright Teal", hex:"#2FB4CC", use:"Accents, CTAs, highlights" },
+        { name:"White", hex:"#FFFFFF", use:"Reversed logo & text on teal" },
+        { name:"Slate Gray", hex:"#565A5C", use:"Body text, captions" }
+      ],
+      logoRules: [
+        "Lead with the Texas-outline mark; keep the star/state silhouette recognizable — don't crop it.",
+        "Use the white/blue reversed logo on deep-teal backgrounds; full color on white.",
+        "Endorse with ClearK12: “LoneStar CR, a ClearK12 product.”"
+      ],
       tools:["Unlimited assignment creation","Instant grading & feedback","Automated scaffolding (multi-tiered)","Strategy anchors (RACE, TAG)","Self-paced interactive lessons","Integrated data & analytics (Crystal-Clear reports)"],
       audienceMessaging:[
         { audience:"teacher", care:["Grading load","Not enough writing time","Fast, useful feedback","Reaching every level"], leadMessage:"Assign more writing, grade none of it — and give every student instant feedback." },
-        { audience:"campus", care:["STAAR writing performance","Instructional consistency","Teacher time & morale","Evidence of growth"], leadMessage:"More writing practice in every classroom — with visible, tracked growth." },
-        { audience:"district", care:["STAAR/accountability outcomes","TEKS alignment","Scalable, research-backed approach","Return on teacher time"], leadMessage:"A Texas-built, research-backed way to raise constructed-response scores at scale." }
+        { audience:"campus", care:["State test writing performance","Instructional consistency","Teacher time & morale","Evidence of growth","Increased capacity"], leadMessage:"More writing practice in every classroom — with visible, tracked growth." },
+        { audience:"district", care:["State test/accountability outcomes","Standard alignment","Scalable, research-backed approach","Return on teacher time"], leadMessage:"A Texas-built, research-backed way to raise constructed-response scores at scale." }
       ],
       sayThis:["Built exclusively for TEKS and Texas writing.","Assign more writing, grade none of it.","Up to 10x more writing practice.","Instant, personalized feedback on every response.","Research-backed writing growth in daily routines."],
       notThis:["Just an AI essay grader","Replaces your ELAR curriculum","Works for any state / any test","Grades like a human, so no need to review","A worksheet generator"],
@@ -594,6 +636,7 @@ const DATA = {
         "Realistically, how often do students write, and how long until they get feedback?",
         "How much time are ELAR teachers spending grading writing each week?"
       ],
+      proofIntro:"Frequent writing, explicit strategies, and instant feedback across drafts map directly to the research base. Use these to substantiate claims; cite responsibly.",
       proofPoints:[
         "Strategy-rich writing instruction improved achievement by up to +1.14 SD (Graham & Perin, Writing Next, 2007).",
         "Automated writing evaluation produced a +0.86 SD effect, strongest when students revised across drafts (Zhai & Ma, 2023).",
@@ -759,7 +802,7 @@ function vHome(){
   ];
   const cards = [
     { id:"clark12", name:"ClearK12", color:"#10305C", accent:"#1F9BE0",
-      desc:"The company story: Texas-built, teacher-first, additive not disruptive.",
+      desc:"The company story: state standard-built, teacher-first, additive not disruptive.",
       chips:[{l:"Principles", h:"#/home"},{l:"Sales process", h:"#/process"},{l:"Brand kit", h:"#/brand"}],
       go:{ l:"View sales process", h:"#/process" } },
     { id:"crystal", name:"Crystal Instruction", color:"#D81BB8", accent:"#D81BB8",
@@ -819,6 +862,14 @@ function vHome(){
   </div>
 
   <div class="section">
+    <div class="sec-title"><h2>Who ClearK12 is</h2><span class="rule"></span></div>
+    <div class="card pad">
+      <p style="color:var(--ink-2)">${esc(c.positioning)}</p>
+      <p class="hook" style="margin-top:14px;font-size:17px">${esc(c.promise)}</p>
+    </div>
+  </div>
+
+  <div class="section">
     <div class="callout"><b>The golden rule.</b> ${esc(c.goldenRule)}</div>
   </div>
 
@@ -843,15 +894,14 @@ function vHome(){
         <div class="pillar"><div class="eyebrow" style="color:#D81BB8">Lead with Crystal when</div><p style="margin-top:6px">${esc(DATA.crossSell.leadWithCrystal)}</p></div>
         <div class="pillar"><div class="eyebrow" style="color:#2FB4CC">Lead with LoneStar when</div><p style="margin-top:6px">${esc(DATA.crossSell.leadWithLonestar)}</p></div>
       </div>
+      <p style="font-size:13.5px;color:var(--muted);margin-top:16px">${esc(DATA.company.familyNote)}
+        <button class="bchip" data-route data-hash="#/lonestar" style="--bc:#2FB4CC;margin-left:8px;padding:3px 10px;font-size:12px">Crystal Writing — OH &amp; GA →</button></p>
     </div>
   </div>
 
   <div class="section">
-    <div class="sec-title"><h2>Company promise & voice</h2><span class="rule"></span></div>
-    <div class="grid g2">
-      <div class="card pad"><div class="eyebrow">Promise</div><p class="hook" style="margin-top:8px">${esc(c.promise)}</p></div>
-      <div class="card pad"><div class="eyebrow">Voice</div><p style="margin-top:8px;color:var(--ink-2)">${esc(c.voice)}</p></div>
-    </div>
+    <div class="sec-title"><h2>Shared voice</h2><span class="rule"></span></div>
+    <div class="card pad"><p style="color:var(--ink-2)">${esc(c.voice)}</p></div>
   </div>`;
 }
 
@@ -902,8 +952,24 @@ function vProduct(id){
   ${p.proofPoints ? `
   <div class="section">
     <div class="sec-title"><h2>Proof points</h2><span class="rule"></span></div>
-    <div class="card pad">${p.proofPoints.map(pp=>`<div class="proof">${esc(pp)}</div>`).join('')}
+    <div class="card pad">
+    ${p.proofIntro?`<p style="font-size:13.5px;color:var(--muted);margin-bottom:16px">${esc(p.proofIntro)}</p>`:''}
+    ${p.proofPoints.map(pp=>`<div class="proof">${esc(pp)}</div>`).join('')}
     <div class="callout" style="margin-top:16px"><b>Cleared claims only.</b> ${esc(p.productClaims)}</div></div>
+  </div>` : ''}
+
+  ${id==='lonestar' ? `
+  <div class="section">
+    <div class="sec-title"><h2>Sister product — ${esc(DATA.crystalWriting.name)}</h2><span class="rule"></span></div>
+    <div class="card pad">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span class="chip accent">${esc(DATA.crystalWriting.availability)}</span>
+        <span class="chip">a ClearK12 product</span>
+      </div>
+      <p class="hook" style="margin:14px 0 12px;font-size:17px">${esc(DATA.crystalWriting.blurb)}</p>
+      <p style="color:var(--ink-2)">${esc(DATA.crystalWriting.positioning)}</p>
+      <p style="font-size:13px;color:var(--muted);margin-top:14px">${esc(DATA.company.familyNote)}</p>
+    </div>
   </div>` : ''}`;
 }
 
@@ -1070,8 +1136,19 @@ function renderObjFinder(){
 
 function vBrand(){
   const c = DATA.company;
-  const swatches = (obj) => `<div class="palette">${Object.entries(obj).map(([k,v])=>`
-    <div class="sw"><div class="sw-chip" style="background:${v}"></div><div class="sw-meta"><div class="nm">${esc(k)}</div><div class="hx">${esc(v)}</div></div></div>`).join('')}</div>`;
+  const swatches = (meta) => `<div class="palette">${meta.map(s=>`
+    <div class="sw"><div class="sw-chip" style="background:${s.hex};${s.hex==='#FFFFFF'?'border-bottom:1px solid var(--border)':''}"></div>
+    <div class="sw-meta"><div class="nm">${esc(s.name)}</div><div class="hx">${esc(s.hex)}</div>
+    ${s.use?`<div style="font-size:11.5px;color:var(--muted);margin-top:3px;line-height:1.45">${esc(s.use)}</div>`:''}</div></div>`).join('')}</div>`;
+  const brandBlock = (title, meta, rules, col, id) => `
+  <div class="section">
+    <div class="sec-title"><h2>${esc(title)}</h2><span class="rule"></span></div>
+    ${swatches(meta)}
+    <div class="grid g2" style="margin-top:16px;align-items:start">
+      <div class="card pad" style="text-align:center">${gem(col,44)}<div style="margin-top:10px;font-weight:700">${esc(title)}</div><div style="font-size:11.5px;color:var(--faint);margin-top:4px">Placeholder mark — final logo pending</div></div>
+      <div class="card pad"><div class="eyebrow">Logo rules</div><div style="margin-top:12px">${rows(rules)}</div></div>
+    </div>
+  </div>`;
   return `
   <div class="page-head">
     <div class="eyebrow">Brand Standards</div>
@@ -1079,23 +1156,24 @@ function vBrand(){
     <p class="lede">Every asset carries the same identity. Endorse products as “a ClearK12 product,” and keep the palettes true to hex.</p>
   </div>
 
-  <div class="section" style="margin-top:0">
-    <div class="sec-title"><h2>ClearK12 (company)</h2><span class="rule"></span></div>
-    ${swatches(c.colors)}
-  </div>
-  ${DATA.products.map(p=>`
-  <div class="section">
-    <div class="sec-title"><h2>${esc(p.name)}</h2><span class="rule"></span></div>
-    ${swatches(p.colors)}
-  </div>`).join('')}
+  <div class="callout" style="margin-top:0">${esc(c.paletteNote)}</div>
+
+  ${brandBlock('ClearK12', c.paletteMeta, c.logoRules, '#1F9BE0', 'clark12')}
+  ${DATA.products.map(p=>brandBlock(p.name, p.paletteMeta, p.logoRules, PROD_META[p.id].color, p.id)).join('')}
 
   <div class="section">
-    <div class="sec-title"><h2>Logo usage</h2><span class="rule"></span></div>
-    <div class="grid g3">
-      ${[['clark12','#1F9BE0'],['crystal','#D81BB8'],['lonestar','#2FB4CC']].map(([id,col])=>`
-        <div class="card pad" style="text-align:center">${gem(col,44)}<div style="margin-top:10px;font-weight:700">${PROD_META[id].label}</div></div>`).join('')}
+    <div class="sec-title"><h2>Cohesive branding</h2><span class="rule"></span></div>
+    <div class="grid g2" style="align-items:start">
+      <div class="card pad">
+        <div class="eyebrow">Email signature</div>
+        <div class="script" style="margin-top:12px"><div class="script-body" style="padding:14px 16px">${esc(c.emailSignature)}</div></div>
+      </div>
+      <div class="card pad">
+        <div class="eyebrow">How to introduce us</div>
+        <p class="hook" style="margin-top:10px;font-size:16.5px">“${esc(c.introLine)}”</p>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:10px">Always name the company first, then the program — every rep, the same way.</p>
+      </div>
     </div>
-    <div class="callout" style="margin-top:16px"><b>Note.</b> These crystal marks are placeholders. Final logos: <code>clark12-logo.png</code>, <code>crystal-logo.png</code>, <code>lonestar-logo.png</code> — Crystal reads best on white or black; LoneStar has a reversed white/blue version for teal backgrounds.</div>
   </div>
 
   <div class="section">
