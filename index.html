@@ -418,6 +418,17 @@
   .hook { font-size: 20px; font-weight: 600; letter-spacing: -.01em; color: var(--ink); line-height: 1.4; }
   .hook .em { color: var(--accent-strong); font-weight: 700; }
 
+  #updateBar {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    z-index: 95; display: flex; align-items: center; gap: 14px;
+    background: var(--ink); color: var(--bg); border-radius: 12px;
+    padding: 11px 16px; font-size: 13.5px; font-weight: 600; box-shadow: var(--shadow-lg);
+    animation: rise .3s ease;
+  }
+  #updateBar button {
+    background: var(--bg); color: var(--ink); border: 0; border-radius: 8px;
+    padding: 6px 13px; font-weight: 700; font-size: 12.5px; cursor: pointer;
+  }
   .toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 20px); background: var(--ink); color: var(--bg); padding: 10px 18px; border-radius: 10px; font-size: 13.5px; font-weight: 600; box-shadow: var(--shadow-lg); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; z-index: 90; }
   .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
@@ -2621,6 +2632,33 @@ document.addEventListener('click', e => {
   const menu = $('#avatarMenu');
   if (menu?.open && !e.target.closest('#avatarMenu')) menu.open = false;
 });
+
+/* ============================ UPDATE WATCHER ============================ */
+// GitHub Pages caches this page for 10 minutes; reps keep tabs open far longer.
+// Poll our own ETag and offer a one-click refresh when a new deploy lands.
+(function(){
+  let baseline = null;
+  async function check(){
+    try {
+      const r = await fetch(location.pathname, { method: 'HEAD', cache: 'no-store' });
+      const tag = r.headers.get('etag') || r.headers.get('last-modified');
+      if (!tag) return;
+      if (baseline === null){ baseline = tag; return; }
+      if (tag !== baseline && !$('#updateBar')){
+        const bar = document.createElement('div');
+        bar.id = 'updateBar';
+        bar.innerHTML = `<span>✨ The hub was updated — refresh for the latest content.</span>`;
+        const btn = document.createElement('button');
+        btn.textContent = 'Refresh now';
+        btn.addEventListener('click', () => location.reload());
+        bar.appendChild(btn);
+        document.body.appendChild(bar);
+      }
+    } catch(e){ /* offline or unsupported host — stay quiet */ }
+  }
+  check();
+  setInterval(check, 5 * 60 * 1000);
+})();
 
 /* ============================ INIT ============================ */
 applyTheme();
