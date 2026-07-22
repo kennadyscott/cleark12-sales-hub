@@ -868,6 +868,128 @@ const DATA = {
     fitNote: "Before investing in a full demo cycle, confirm FIT. If two or more are unclear, stay in discovery.",
     discoveryIntro: "Discovery is where deals are won. Ask, listen, and mirror their words back in the demo. Start shared, then go product-specific.",
     cadenceNote: "Re-enter engaged-but-not-ready contacts into the long-tail nurture below and re-time around their budget/planning cycle.",
+    nurtureSequence: {
+        "name": "Nurture sequence — after Day 22",
+        "entryCriteria": "A contact who finished the 22-day Connect cadence without booking a conversation, or who engaged and told us the timing isn't right. They are not disqualified — just not ready. Nurture keeps us warmly and usefully present until the timing turns, which for most Texas campuses is spring planning.",
+        "tonePrinciple": "We earn the next conversation by being useful, not persistent. Every nurture touch gives something — a resource, a relevant thought, a genuine note. None of them push. Confident, generous, patient, zero pressure. If a touch feels like a chase, rewrite it.",
+        "rhythm": "Roughly one value touch every 4-6 weeks, timed to the Texas school calendar — not a fixed day count. Mostly email and LinkedIn; a call only at a natural high-intent moment (spring planning). Between touches, engage lightly on LinkedIn: react to and comment on their posts so you stay familiar without emailing.",
+        "segments": [
+            {
+                "label": "Warm / not now",
+                "guidance": "They named a time ('check back in the spring', 'after STAAR'). Honor it exactly. Fewer touches, well-timed, converging on the moment they gave you. This is the highest-value segment — treat the date they named as a commitment you keep."
+            },
+            {
+                "label": "Cold / never engaged",
+                "guidance": "No reply through the whole cadence. Go lighter and slower (roughly every 6-8 weeks), lead with LinkedIn plus the occasional value email, and watch for a trigger (new role, a post about writing/assessment/STAAR, a district initiative) to re-engage."
+            }
+        ],
+        "exitRules": [
+            "Any real engagement — a reply, a resource click followed by a reply, a LinkedIn message, expressed interest — moves them straight back into the active Connect cadence or into Discover. Stop nurturing and pick up the conversation.",
+            "An explicit 'not interested' or 'please stop' means mark them disqualified and remove them from all sequences.",
+            "At the spring planning window, deliberately re-enter the active cadence with a fresh, timely reason (touch N5 does this)."
+        ],
+        "touches": [
+            {
+                "id": "N1",
+                "timing": "~4 weeks after Day 22",
+                "channel": "Email",
+                "purpose": "First nurture touch. Give something genuinely useful with zero ask, so the relationship resets from 'sales follow-up' to 'helpful partner.'",
+                "crystal": {
+                    "subject": "A quick reteach checklist you might find useful",
+                    "body": "Hi [Name] — no ask here, just something that might help your team. We put together a one-page checklist teachers use to turn benchmark results into targeted reteach the same day: [link].\n\nSteal it, share it with your team, or ignore it — whatever's useful. Rooting for a strong year.\n— [Rep]"
+                },
+                "lonestar": {
+                    "subject": "A constructed-response practice guide for your ELAR team",
+                    "body": "Hi [Name] — no ask here, just something that might help your team. Here's a short guide our ELAR teachers like for making constructed-response practice manageable without drowning in grading: [link].\n\nPass it along or ignore it — whatever's useful. Rooting for a strong year.\n— [Rep]"
+                }
+            },
+            {
+                "id": "N2",
+                "timing": "~6-8 weeks after Day 22",
+                "channel": "LinkedIn (connection request + note)",
+                "purpose": "Move the relationship to a lower-pressure channel where you can stay familiar without filling their inbox.",
+                "crystal": {
+                    "subject": null,
+                    "body": "Hi [Name] — I work with Texas campus leaders on instructional response after benchmarks. No pitch — I mostly share useful things for principals here and would value staying connected."
+                },
+                "lonestar": {
+                    "subject": null,
+                    "body": "Hi [Name] — I work with Texas campus leaders on writing and constructed response. No pitch — I mostly share useful things for principals here and would value staying connected."
+                }
+            },
+            {
+                "id": "N3",
+                "timing": "Fall benchmark window (seasonal trigger)",
+                "channel": "Email",
+                "purpose": "Be relevant to the moment. Tie a light, no-agenda offer to what's actually happening on campus right now.",
+                "crystal": {
+                    "subject": "As fall benchmarks roll in",
+                    "body": "Hi [Name] — thinking of your team as fall benchmark data starts coming back. The hard part is rarely the data; it's turning it into fast, consistent reteach across classrooms.\n\nIf it's ever useful to compare notes on how other Texas campuses handle that stretch, I'm glad to — no agenda. Hope the year's off to a good start.\n— [Rep]"
+                },
+                "lonestar": {
+                    "subject": "As fall writing ramps up",
+                    "body": "Hi [Name] — thinking of your ELAR team as the year gets going and writing ramps up.\n\nIf it's ever useful to swap notes on how other Texas campuses fit more constructed-response practice in without piling on grading, I'm glad to — no agenda. Hope the year's off to a good start.\n— [Rep]"
+                }
+            },
+            {
+                "id": "N4",
+                "timing": "Before winter break (December)",
+                "channel": "Email",
+                "purpose": "A purely human, no-agenda note. This is what separates a partner from a vendor — and it keeps the relationship warm through the quiet stretch.",
+                "crystal": {
+                    "subject": "A note before the break",
+                    "body": "Hi [Name] — just a quick note to wish you and your teachers a well-earned break. It's a long fall on a campus.\n\nNo agenda at all — thank you for the work you do for your kids and your staff. Talk in the new year if it's ever useful.\n— [Rep]"
+                },
+                "lonestar": {
+                    "subject": "A note before the break",
+                    "body": "Hi [Name] — just a quick note to wish you and your teachers a well-earned break. It's a long fall on a campus.\n\nNo agenda at all — thank you for the work you do for your kids and your staff. Talk in the new year if it's ever useful.\n— [Rep]"
+                }
+            },
+            {
+                "id": "N5",
+                "timing": "Spring planning / budget window (Jan-Feb) — RE-ENTRY POINT",
+                "channel": "Email + Call",
+                "purpose": "The pivotal touch. This is when campuses shape next year, so it's the moment to re-open the conversation and move the contact back into the active Connect cadence.",
+                "crystal": {
+                    "subject": "As you plan for next year at [Campus]",
+                    "body": "Hi [Name] — this is usually when campuses start shaping next year. If more consistent instructional response — every classroom reteaching the right TEKS quickly after assessments — is something you're weighing, I'd welcome a 20-minute conversation to share what's working on similar campuses.\n\nI completely understand if the timing still isn't right; I just thought this was the natural moment to check.\n— [Rep]"
+                },
+                "lonestar": {
+                    "subject": "As you plan for next year at [Campus]",
+                    "body": "Hi [Name] — this is usually when campuses start shaping next year. If getting students writing more, with the grading off your ELAR teachers, is on your list, I'd welcome a 20-minute conversation to share what's working on similar campuses.\n\nI completely understand if the timing still isn't right; I just thought this was the natural moment to check.\n— [Rep]"
+                }
+            },
+            {
+                "id": "N6",
+                "timing": "STAAR season (Mar-Apr)",
+                "channel": "Email",
+                "purpose": "Stay out of the way during the busiest, most stressful stretch — while signaling you're still here. Empathy over ask.",
+                "crystal": {
+                    "subject": "Through the STAAR stretch",
+                    "body": "Hi [Name] — I know spring and STAAR swallow the calendar, so I'll be brief and stay out of your way.\n\nJust a note that I'm here whenever things settle and it's useful to talk about next year. Wishing your teachers and students a strong finish.\n— [Rep]"
+                },
+                "lonestar": {
+                    "subject": "Through the STAAR stretch",
+                    "body": "Hi [Name] — I know spring and STAAR swallow the calendar, so I'll keep out of your way.\n\nJust a note that I'm here whenever things settle and it's useful to talk about writing for next year. Wishing your teachers and students a strong finish.\n— [Rep]"
+                }
+            },
+            {
+                "id": "N7",
+                "timing": "End of year / early summer (May-June)",
+                "channel": "Email",
+                "purpose": "Reflection plus a next-year seed. Summer is a calm window to explore without the school-year rush — position it that way.",
+                "crystal": {
+                    "subject": "A calm time to look at next year",
+                    "body": "Hi [Name] — as the year wraps, a lot of campuses take stock of what to change for next fall. If instructional consistency and faster reteach are on that list, summer is a calm time to explore it without the school-year rush.\n\nHappy to share what similar campuses are planning, whenever suits you. Congratulations on getting your team to the finish line.\n— [Rep]"
+                },
+                "lonestar": {
+                    "subject": "A calm time to plan writing for next year",
+                    "body": "Hi [Name] — as the year wraps, campuses take stock of what to change for next fall. If more writing practice and less grading for your ELAR team is on that list, summer is a calm time to explore it without the rush.\n\nHappy to share what similar campuses are planning, whenever suits you. Congratulations on getting your team to the finish line.\n— [Rep]"
+                }
+            }
+        ],
+        "reEntry": "If a nurture touch earns any engagement, stop nurturing and pick the conversation back up in the active Connect cadence or Discover. Otherwise, the sequence loops with the school calendar — the spring planning touch (N5) is the deliberate re-entry each year until they either engage or ask you to stop."
+    },
     nurture: {
       intro: "Most K-12 deals die on timing, not fit. After the Day-22 break-up email, engaged-but-not-ready contacts move into nurture — treat it as a real pipeline stage with its own motion, not a graveyard.",
       rhythm: [
@@ -2330,17 +2452,52 @@ function vProcess(){
       <table><thead><tr><th>When</th><th>Channel</th><th>Action</th></tr></thead>
       <tbody>${pr.cadence.map(c=>`<tr><td class="day num">${esc(c.day)}</td><td><span class="chip" style="font-size:11px">${esc(c.channel)}</span></td><td>${esc(c.action)}</td></tr>`).join('')}</tbody></table>
     </div>
-    <div class="callout" style="margin-top:16px"><b>After Day 22.</b> ${esc(pr.cadenceNote)}</div>
+    <div class="callout" style="margin-top:16px"><b>After Day 22.</b> ${esc(pr.cadenceNote)}
+      <button class="bchip" data-route data-hash="#/process" data-anchor="#sec-nurture" style="--bc:var(--accent);margin-left:8px;padding:3px 10px;font-size:12px">See the nurture cadence ↓</button></div>
   </div>
 
   <div class="section" id="sec-nurture">
-    <div class="sec-title"><h2>Long-tail nurture</h2><span class="rule"></span></div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.nurture.intro)}</p>
-    <div class="grid g2" style="align-items:start">
-      <div class="card pad"><div class="eyebrow">The rhythm</div><div style="margin-top:12px">${rows(pr.nurture.rhythm)}</div></div>
-      <div class="card pad"><div class="eyebrow">Re-entry triggers — watch for these</div><div style="margin-top:12px">${rows(pr.nurture.triggers)}</div></div>
+    <div class="sec-title"><h2>${esc(pr.nurtureSequence.name)}</h2><span class="rule"></span></div>
+    <p style="color:var(--ink-2);font-size:14px;margin-bottom:14px"><b style="color:var(--accent-strong)">Who enters:</b> ${esc(pr.nurtureSequence.entryCriteria)}</p>
+    <div class="callout"><b>Tone.</b> ${esc(pr.nurtureSequence.tonePrinciple)}</div>
+    <div class="card pad" style="margin-top:14px">
+      <div class="eyebrow">Rhythm</div>
+      <p style="color:var(--ink-2);font-size:13.5px;margin-top:8px">${esc(pr.nurtureSequence.rhythm)}</p>
     </div>
-    <div class="callout" style="margin-top:16px"><b>The rule.</b> ${esc(pr.nurture.rule)}</div>
+    <div class="grid g2" style="margin-top:14px">
+      ${pr.nurtureSequence.segments.map(sg=>`<div class="pillar"><div class="eyebrow">${esc(sg.label)}</div><p style="margin-top:8px;font-size:13px">${esc(sg.guidance)}</p></div>`).join('')}
+    </div>
+
+    <h3 style="font-size:16px;font-weight:800;margin:26px 0 10px">The seven touches</h3>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${pr.nurtureSequence.touches.map(t=>`
+        <details class="card task-row" style="overflow:hidden">
+          <summary style="display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;flex-wrap:wrap;list-style:none">
+            <span class="caret" style="color:var(--faint);font-size:11px">▸</span>
+            <span class="stage-n" style="width:auto;border-radius:999px;padding:0 10px;font-size:12px;height:26px">${esc(t.id)}</span>
+            <span style="font-weight:700;font-size:14px">${esc(t.timing)}</span>
+            <span class="chip" style="font-size:11px">${esc(t.channel)}</span>
+            ${t.id==='N5'?'<span class="chip accent" style="font-size:10px;font-weight:800">RE-ENTRY POINT</span>':''}
+          </summary>
+          <div style="padding:0 16px 16px">
+            <p style="font-size:13px;color:var(--muted);margin-bottom:14px">${esc(t.purpose)}</p>
+            <div class="grid g2" style="align-items:start">
+              ${[['crystal','Crystal Instruction','#D81BB8'],['lonestar','LoneStar CR','#2FB4CC']].map(([k,label,col])=>{
+                const c = t[k]; if(!c) return '';
+                const copyText = (c.subject?`Subject: ${c.subject}\n\n`:'') + c.body;
+                return `<div class="script"><div class="script-head"><h4 style="color:${col}">${label}</h4>${copyBtn('Copy', payload(copyText))}</div>
+                  ${c.subject?`<div class="email-sub"><b>Subject:</b> ${highlightPH(c.subject)}</div>`:''}
+                  <div class="script-body">${highlightPH(c.body)}</div></div>`;
+              }).join('')}
+            </div>
+          </div>
+        </details>`).join('')}
+    </div>
+
+    <div class="grid g2" style="margin-top:16px;align-items:start">
+      <div class="card pad"><div class="eyebrow" style="color:var(--good)">Exit rules — when to stop nurturing</div><div style="margin-top:12px">${rows(pr.nurtureSequence.exitRules)}</div></div>
+      <div class="callout" style="height:100%"><b>The loop.</b> ${esc(pr.nurtureSequence.reEntry)}</div>
+    </div>
   </div>
 
   <div class="section" id="sec-close">
