@@ -122,7 +122,24 @@
   .top-right { margin-left: auto; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .icon-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface-2); color: var(--ink-2); display: grid; place-items: center; }
   .icon-btn:hover { border-color: var(--border-strong); color: var(--ink); }
-  .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border); display: grid; place-items: center; font-size: 12.5px; font-weight: 700; color: var(--ink-2); }
+  .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--border); display: grid; place-items: center; font-size: 12.5px; font-weight: 700; color: var(--ink-2); cursor: pointer; }
+  .avatar:hover { border-color: var(--accent); color: var(--accent-strong); }
+  .avatar-wrap { position: relative; }
+  .avatar-wrap[open] .avatar { border-color: var(--accent); }
+  .avatar-wrap summary { list-style: none; }
+  .avatar-wrap summary::-webkit-details-marker { display: none; }
+  .avatar-menu {
+    position: absolute; right: 0; top: calc(100% + 10px); z-index: 60; width: 264px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+    box-shadow: var(--shadow-lg); padding: 8px; animation: rise .18s ease;
+  }
+  .avatar-menu .am-head { padding: 10px 12px 8px; border-bottom: 1px solid var(--border); margin-bottom: 6px; }
+  .avatar-menu .am-title { font-weight: 800; font-size: 14px; }
+  .avatar-menu .am-sub { font-size: 11.5px; color: var(--muted); margin-top: 2px; }
+  .avatar-menu a { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 9px; text-decoration: none; color: var(--ink); font-weight: 600; font-size: 13.5px; }
+  .avatar-menu a:hover { background: var(--surface-2); }
+  .avatar-menu a .ami { color: var(--accent-strong); flex-shrink: 0; }
+  .avatar-menu .am-note { font-size: 10.5px; color: var(--faint); padding: 8px 12px 4px; border-top: 1px solid var(--border); margin-top: 6px; }
 
   /* search (shared component) */
   .search-wrap { position: relative; }
@@ -732,7 +749,25 @@
       <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
         <svg id="themeIcon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"></svg>
       </button>
-      <span class="avatar">KS</span>
+      <details class="avatar-wrap" id="avatarMenu">
+        <summary class="avatar" title="Your Sales HQ">KS</summary>
+        <div class="avatar-menu">
+          <div class="am-head">
+            <div class="am-title">Sales HQ</div>
+            <div class="am-sub">Your dashboard, call log &amp; celebration board</div>
+          </div>
+          <a data-hq href="/" target="_blank" rel="noreferrer">
+            <svg class="ami" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 12 12 3l9 9M5 10v10h5v-6h4v6h5V10"/></svg>
+            Today — my task list</a>
+          <a data-hq href="/pipeline" target="_blank" rel="noreferrer">
+            <svg class="ami" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+            Call Log</a>
+          <a data-hq href="/board" target="_blank" rel="noreferrer">
+            <svg class="ami" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 0 1-10 0Z"/><path d="M17 5h3a2 2 0 0 1-2 4h-1M7 5H4a2 2 0 0 0 2 4h1"/></svg>
+            Celebration Board</a>
+          <div class="am-note">Sign in with your Sales HQ account — same email your admin set up.</div>
+        </div>
+      </details>
     </div>
   </div>
 </header>
@@ -2570,6 +2605,20 @@ document.addEventListener('keydown', e => {
     location.hash = '#/home';
     setTimeout(() => $('#heroSearch')?.focus(), 80);
   }
+});
+
+/* ============================ SALES HQ LINK ============================ */
+// The rep dashboard (private Next.js app). Update this ONE constant if the
+// deployed URL differs; localhost fallback keeps it working in local dev.
+const HQ_URL = location.hostname === 'localhost'
+  ? 'http://localhost:4193'
+  : 'https://cleark12-sales-hq.vercel.app';
+document.querySelectorAll('[data-hq]').forEach(a => {
+  a.href = HQ_URL + a.getAttribute('href');
+});
+document.addEventListener('click', e => {
+  const menu = $('#avatarMenu');
+  if (menu?.open && !e.target.closest('#avatarMenu')) menu.open = false;
 });
 
 /* ============================ INIT ============================ */
