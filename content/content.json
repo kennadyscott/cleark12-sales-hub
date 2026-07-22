@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.11",
+    "version": "1.12",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
     "lastUpdated": "2026-07-22",
@@ -508,7 +508,7 @@
       "endorsement": "a ClearK12 product",
       "updated": {
         "scripts": "2026-07-22",
-        "objections": "2026-07-21",
+        "objections": "2026-07-22",
         "messaging": "2026-07-21"
       },
       "oneLiner": "The instructional response partner for Texas classrooms.",
@@ -580,6 +580,7 @@
       "pbExtras": {
         "headline": "Know what to say — and what to ask next.",
         "sub": "Choose a sales moment to get the script, talking points, objections, and discovery guidance you need.",
+        "demoOwner": "Erin",
         "moments": [
           {
             "key": "call",
@@ -597,15 +598,6 @@
             "chips": [
               "Subject + body",
               "Placeholders auto-fill"
-            ]
-          },
-          {
-            "key": "pitch",
-            "label": "Pitch outline",
-            "sub": "Six-part conversation · 5 min",
-            "chips": [
-              "6 beats",
-              "~5 minutes"
             ]
           }
         ]
@@ -786,6 +778,14 @@
         {
           "objection": "How is this different from our data dashboard?",
           "response": "Dashboards show what happened. Crystal helps teachers act on it immediately — launch targeted reteach, check understanding live, and move on with confidence."
+        },
+        {
+          "objection": "We already have too many platforms.",
+          "response": "Fair — and Crystal Instruction isn't another platform to manage. It works alongside the curriculum, benchmarks, and dashboards you already have, using what they surface to help teachers act. The goal is fewer disconnected steps, not one more login."
+        },
+        {
+          "objection": "I can't add something else to my teachers' plates.",
+          "response": "That's exactly the problem we're solving. Crystal Instruction is meant to take work off teachers' plates — it identifies the gap for them, checks understanding without grading, and gives them the next move so they're not building reteach from scratch. It should save planning and grading time, not add to it."
         }
       ],
       "outreachCadence": {

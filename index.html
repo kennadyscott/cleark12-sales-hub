@@ -938,7 +938,7 @@ const DATA = {
   products: [
     {
       id:"crystal", name:"Crystal Instruction", endorsement:"a ClearK12 product",
-      updated: { scripts: "2026-07-22", objections: "2026-07-21", messaging: "2026-07-21" },
+      updated: { scripts: "2026-07-22", objections: "2026-07-22", messaging: "2026-07-21" },
       oneLiner:"The instructional response partner for Texas classrooms.",
       cardBlurb:"Instructional tools that turn insight into action.",
       selfGuidedDemo:"crystalinstruction.com/self-guided-demo",
@@ -1057,7 +1057,9 @@ const DATA = {
       },
       objections:[
         { objection:"Is this a curriculum replacement?", response:"No — Crystal works alongside your curriculum and assessments to help teachers respond faster. We support MTSS; we don't replace it." },
-        { objection:"How is this different from our data dashboard?", response:"Dashboards show what happened. Crystal helps teachers act on it immediately — launch targeted reteach, check understanding live, and move on with confidence." }
+        { objection:"How is this different from our data dashboard?", response:"Dashboards show what happened. Crystal helps teachers act on it immediately — launch targeted reteach, check understanding live, and move on with confidence." },
+        { objection:"We already have too many platforms.", response:"Fair — and Crystal Instruction isn't another platform to manage. It works alongside the curriculum, benchmarks, and dashboards you already have, using what they surface to help teachers act. The goal is fewer disconnected steps, not one more login." },
+        { objection:"I can't add something else to my teachers' plates.", response:"That's exactly the problem we're solving. Crystal Instruction is meant to take work off teachers' plates — it identifies the gap for them, checks understanding without grading, and gives them the next move so they're not building reteach from scratch. It should save planning and grading time, not add to it." }
       ]
     },
     {
@@ -1848,9 +1850,9 @@ function vMessagingPro(p, id){
   </div>
 
   <div class="section pro-foot">
-    <button class="linky" data-route data-hash="#/process" data-anchor="#objection-finder">
+    <button class="linky" data-route data-hash="#/${id}/playbook" data-anchor="#obj">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 19V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2Zm0 0a2 2 0 0 1 2-2h13"/></svg>
-      Open objection finder →</button>
+      Objection responses →</button>
     <span class="fdiv"></span>
     <button class="linky" data-route data-hash="#/${id}/playbook">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
@@ -1958,10 +1960,11 @@ function vPlaybookPro(p, id){
   </div>
 
   <div class="section" id="obj">
-    <div class="sec-title"><h2>Objection responses</h2><span class="rule"></span>
-      <button class="linky" data-route data-hash="#/process" data-anchor="#objection-finder" style="background:none;border:0;cursor:pointer;color:var(--accent);font-weight:700;font-size:13.5px">Open objection finder →</button>
-    </div>
-    ${objList(p.objections)}
+    <div class="sec-title"><h2>Objection responses</h2><span class="rule"></span>${stamp(p.updated?.objections)}</div>
+    ${objList([
+      ...p.objections.map(o => ({...o, src: p.name})),
+      ...DATA.process.sharedObjections.map(o => ({...o, src: 'Any ClearK12 product'}))
+    ], o => o.src)}
   </div>
 
   <div class="section grid g2" style="align-items:start">
@@ -1985,10 +1988,6 @@ function vPlaybookPro(p, id){
     <button class="linky" data-route data-hash="#/${id}/messaging">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l2-5.4a8.3 8.3 0 0 1-1-4A8.4 8.4 0 0 1 12.5 3a8.4 8.4 0 0 1 8.5 8.5Z"/></svg>
       Messaging →</button>
-    <span class="fdiv"></span>
-    <button class="linky" data-route data-hash="#/process" data-anchor="#objection-finder">
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      Objection finder →</button>
     <span class="fdiv"></span>
     <button class="btn" id="footCopyScript" style="font-size:14px">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
