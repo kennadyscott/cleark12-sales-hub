@@ -979,10 +979,10 @@ const DATA = {
       pbExtras:{
         headline:"Know what to say — and what to ask next.",
         sub:"Choose a sales moment to get the script, talking points, objections, and discovery guidance you need.",
+        demoOwner:"Erin",
         moments:[
-          { key:"call",  label:"Cold call",     sub:"Open with the problem · ~45 sec",  chips:["~45 seconds","20-minute demo ask"] },
-          { key:"email", label:"Cold email",    sub:"Short outreach · 2 min read",      chips:["Subject + body","Placeholders auto-fill"] },
-          { key:"pitch", label:"Pitch outline", sub:"Six-part conversation · 5 min",    chips:["6 beats","~5 minutes"] }
+          { key:"call",  label:"Cold call",  sub:"Open with the problem · ~45 sec", chips:["~45 seconds","20-minute demo ask"] },
+          { key:"email", label:"Cold email", sub:"Short outreach · 2 min read",     chips:["Subject + body","Placeholders auto-fill"] }
         ]
       },
       marketTagline:"Teach. See. Respond.",
@@ -1942,7 +1942,9 @@ function vPlaybookPro(p, id){
   </div>
 
   <div class="section card pmap">
-    <div class="pml">Pitch map</div>
+    <div class="pml" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">Demo — the six beats
+      ${x.demoOwner ? `<span class="chip" style="text-transform:none;letter-spacing:0;background:color-mix(in srgb, var(--accent) 10%, var(--surface));border-color:color-mix(in srgb, var(--accent) 30%, var(--border));color:var(--accent-strong)">🎤 Run by ${esc(x.demoOwner)} — you schedule it, ${esc(x.demoOwner)} delivers it</span>` : ''}
+    </div>
     <div class="pmap-steps">
       ${beats.map((b,i)=>`
         <div class="pmap-step">
