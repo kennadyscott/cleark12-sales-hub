@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "1.9",
+    "version": "1.10",
     "title": "ClearK12 Sales Hub",
     "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
     "lastUpdated": "2026-07-21",
@@ -747,7 +747,7 @@
           {
             "day": "Day 3",
             "channel": "Email",
-            "purpose": "Value follow-up. Make it concrete with one believable classroom scenario, then leave the decision with them.",
+            "purpose": "Value follow-up + the self-guided demo. Give one concrete scenario, hand over the async demo link, then leave the decision with them.",
             "components": [
               {
                 "type": "email",
@@ -757,11 +757,11 @@
                   "One less thing on your teachers' plates",
                   "From data to reteach in the same day"
                 ],
-                "body": "Hi [Name] \u2014 a concrete example of what I meant, and then I'll leave it with you. A 3rd-grade teacher finishes a unit and 12 students miss key TEKS. Normally that's hours of analyzing, regrouping, and hunting for reteach. With Crystal, those gaps surface right away and the teacher can respond the same day \u2014 without building anything from scratch.\n\nAcross a campus, that's more consistent response in every room and teachers who feel supported rather than buried. If that fits where you're headed this year, I'd enjoy walking your team through it \u2014 20 minutes, whenever suits you.\n\u2014 [Rep]",
+                "body": "Hi [Name] \u2014 a concrete example of what I meant, and then I'll leave it with you. A 3rd-grade teacher finishes a unit and 12 students miss key TEKS. Normally that's hours of analyzing, regrouping, and hunting for reteach. With Crystal, those gaps surface right away and the teacher can respond the same day \u2014 without building anything from scratch.\n\nAcross a campus, that's more consistent response in every room and teachers who feel supported rather than buried. If that fits where you're headed this year, I'd enjoy walking your team through it \u2014 20 minutes, whenever suits you. If you'd rather explore on your own first, here's a self-guided demo \u2014 no scheduling required: crystalinstruction.com/self-guided-demo\n\u2014 [Rep]",
                 "variant": {
                   "label": "A/B \u2014 outcome-led",
                   "subject": "What consistent reteach could look like at [Campus]",
-                  "body": "Hi [Name] \u2014 picture walking any classroom the week after a benchmark and seeing the same thing everywhere: teachers already reteaching the exact TEKS students missed and checking understanding live. That consistency is what we help campuses build \u2014 alongside your current curriculum, and in partnership with your teachers, not around them. Happy to show you if it's useful; you're the best judge of the fit.\n\u2014 [Rep]"
+                  "body": "Hi [Name] \u2014 picture walking any classroom the week after a benchmark and seeing the same thing everywhere: teachers already reteaching the exact TEKS students missed and checking understanding live. That consistency is what we help campuses build \u2014 alongside your current curriculum, and in partnership with your teachers, not around them. Happy to show you if it's useful; you're the best judge of the fit.\n\u2014 [Rep]\n\nWant to look on your own first? Self-guided demo: crystalinstruction.com/self-guided-demo"
                 }
               }
             ]
@@ -850,7 +850,8 @@
             ]
           }
         ]
-      }
+      },
+      "selfGuidedDemo": "crystalinstruction.com/self-guided-demo"
     },
     {
       "id": "lonestar",
