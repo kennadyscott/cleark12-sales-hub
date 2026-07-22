@@ -398,6 +398,81 @@
   .fit-card h4 { font-size: 15px; margin-bottom: 5px; }
   .fit-card p { font-size: 13px; color: var(--muted); }
 
+  /* ============ Sales Process redesign (sp-) ============ */
+  .sp-head { display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: start; }
+  .sp-qa { display: flex; gap: 10px; padding-top: 30px; }
+  .sp-qa button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; width: 104px; min-height: 94px; padding: 12px 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); font-size: 11.5px; font-weight: 700; color: var(--ink-2); text-align: center; line-height: 1.35; cursor: pointer; }
+  .sp-qa button:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); color: var(--accent-strong); }
+  .sp-qa svg { color: var(--accent-strong); }
+  .sp-motion { display: flex; gap: 15px; align-items: center; background: linear-gradient(92deg, #1B3FBE, #2451D6); border-radius: var(--radius); padding: 17px 22px; color: #fff; margin: 4px 0 8px; }
+  .sp-motion .mi { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.16); display: grid; place-items: center; color: #fff; }
+  .sp-motion p { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,.94); }
+  .sp-motion b { color: #fff; letter-spacing: .07em; font-size: 11.5px; text-transform: uppercase; }
+  .sp-stagegrid { display: grid; grid-template-columns: 1fr 292px; gap: 20px; align-items: start; }
+  .sp-sicon { width: 38px; height: 38px; border-radius: 10px; background: color-mix(in srgb, var(--accent) 10%, var(--surface)); color: var(--accent-strong); display: inline-grid; place-items: center; vertical-align: middle; margin-right: 10px; flex-shrink: 0; }
+  .stage-body { display: flex; gap: 12px; }
+  .stage-body > .sp-sicon { margin-top: 2px; }
+  .stage-body .stall { font-size: 12.5px; color: #C2410C; margin-top: 2px; }
+  .stage-body .stall b { color: #C2410C; font-weight: 700; }
+  .sp-side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 118px; }
+  .sp-sidecard { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); padding: 18px; }
+  .sp-sidecard h4 { display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--accent-strong); margin-bottom: 12px; }
+  .sp-check { display: flex; gap: 10px; font-size: 12.5px; color: var(--ink-2); line-height: 1.55; }
+  .sp-check + .sp-check { margin-top: 10px; }
+  .sp-check svg { flex-shrink: 0; color: #0E9F6E; margin-top: 2px; }
+  .sp-fitbar { display: flex; flex-wrap: wrap; margin-top: 14px; border-radius: var(--radius-sm); overflow: hidden; }
+  .sp-fitbar > div { flex: 1 1 240px; display: flex; align-items: center; gap: 10px; padding: 13px 18px; font-size: 13px; font-weight: 600; color: #fff; }
+  .sp-fitbar .adv { background: #1B3FBE; }
+  .sp-fitbar .stay { background: #10298A; }
+  .sp-obj { display: grid; grid-template-columns: 330px 1fr; gap: 16px; align-items: start; }
+  .sp-objlist { display: flex; flex-direction: column; gap: 6px; max-height: 520px; overflow: auto; padding-right: 4px; }
+  .sp-objlist button { display: flex; align-items: flex-start; gap: 9px; text-align: left; border: 1px solid var(--border); background: var(--surface); border-radius: 10px; padding: 11px 13px; font-size: 13px; font-weight: 600; color: var(--ink-2); cursor: pointer; line-height: 1.4; }
+  .sp-objlist button .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--faint); margin-top: 5px; flex-shrink: 0; }
+  .sp-objlist button.sel { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); color: var(--ink); }
+  .sp-objlist button.sel .dot { background: var(--accent); }
+  .sp-objdetail { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); padding: 22px; }
+  .sp-objdetail h3 { font-size: 16.5px; line-height: 1.35; margin: 4px 0 2px; }
+  .sp-objdetail .src { font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-strong); }
+  .sp-objdetail .resp { font-size: 13.5px; color: var(--ink-2); line-height: 1.65; margin: 12px 0 16px; }
+  .sp-crow { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border); font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+  .sp-crow:first-child { border-top: 0; padding-top: 2px; }
+  .sp-crow .copy { margin-left: auto; flex-shrink: 0; }
+  .sp-cadwrap { overflow-x: auto; padding-bottom: 4px; }
+  .sp-cad { display: grid; grid-template-columns: repeat(7, minmax(118px, 1fr)) minmax(140px, 160px); gap: 0; min-width: 980px; }
+  .sp-cadstep { position: relative; padding-right: 14px; }
+  .sp-cadstep .dayl { font-size: 12px; font-weight: 800; color: var(--accent-strong); }
+  .sp-cadstep .node { width: 34px; height: 34px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border: 2px solid color-mix(in srgb, var(--accent) 40%, var(--border)); color: var(--accent-strong); display: grid; place-items: center; margin: 8px 0; position: relative; z-index: 1; }
+  .sp-cadstep::after { content: ""; position: absolute; top: 43px; left: 40px; right: 6px; height: 2px; background: var(--border-strong); }
+  .sp-cadstep .chn { font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--accent-strong); margin-bottom: 4px; }
+  .sp-cadstep .act { font-size: 11.5px; color: var(--muted); line-height: 1.45; }
+  .sp-cadafter { border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border)); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); border-radius: var(--radius-sm); padding: 14px; font-size: 12px; color: var(--ink-2); display: flex; flex-direction: column; gap: 8px; align-self: start; }
+  .sp-cadafter b { color: var(--accent-strong); font-size: 12.5px; }
+  .sp-nurhead { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sp-nur3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+  .sp-ntlwrap { overflow-x: auto; margin: 20px 0 4px; }
+  .sp-ntl { display: grid; grid-template-columns: repeat(7, 1fr); min-width: 760px; }
+  .sp-ntl .nt { text-align: center; position: relative; padding: 4px 6px 0; }
+  .sp-ntl .nn { width: 38px; height: 38px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 12.5px; background: color-mix(in srgb, var(--accent) 12%, var(--surface)); color: var(--accent-strong); border: 2px solid color-mix(in srgb, var(--accent) 35%, var(--border)); position: relative; z-index: 1; }
+  .sp-ntl .nt::before { content: ""; position: absolute; top: 23px; left: -50%; width: 100%; height: 2px; background: var(--border-strong); }
+  .sp-ntl .nt:first-child::before { display: none; }
+  .sp-ntl .tim { font-size: 11px; color: var(--muted); margin-top: 8px; line-height: 1.35; }
+  .sp-ntl .ch { font-size: 10.5px; font-weight: 700; color: var(--accent-strong); margin-top: 3px; }
+  .sp-ntl .nt.re .nn { background: #F59E0B; border-color: #F59E0B; color: #fff; }
+  .sp-ntl .nt.re .rel { font-size: 9.5px; font-weight: 800; letter-spacing: .07em; color: #B45309; text-transform: uppercase; margin-top: 3px; }
+  .sp-close { background: #0C1C4E; border-radius: var(--radius); padding: 26px 28px; color: #fff; display: grid; grid-template-columns: 1.7fr 1fr; gap: 26px; }
+  .sp-close h2 { color: #fff; font-size: 19px; margin-bottom: 16px; display: flex; gap: 10px; align-items: center; }
+  .sp-close .sp-check { color: rgba(255,255,255,.86); }
+  .sp-close .sp-check svg { color: #5EEAD4; }
+  .sp-close aside { border-left: 1px solid rgba(255,255,255,.18); padding-left: 22px; font-size: 12.5px; color: rgba(255,255,255,.72); line-height: 1.6; display: flex; gap: 10px; align-items: flex-start; }
+  @media (max-width: 900px) {
+    .sp-head, .sp-stagegrid, .sp-obj, .sp-nurhead, .sp-close { grid-template-columns: 1fr; }
+    .sp-nur3 { grid-template-columns: 1fr; }
+    .sp-qa { padding-top: 0; flex-wrap: wrap; }
+    .sp-side { position: static; }
+    .sp-objlist { max-height: 280px; }
+    .sp-close aside { border-left: 0; padding-left: 0; }
+  }
+
   .rows { display: flex; flex-direction: column; gap: 9px; }
   .row { display: flex; gap: 11px; align-items: flex-start; font-size: 13.5px; color: var(--ink-2); }
   .row .b { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 8px; }
@@ -2365,37 +2440,87 @@ function vWriting(){
 
 function vProcess(){
   const pr = DATA.process;
+  const sents = t => t.split(/(?<=\.)\s+/).filter(Boolean);
+  const CK = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>`;
+  const checks = list => list.map(t=>`<div class="sp-check">${CK}<span>${esc(t)}</span></div>`).join('');
+  const STAGE_ICONS = [
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.9-2.8 3-4.2 5.5-4.2s4.6 1.4 5.5 4.2"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.6c2.3.2 4 1.5 4.8 3.9"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15c-2 0-3-1-3-1s-2.5.5-4-1c2-1 2.5-2.5 2.5-2.5S8.6 4.6 14 3c 4-1 7 0 7 0s1 3-0 7c-1.6 5.4-7.5 6.5-7.5 6.5S13 18 12 20c-1.5-1.5-1-4-1-4"/><circle cx="15" cy="9" r="1.6"/><path d="M5 19c1-1 3-1 3-1s0 2-1 3-3 1-3 1 0-2 1-3Z"/></svg>`
+  ];
+  const chanIcons = ch => {
+    let s = '';
+    if (/call/i.test(ch)) s += `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>`;
+    if (/email|linkedin/i.test(ch)) s += `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>`;
+    return s || CK;
+  };
+  const crows = list => list.map(t=>`<div class="sp-crow">${CK}<span>${esc(t)}</span>${copyBtn('Copy', payload(t))}</div>`).join('');
+  const fitS = sents(pr.fitNote);
+
   return `
-  <div class="page-head">
-    <div class="eyebrow">Shared Playbook</div>
-    <h1>The ClearK12 sales process</h1>
-    <p class="lede">One process for both products — what changes is the pain we lead with and the proof we bring. Use the messaging pages for the words; use this for the moves.</p>
+  <div class="sp-head">
+    <div class="page-head" style="margin-bottom:0">
+      <div class="eyebrow">Shared Playbook</div>
+      <h1>The ClearK12 sales process</h1>
+      <p class="lede">One process for both products — what changes is the pain we lead with and the proof we bring. Use the messaging pages for the words; use this for the moves.</p>
+    </div>
+    <div class="sp-qa">
+      <button data-route data-hash="#/home" data-anchor="#heroSearchWrap">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg>
+        Search playbook</button>
+      <button data-route data-hash="#/process" data-anchor="#objection-finder">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a8 8 0 0 1-11.6 7.2L4 21l1.8-5.4A8 8 0 1 1 21 12Z"/><path d="M9 11h6M9 14h3"/></svg>
+        Open objection finder</button>
+      <button data-route data-hash="#/crystal/messaging">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
+        Product messaging</button>
+    </div>
   </div>
 
-  <div class="callout" style="margin-top:0"><b>The motion.</b> ${esc(pr.principle)}</div>
+  <div class="sp-motion">
+    <span class="mi"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    <p><b>The motion:</b> ${esc(pr.principle)}</p>
+  </div>
 
   <nav class="jumpbar" id="jumpbar" aria-label="On this page">
     ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#objection-finder","Objections"],["#sec-cadence","Cadence"],["#sec-nurture","Nurture"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
   </nav>
 
   <div class="section" id="sec-stages">
-    <div class="sec-title"><h2>Seven stages</h2><span class="rule"></span></div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.stagesIntro)} Benchmarks below are guidance — tune them with sales enablement as real cycle data comes in.</p>
-    <div class="card pad">
-      <div class="stages">
-        ${pr.stages.map(s=>`
-          <div class="stage">
-            <div class="stage-rail"><span class="stage-n">${s.n}</span><span class="stage-line"></span></div>
-            <div class="stage-body"><h4>${esc(s.name)} <span class="bench chip">${esc(s.healthy)}</span></h4>
-              <p class="goal">${esc(s.goal)}</p>
-              <p class="exit"><b>Exit:</b> ${esc(s.exit)}</p>
-              <p class="stall"><b>Stalled?</b> ${esc(s.stall)}</p>
-            </div>
-          </div>`).join('')}
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:16px">${esc(pr.stagesIntro)} Benchmarks are guidance — tune them with sales enablement as real cycle data comes in.</p>
+    <div class="sp-stagegrid">
+      <div class="card pad">
+        <div class="stages">
+          ${pr.stages.map((s,i)=>`
+            <div class="stage">
+              <div class="stage-rail"><span class="stage-n">${s.n}</span><span class="stage-line"></span></div>
+              <div class="stage-body">
+                <span class="sp-sicon">${STAGE_ICONS[i%STAGE_ICONS.length]}</span>
+                <div>
+                  <h4>${esc(s.name)} <span class="bench chip">${esc(s.healthy)}</span></h4>
+                  <p class="goal">${esc(s.goal)}</p>
+                  <p class="exit"><b>Exit:</b> ${esc(s.exit)}</p>
+                  <p class="stall"><b>Stalled?</b> ${esc(s.stall)}</p>
+                </div>
+              </div>
+            </div>`).join('')}
+        </div>
+      </div>
+      <div class="sp-side">
+        <div class="sp-sidecard">
+          <h4><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Cycle length</h4>
+          ${checks(sents(pr.cycleNote))}
+        </div>
+        <div class="sp-sidecard">
+          <h4><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg> Timing &amp; procurement</h4>
+          ${checks(sents(pr.timingNote))}
+        </div>
       </div>
     </div>
-    <div class="callout" style="margin-top:16px"><b>Cycle length.</b> ${esc(pr.cycleNote)}</div>
-    <div class="callout" style="margin-top:12px"><b>Timing & procurement.</b> ${esc(pr.timingNote)}</div>
   </div>
 
   <div class="section" id="sec-icp">
@@ -2403,24 +2528,37 @@ function vProcess(){
     <div class="card pad">
       <p style="color:var(--ink-2)">${esc(pr.icp)}</p>
       <div class="grid g2" style="margin-top:16px">
-        <div class="pillar"><div class="eyebrow" style="color:#D81BB8">Best fit — Crystal Instruction</div><div style="margin-top:10px">${rows(prod('crystal').bestFitSignals)}</div></div>
-        <div class="pillar"><div class="eyebrow" style="color:#57B4E5">Best fit — Crystal Writing (LoneStar CR in Texas)</div><div style="margin-top:10px">${rows(DATA.crystalWriting.bestFitSignals)}</div></div>
+        <div class="pillar"><div class="eyebrow" style="color:#D81BB8;display:flex;align-items:center;gap:7px">${gem('#D81BB8',14)} Best fit — Crystal Instruction</div><div style="margin-top:10px">${rows(prod('crystal').bestFitSignals)}</div></div>
+        <div class="pillar"><div class="eyebrow" style="color:#57B4E5;display:flex;align-items:center;gap:7px">${gem('#57B4E5',14)} Best fit — Crystal Writing (LoneStar CR in Texas)</div><div style="margin-top:10px">${rows(DATA.crystalWriting.bestFitSignals)}</div></div>
       </div>
-      <p style="font-size:12.5px;color:var(--muted);margin-top:14px">State-specific writing signals live on each state's playbook: <a href="#/lonestar/playbook" style="font-weight:600;color:var(--accent-strong)">Texas</a> · <a href="#/writing/ohio/playbook" style="font-weight:600;color:var(--accent-strong)">Ohio</a> · <a href="#/writing/georgia/playbook" style="font-weight:600;color:var(--accent-strong)">Georgia</a></p>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:14px">State-specific playbooks live in each state's playbook: <a href="#/lonestar/playbook" style="font-weight:600;color:var(--accent-strong)">Texas</a> · <a href="#/writing/ohio/playbook" style="font-weight:600;color:var(--accent-strong)">Ohio</a> · <a href="#/writing/georgia/playbook" style="font-weight:600;color:var(--accent-strong)">Georgia</a></p>
     </div>
   </div>
 
   <div class="section" id="sec-fit">
     <div class="sec-title"><h2>FIT qualification</h2><span class="rule"></span></div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.fitNote)}</p>
     <div class="fit">
       ${pr.qualification.items.map(i=>`<div class="fit-card"><div class="fit-l">${i.letter}</div><h4>${esc(i.title)}</h4><p>${esc(i.body)}</p></div>`).join('')}
     </div>
+    <div class="sp-fitbar">
+      <div class="adv">${CK}<span>${esc(fitS[0]||pr.fitNote)}</span></div>
+      <div class="stay"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg><span>${esc(fitS[1]||'')}</span></div>
+    </div>
+  </div>
+
+  <div class="section" id="sec-discovery">
+    <div class="sec-title"><h2>Discovery &amp; demo</h2><span class="rule"></span>${stamp(pr.updated?.discovery)}</div>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.discoveryIntro)}</p>
+    <div class="grid g2" style="align-items:start">
+      <div class="card pad"><div class="eyebrow">Discovery — ask with intent</div><div style="margin-top:10px">${crows(pr.discoveryShared)}</div></div>
+      <div class="card pad"><div class="eyebrow">Demo tips</div><div style="margin-top:10px">${crows(pr.demoTips)}</div></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Product-specific discovery questions live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
   </div>
 
   <div class="section" id="objection-finder">
     <div class="sec-title"><h2>Objection finder</h2><span class="rule"></span>${stamp(pr.updated?.objections)}</div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:12px">Search every response. Filter the mix by product below.</p>
+    <p style="color:var(--muted);font-size:13.5px;margin-bottom:12px">Pick an objection on the left — the full response appears beside it, ready to copy. Filter the mix by product below.</p>
     <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px">
       <div class="search" style="flex:1;min-width:240px;max-width:420px;padding:9px 13px">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
@@ -2436,39 +2574,50 @@ function vProcess(){
     <div id="objResults"></div>
   </div>
 
-  <div class="section" id="sec-discovery">
-    <div class="sec-title"><h2>Discovery & demo</h2><span class="rule"></span>${stamp(pr.updated?.discovery)}</div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.discoveryIntro)}</p>
-    <div class="grid g2">
-      <div class="card pad"><div class="eyebrow">Shared discovery questions</div><div style="margin-top:12px">${rows(pr.discoveryShared)}</div></div>
-      <div class="card pad"><div class="eyebrow">Demo tips</div><div style="margin-top:12px">${rows(pr.demoTips)}</div></div>
-    </div>
-    <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Product-specific discovery questions live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
-  </div>
-
   <div class="section" id="sec-cadence">
-    <div class="sec-title"><h2>Outreach cadence</h2><span class="rule"></span>${stamp(pr.updated?.cadence)}</div>
-    <div class="tbl-wrap">
-      <table><thead><tr><th>When</th><th>Channel</th><th>Action</th></tr></thead>
-      <tbody>${pr.cadence.map(c=>`<tr><td class="day num">${esc(c.day)}</td><td><span class="chip" style="font-size:11px">${esc(c.channel)}</span></td><td>${esc(c.action)}</td></tr>`).join('')}</tbody></table>
+    <div class="sec-title"><h2>Outreach cadence <span style="font-weight:600;color:var(--muted);font-size:13px">(22-day sequence)</span></h2><span class="rule"></span>${stamp(pr.updated?.cadence)}</div>
+    <div class="sp-cadwrap">
+      <div class="sp-cad">
+        ${pr.cadence.map(c=>`
+          <div class="sp-cadstep" title="${esc(c.action)}">
+            <div class="dayl">${esc(String(c.day))}</div>
+            <div class="node">${chanIcons(c.channel)}</div>
+            <div class="chn">${esc(c.channel)}</div>
+            <div class="act">${esc(c.action)}</div>
+          </div>`).join('')}
+        <div class="sp-cadafter">
+          <b>After Day 22 →</b>
+          <span>${esc(pr.cadenceNote)}</span>
+          <button class="bchip" data-route data-hash="#/process" data-anchor="#sec-nurture" style="--bc:var(--accent);padding:3px 10px;font-size:12px;align-self:flex-start">Move to nurture ↓</button>
+        </div>
+      </div>
     </div>
-    <div class="callout" style="margin-top:16px"><b>After Day 22.</b> ${esc(pr.cadenceNote)}
-      <button class="bchip" data-route data-hash="#/process" data-anchor="#sec-nurture" style="--bc:var(--accent);margin-left:8px;padding:3px 10px;font-size:12px">See the nurture cadence ↓</button></div>
   </div>
 
   <div class="section" id="sec-nurture">
-    <div class="sec-title"><h2>${esc(pr.nurtureSequence.name)}</h2><span class="rule"></span></div>
-    <p style="color:var(--ink-2);font-size:14px;margin-bottom:14px"><b style="color:var(--accent-strong)">Who enters:</b> ${esc(pr.nurtureSequence.entryCriteria)}</p>
-    <div class="callout"><b>Tone.</b> ${esc(pr.nurtureSequence.tonePrinciple)}</div>
-    <div class="card pad" style="margin-top:14px">
-      <div class="eyebrow">Rhythm</div>
-      <p style="color:var(--ink-2);font-size:13.5px;margin-top:8px">${esc(pr.nurtureSequence.rhythm)}</p>
+    <div class="sec-title"><h2>Nurture — after Day 22</h2><span class="rule"></span></div>
+    <div class="sp-nurhead">
+      <div class="card pad"><div class="eyebrow">Who enters</div><p style="font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.55">${esc(pr.nurtureSequence.entryCriteria)}</p></div>
+      <div class="card pad"><div class="eyebrow">Tone</div><p style="font-size:13px;color:var(--ink-2);margin-top:8px;line-height:1.55">${esc(pr.nurtureSequence.tonePrinciple)}</p></div>
     </div>
-    <div class="grid g2" style="margin-top:14px">
+    <div class="sp-nur3">
+      <div class="pillar"><div class="eyebrow" style="display:flex;align-items:center;gap:7px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Rhythm</div><p style="margin-top:8px;font-size:13px">${esc(pr.nurtureSequence.rhythm)}</p></div>
       ${pr.nurtureSequence.segments.map(sg=>`<div class="pillar"><div class="eyebrow">${esc(sg.label)}</div><p style="margin-top:8px;font-size:13px">${esc(sg.guidance)}</p></div>`).join('')}
     </div>
 
-    <h3 style="font-size:16px;font-weight:800;margin:26px 0 10px">The seven touches</h3>
+    <div class="sp-ntlwrap">
+      <div class="sp-ntl">
+        ${pr.nurtureSequence.touches.map(t=>`
+          <div class="nt ${t.id==='N5'?'re':''}">
+            <div class="nn">${t.id==='N5'?'★':esc(t.id)}</div>
+            <div class="tim">${esc(t.timing)}</div>
+            <div class="ch">${esc(t.channel)}</div>
+            ${t.id==='N5'?'<div class="rel">Re-entry point</div>':''}
+          </div>`).join('')}
+      </div>
+    </div>
+
+    <h3 style="font-size:16px;font-weight:800;margin:22px 0 10px">The seven touches — full scripts</h3>
     <div style="display:flex;flex-direction:column;gap:8px">
       ${pr.nurtureSequence.touches.map(t=>`
         <details class="card task-row" style="overflow:hidden">
@@ -2501,13 +2650,20 @@ function vProcess(){
   </div>
 
   <div class="section" id="sec-close">
-    <div class="sec-title"><h2>Close steps</h2><span class="rule"></span></div>
-    <div class="card pad">${rows(pr.closeSteps)}</div>
-    <p style="font-size:12.5px;color:var(--muted);margin-top:14px">${esc(pr.livingNote)}</p>
+    <div class="sp-close">
+      <div>
+        <h2><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg> Close with clarity</h2>
+        ${checks(pr.closeSteps)}
+      </div>
+      <aside>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="flex-shrink:0;margin-top:2px"><path d="M12 3a7 7 0 0 1 4 12.7c-.6.5-1 1.3-1 2.3h-6c0-1-.4-1.8-1-2.3A7 7 0 0 1 12 3Z"/><path d="M9.5 21h5"/></svg>
+        <span>${esc(pr.livingNote)}</span>
+      </aside>
+    </div>
   </div>`;
 }
 
-let objMix = 'all';
+let objMix = 'all', objSel = 0, _objKey = '';
 function renderObjFinder(){
   const box = $('#objResults'); if (!box) return;
   const withSrc = p => p.objections.map(o => ({...o, src:PROD_META[p.id].short}));
@@ -2522,10 +2678,28 @@ function renderObjFinder(){
   }
   const q = ($('#objFilter')?.value || '').toLowerCase().trim();
   const list = q ? merged.filter(o => (o.objection+' '+o.response).toLowerCase().includes(q)) : merged;
-  box.innerHTML = list.length
-    ? objList(list, o => o.src)
-    : `<div class="card pad" style="color:var(--muted)">No objection matches “${esc(q)}”. Try fewer words.</div>`;
-  bindObjections(box);
+  const key = objMix + '|' + q;
+  if (key !== _objKey){ _objKey = key; objSel = 0; }
+  if (!list.length){
+    box.innerHTML = `<div class="card pad" style="color:var(--muted)">No objection matches “${esc(q)}”. Try fewer words.</div>`;
+    return;
+  }
+  if (objSel >= list.length) objSel = 0;
+  const o = list[objSel];
+  box.innerHTML = `
+  <div class="sp-obj">
+    <div class="sp-objlist">
+      ${list.map((x,i)=>`<button class="${i===objSel?'sel':''}" data-oi="${i}"><span class="dot"></span><span>${esc(x.objection)}</span></button>`).join('')}
+    </div>
+    <div class="sp-objdetail">
+      <div class="src">${esc(o.src)}</div>
+      <h3>“${esc(o.objection)}”</h3>
+      <div class="resp">${esc(o.response)}</div>
+      ${copyBtn('Copy response', payload(o.response))}
+    </div>
+  </div>`;
+  box.querySelectorAll('[data-oi]').forEach(b =>
+    b.addEventListener('click', () => { objSel = +b.dataset.oi; renderObjFinder(); }));
 }
 
 function vBrand(){
