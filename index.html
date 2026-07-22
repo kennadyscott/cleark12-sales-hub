@@ -424,16 +424,18 @@
   .sp-fitbar > div { flex: 1 1 240px; display: flex; align-items: center; gap: 10px; padding: 13px 18px; font-size: 13px; font-weight: 600; color: #fff; }
   .sp-fitbar .adv { background: #1B3FBE; }
   .sp-fitbar .stay { background: #10298A; }
-  .sp-obj { display: grid; grid-template-columns: 330px 1fr; gap: 16px; align-items: start; }
-  .sp-objlist { display: flex; flex-direction: column; gap: 6px; max-height: 520px; overflow: auto; padding-right: 4px; }
-  .sp-objlist button { display: flex; align-items: flex-start; gap: 9px; text-align: left; border: 1px solid var(--border); background: var(--surface); border-radius: 10px; padding: 11px 13px; font-size: 13px; font-weight: 600; color: var(--ink-2); cursor: pointer; line-height: 1.4; }
-  .sp-objlist button .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--faint); margin-top: 5px; flex-shrink: 0; }
-  .sp-objlist button.sel { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); color: var(--ink); }
+  .sp-obj { display: grid; grid-template-columns: 300px 1fr; gap: 12px; align-items: start; }
+  .sp-objlist { display: flex; flex-direction: column; max-height: 360px; overflow: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); }
+  .sp-objlist button { display: flex; align-items: flex-start; gap: 8px; text-align: left; border: 0; border-top: 1px solid var(--border); background: transparent; padding: 8px 12px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); cursor: pointer; line-height: 1.4; }
+  .sp-objlist button:first-child { border-top: 0; }
+  .sp-objlist button:hover { background: var(--surface-2); }
+  .sp-objlist button .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--faint); margin-top: 6px; flex-shrink: 0; }
+  .sp-objlist button.sel { background: color-mix(in srgb, var(--accent) 9%, var(--surface)); color: var(--ink); box-shadow: inset 2.5px 0 0 var(--accent); }
   .sp-objlist button.sel .dot { background: var(--accent); }
-  .sp-objdetail { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); padding: 22px; }
-  .sp-objdetail h3 { font-size: 16.5px; line-height: 1.35; margin: 4px 0 2px; }
-  .sp-objdetail .src { font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-strong); }
-  .sp-objdetail .resp { font-size: 13.5px; color: var(--ink-2); line-height: 1.65; margin: 12px 0 16px; }
+  .sp-objdetail { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); padding: 16px 18px; }
+  .sp-objdetail h3 { font-size: 15.5px; line-height: 1.35; margin: 3px 0 0; }
+  .sp-objdetail .src { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-strong); }
+  .sp-objdetail .resp { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; margin: 8px 0 12px; }
   .sp-crow { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-top: 1px solid var(--border); font-size: 13px; color: var(--ink-2); line-height: 1.5; }
   .sp-crow:first-child { border-top: 0; padding-top: 2px; }
   .sp-crow .copy { margin-left: auto; flex-shrink: 0; }
