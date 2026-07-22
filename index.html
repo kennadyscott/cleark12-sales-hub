@@ -1420,6 +1420,134 @@ function vHome(){
 
 function vProduct(id){
   const p = prod(id);
+  if (!p.overview) return vProductClassic(p, id);
+  const o = p.overview;
+  const A = p.colors.primary, A2 = p.colors.accent;
+
+  const QA_ICONS = [
+    `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h11l4 4v12H4Z"/><path d="M14 4v5h5M8 13h7M8 16h5"/></svg>`,
+    `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="14" height="10" rx="2"/><path d="M8 19h8M12 15v4"/></svg>`,
+    `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.2"/></svg>`,
+    `<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h11l4 4v10H4Z"/><path d="M8 12h7M8 15h4"/></svg>`
+  ];
+  const qa = [
+    { l:"Open cold-call script", h:`#/${id}/playbook` },
+    { l:"View messaging", h:`#/${id}/messaging` },
+    { l:"Practice objections", h:`#/${id}/playbook`, a:"#obj" },
+    { l:"Open playbook", h:`#/${id}/playbook` }
+  ];
+
+  const PILLAR_ICONS = [
+    `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="13" r="8"/><path d="M12 13V9M12 5V3M10 3h4M18 6l1.5-1.5"/></svg>`,
+    `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>`,
+    `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M5 21c1.3-3.3 4-5 7-5s5.7 1.7 7 5"/></svg>`,
+    `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/></svg>`,
+    `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 11l2 2 4-4"/></svg>`
+  ];
+  const PROOF_ICONS = [
+    `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H3ZM21 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7Z"/></svg>`,
+    `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14v-3M11 14v-5M15 14v-2M9 21h6"/></svg>`,
+    `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m12 3 2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.3l5-.7Z"/></svg>`
+  ];
+
+  // 3-step model from model.name (Teach. See. Respond.) matched to steps
+  const names = p.model.name.replace(/\.$/,'').split('.').map(s=>s.trim()).filter(Boolean);
+  let msteps = names.map(n => p.model.steps.find(s => s.name.toLowerCase() === n.toLowerCase())).filter(Boolean);
+  if (msteps.length < 2) msteps = p.model.steps;
+
+  const pitchId = payload(o.fifteenSecond);
+
+  return `
+  ${prodHead(p)}
+  ${tabs(id,'overview')}
+
+  <div class="ov-hero">
+    <div>
+      <div class="eyebrow">Product Overview</div>
+      <h1 class="rh">${esc(o.repHeadline)}</h1>
+      <p class="rsub">${esc(o.repSub)}</p>
+      <div class="ov-badge">${gem(A, 16)} ${esc(o.badge)}</div>
+    </div>
+    <div class="qa-box">
+      <h3>Rep Quick Actions</h3>
+      ${qa.map((q,i)=>`<button class="qa-row" data-route data-hash="${q.h}" ${q.a?`data-anchor="${q.a}"`:''}>
+        <span class="qi">${QA_ICONS[i]}</span><span class="ql">${q.l}</span>
+        <svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>`).join('')}
+    </div>
+  </div>
+
+  <div class="section ov-15">
+    <div style="flex:1;min-width:280px">
+      <div class="lbl">The 15-second version</div>
+      <p>${esc(o.fifteenSecond)}</p>
+    </div>
+    <span class="rule"></span>
+    <div>${copyBtn('Copy pitch', pitchId)}</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>What buyers need to understand</h2><span class="rule"></span></div>
+    <div class="ov-buyers">
+      ${o.buyers.map(b=>`<div class="ov-buyer"><div class="bn">${b.n}</div><div class="bl">${esc(b.label)}</div><p>${esc(b.text)}</p></div>`).join('')}
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>Core value pillars</h2><span class="rule"></span></div>
+    <div class="ov-pillars">
+      ${p.valuePillars.map((v,i)=>`<div class="ov-pillar"><span class="pi">${PILLAR_ICONS[i%PILLAR_ICONS.length]}</span><h4>${esc(v.title)}</h4><p>${esc(v.body)}</p></div>`).join('')}
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>How to explain the model</h2><span class="rule"></span></div>
+    <div class="ov-model">
+      ${msteps.map((s,i)=>`
+        <div class="ov-mstep">
+          <div class="mhead"><span class="ov-mnum" style="background:${i===0?A:A2}">${i+1}</span><h4 style="color:${i===0?A:A2}">${esc(s.name)}</h4></div>
+          <p class="mbody" style="padding-left:0"><span>${esc(s.body)}</span></p>
+        </div>
+        ${i<msteps.length-1?`<svg class="ov-marrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>`:''}`).join('')}
+    </div>
+    <div class="ov-repnote">💬 <span><b>Rep note:</b> ${esc(o.modelRepNote)}</span></div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>Position it correctly</h2><span class="rule"></span></div>
+    <div class="isisnt">
+      <div class="isbox is"><div class="lbl">✓ It is</div><p>${esc(p.isIsnt.is)}</p>
+        <div style="margin-top:12px;font-size:12.5px;color:var(--muted)">${p.tools.map(t=>esc(t.split(' (')[0])).join(' · ')}</div>
+      </div>
+      <div class="isbox isnt"><div class="lbl">✕ It isn't</div><p>${esc(p.isIsnt.isnt)}</p>
+        <div class="usewhen"><div class="uwl">Use this when…</div><p>${esc(o.isntUseWhen)}</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-title"><h2>Product proof points</h2><span class="rule"></span><span style="font-size:13px;color:var(--muted);font-weight:400">What backs up the story</span></div>
+    <div class="ov-proof">
+      ${p.tools.map((t,i)=>{const m=t.match(/^(.*?)\s*\((.*)\)\s*$/);const nm=m?m[1]:t;const ds=m?m[2]:'';return `<div class="ov-proofcard"><span class="pc-ic">${PROOF_ICONS[i%PROOF_ICONS.length]}</span><div><h4>${esc(nm)}</h4>${ds?`<p>${esc(ds)}</p>`:''}</div></div>`;}).join('')}
+    </div>
+  </div>
+
+  <div class="section ov-lead bleed">
+    <div class="ov-lead-in bleed-in">
+      <div>
+        <div class="ll">Lead with this</div>
+        <h2>${esc(o.leadWith.heading)}</h2>
+        <p class="lsub">${esc(o.leadWith.sub)}</p>
+      </div>
+      <div class="ov-lead-links">
+        <a data-route data-hash="#/${id}/messaging">Messaging <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a data-route data-hash="#/${id}/playbook">Playbook <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>`;
+}
+
+function vProductClassic(p, id){
   return `
   ${prodHead(p)}
   ${tabs(id,'overview')}
