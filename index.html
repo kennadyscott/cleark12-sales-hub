@@ -575,6 +575,109 @@
     .ov-marrow { transform: rotate(90deg); align-self: center; }
   }
 
+
+  /* ============ MESSAGING / PLAYBOOK PRO (Crystal) ============ */
+  .pro-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .pro-top .prod-head { flex: 1; min-width: 260px; }
+  .pro-top .stamp { margin-top: 44px; }
+  .pro-head2 { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin: 4px 0 22px; }
+  .pro-head2 h1 { font-size: clamp(24px, 3.2vw, 34px); letter-spacing: -.03em; margin: 8px 0 8px; }
+  .pro-head2 .psub { font-size: 14.5px; color: var(--muted); max-width: 60ch; }
+  .pro-search { min-width: 250px; }
+  .pro-search .search { padding: 10px 14px; }
+
+  .msg2-grid { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; }
+  .aud-tab { display: flex; align-items: center; gap: 14px; width: 100%; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; cursor: pointer; color: var(--ink); font-weight: 700; font-size: 15px; margin-bottom: 10px; position: relative; overflow: hidden; }
+  .aud-tab .ai { color: var(--accent); }
+  .aud-tab.on { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+  .aud-tab.on::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); }
+  .msg2-panel { padding: 24px 26px; }
+  .msg2-panel .pgrid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; }
+  .msg2-panel .lead-q { font-size: clamp(19px, 2.3vw, 27px); font-weight: 800; letter-spacing: -.02em; line-height: 1.3; margin: 10px 0 16px; }
+  .msg2-panel .care-item { display: flex; gap: 11px; align-items: center; font-size: 14px; font-weight: 600; padding: 7px 0; }
+  .msg2-panel .care-n { width: 24px; height: 24px; border-radius: 50%; background: var(--navyish, var(--accent-strong)); background: var(--accent-strong); color: #fff; display: grid; place-items: center; font-size: 12px; font-weight: 800; flex-shrink: 0; }
+  .rep-angle { display: flex; gap: 14px; align-items: center; background: color-mix(in srgb, var(--accent) 7%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border)); border-radius: var(--radius-sm); padding: 14px 18px; margin-top: 20px; font-size: 13.5px; color: var(--ink-2); }
+  .rep-angle .ral { font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong); white-space: nowrap; }
+
+  .msg2-band { background: linear-gradient(120deg, #0A1730, #101F3D); border-radius: var(--radius); color: #fff; padding: 26px 28px; }
+  .msg2-band .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+  .msg2-band .col + .col { border-left: 1px solid rgba(255,255,255,.14); padding-left: 40px; }
+  .msg2-band .bt { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+  .msg2-band .say-t { color: #4ADE80; } .msg2-band .never-t { color: #F87171; }
+  .band-row { display: flex; align-items: center; gap: 11px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.09); font-size: 14px; }
+  .band-row:last-child { border-bottom: 0; }
+  .band-row .bmk { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 11px; font-weight: 900; flex-shrink: 0; }
+  .band-row .bmk.ok { background: #16A34A; color: #fff; } .band-row .bmk.no { background: #DC2626; color: #fff; }
+  .band-row .copy { margin-left: auto; background: transparent; border-color: rgba(255,255,255,.25); color: rgba(255,255,255,.75); }
+  .band-row .copy:hover { border-color: #fff; color: #fff; }
+
+  .msg2-voice { display: grid; grid-template-columns: 1.1fr 2fr; gap: 32px; align-items: center; }
+  .msg2-voice .sb { font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; letter-spacing: -.02em; margin: 8px 0 10px; }
+  .msg2-voice .vp { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+  .msg2-traits { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .msg2-trait { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; border-left: 1px solid var(--border); padding-left: 16px; }
+  .msg2-trait:first-child { border-left: 0; padding-left: 0; }
+  .msg2-trait .ti { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--accent-strong) 10%, var(--surface)); color: var(--accent-strong); }
+  .msg2-trait .tt { font-weight: 700; font-size: 13.5px; line-height: 1.35; }
+  .msg2-trait .td { font-size: 12px; color: var(--faint); }
+  .vcheck { display: flex; align-items: center; gap: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); padding: 14px 20px; flex-wrap: wrap; }
+  .vcheck .vcl { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-strong); margin-right: 26px; }
+  .vcheck .vci { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 650; padding: 0 26px; border-left: 1px solid var(--border); }
+  .vcheck .vci:first-of-type { border-left: 0; padding-left: 0; }
+  .vcheck .vok { color: var(--accent-strong); }
+
+  .pro-foot { display: flex; align-items: center; justify-content: space-around; gap: 12px; background: color-mix(in srgb, var(--accent) 6%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border)); border-radius: var(--radius); padding: 14px 18px; flex-wrap: wrap; }
+  .pro-foot a, .pro-foot button.linky { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; font-size: 14.5px; color: var(--accent); text-decoration: none; background: none; border: 0; cursor: pointer; }
+  .pro-foot .fdiv { width: 1px; height: 22px; background: color-mix(in srgb, var(--accent) 25%, var(--border)); }
+
+  .pb2-grid { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; }
+  .mom-tab { display: flex; gap: 14px; width: 100%; text-align: left; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; cursor: pointer; color: var(--ink); margin-bottom: 12px; position: relative; overflow: hidden; }
+  .mom-tab .mi { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+  .mom-tab .ml { font-weight: 800; font-size: 15px; }
+  .mom-tab .ms { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .mom-tab.on { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+  .mom-tab.on::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); }
+  .pb2-panel { padding: 24px 26px; }
+  .pb2-panel .phead { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 12px; }
+  .pb2-panel .phead h2 { font-size: 24px; letter-spacing: -.02em; margin-right: auto; }
+  .pb2-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .pb2-meta .chip { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); border-color: color-mix(in srgb, var(--accent) 25%, var(--border)); color: var(--accent-strong); }
+  .pb2-body { font-size: 15px; line-height: 1.75; color: var(--ink-2); white-space: pre-wrap; }
+  .pb2-personalize { display: flex; gap: 10px; flex-wrap: wrap; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 14px; }
+  .pb2-personalize input { flex: 1; min-width: 150px; }
+  .core-hook { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); padding: 18px 20px; max-width: 360px; }
+  .core-hook .chl { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-strong); display: flex; justify-content: space-between; align-items: center; }
+  .core-hook p { font-size: 14.5px; font-weight: 600; margin-top: 8px; line-height: 1.5; }
+
+  .pmap { padding: 22px 26px; }
+  .pmap .pml { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-strong); margin-bottom: 18px; }
+  .pmap-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; position: relative; }
+  .pmap-step { text-align: center; position: relative; }
+  .pmap-step .pn2 { font-size: 15px; font-weight: 800; color: var(--accent); }
+  .pmap-step .pdot { width: 16px; height: 16px; border-radius: 50%; border: 2.5px solid var(--accent); background: var(--surface); margin: 8px auto; position: relative; z-index: 1; }
+  .pmap-step:first-child .pdot { background: var(--accent-strong); border-color: var(--accent-strong); }
+  .pmap-steps::before { content: ""; position: absolute; top: 39px; left: 8%; right: 8%; height: 2px; background: color-mix(in srgb, var(--accent) 30%, var(--border)); }
+  .pmap-step .pt { display: inline-block; font-size: 11px; font-weight: 700; background: color-mix(in srgb, var(--accent) 10%, var(--surface)); color: var(--accent-strong); border-radius: 6px; padding: 2px 8px; margin-bottom: 6px; }
+  .pmap-step h5 { font-size: 13.5px; }
+  .pmap-step p { font-size: 11.5px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  .dq-row { display: flex; align-items: center; gap: 11px; border: 1px solid var(--border); border-radius: 10px; padding: 10px 13px; font-size: 13.5px; color: var(--ink-2); margin-bottom: 8px; background: var(--surface); }
+  .dq-row .copy { margin-left: auto; }
+  .dq-row .dqok { color: var(--accent-strong); flex-shrink: 0; }
+  .sig-row { display: flex; gap: 11px; align-items: flex-start; font-size: 13.5px; color: var(--ink-2); padding: 8px 0; }
+  .sig-row .sigmk { width: 20px; height: 20px; border-radius: 50%; background: var(--accent-strong); color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 900; flex-shrink: 0; margin-top: 1px; }
+
+  @media (max-width: 900px) {
+    .msg2-grid, .pb2-grid, .msg2-voice { grid-template-columns: 1fr; }
+    .msg2-panel .pgrid, .msg2-band .cols { grid-template-columns: 1fr; }
+    .msg2-band .col + .col { border-left: 0; padding-left: 0; border-top: 1px solid rgba(255,255,255,.14); padding-top: 18px; margin-top: 18px; }
+    .msg2-traits { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .msg2-trait { border-left: 0; padding-left: 0; }
+    .pmap-steps { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .pmap-steps::before { display: none; }
+    .vcheck .vci { padding: 6px 16px 6px 0; border-left: 0; }
+  }
+
   /* logo theming */
   .logo-swap .lg-dark { display: none; }
   :root[data-theme="dark"] .logo-swap .lg-light { display: none; }
@@ -620,7 +723,7 @@
     </span>
     <nav class="nav" id="nav">
       <a href="#/home" data-nav="#/home">Home</a>
-      <a href="#/crystal" data-nav="#/crystal"><span class="ndot" style="background:#D81BB8"></span>Crystal</a>
+      <a href="#/crystal" data-nav="#/crystal"><span class="ndot" style="background:#D81BB8"></span>Crystal Instruction</a>
       <a href="#/writing" data-nav="#/writing"><span class="ndot" style="background:#57B4E5"></span>Crystal Writing</a>
       <a href="#/process" data-nav="#/process">Sales Process</a>
       <a href="#/brand" data-nav="#/brand">Brand</a>
@@ -820,6 +923,32 @@ const DATA = {
           heading:"The buyer's pain is not a lack of data. It's the work required to turn that data into action.",
           sub:"Features prove the story. They are never the opening line."
         }
+      },
+      msgExtras:{
+        headline:"Find the right message for the person in the room.",
+        sub:"Choose an audience to see the lead message, buyer priorities, and language to use.",
+        repAngles:{
+          teacher:"Focus on time back, clarity in the moment, and support that keeps the teacher in control.",
+          campus:"Focus on consistency across classrooms and visibility that doesn't add walkthrough burden.",
+          district:"Focus on scale inside their existing ecosystem — MTSS alignment and measurable growth outcomes."
+        },
+        soundBite:"Bold. Energetic. Confident.",
+        traits:[
+          { t:"Lead with verbs", d:"identify, respond, reteach, act." },
+          { t:"Respect what districts already own.", d:"" },
+          { t:"Emphasize speed and instructional action.", d:"" },
+          { t:"Make teachers the decision-makers.", d:"" }
+        ],
+        voiceCheck:["Active","Specific","Teacher-led","Never overclaiming"]
+      },
+      pbExtras:{
+        headline:"Know what to say — and what to ask next.",
+        sub:"Choose a sales moment to get the script, talking points, objections, and discovery guidance you need.",
+        moments:[
+          { key:"call",  label:"Cold call",     sub:"Open with the problem · ~45 sec",  chips:["~45 seconds","20-minute demo ask"] },
+          { key:"email", label:"Cold email",    sub:"Short outreach · 2 min read",      chips:["Subject + body","Placeholders auto-fill"] },
+          { key:"pitch", label:"Pitch outline", sub:"Six-part conversation · 5 min",    chips:["6 beats","~5 minutes"] }
+        ]
       },
       marketTagline:"Teach. See. Respond.",
       mission:"Helping teachers turn student performance into instructional action — in real time and without extra work.",
@@ -1609,6 +1738,322 @@ function vProductClassic(p, id){
 
 function vMessaging(id){
   const p = prod(id);
+  return p.msgExtras ? vMessagingPro(p, id) : vMessagingClassic(id);
+}
+
+function vMessagingPro(p, id){
+  const x = p.msgExtras;
+  const AUD_ICONS = {
+    teacher: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M5 21c1.3-3.3 4-5 7-5s5.7 1.7 7 5"/></svg>`,
+    campus: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V7l8-4 8 4v14M4 21h16M9 21v-4h6v4M9 11h.01M15 11h.01M12 11h.01M9 14h.01M15 14h.01M12 14h.01"/></svg>`,
+    district: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M4 21V9m16 12V9M2 9l10-5 10 5M7 21v-8m3.5 8v-8m3 8v-8m3.5 8v-8"/></svg>`
+  };
+  const TRAIT_ICONS = [
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="13" cy="5" r="2"/><path d="M4 21l4-7 3 2 3-6 2 3h4"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>`,
+    `<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c1-2.8 3.3-4.5 6-4.5s5 1.7 6 4.5"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 15.7c2 .4 3.6 1.7 4.5 3.8"/></svg>`
+  ];
+  return `
+  <div class="pro-top">${prodHead(p)}${stamp(p.updated?.messaging)}</div>
+  ${tabs(id,'messaging')}
+
+  <div class="pro-head2">
+    <div>
+      <div class="eyebrow">Messaging</div>
+      <h1>${esc(x.headline)}</h1>
+      <p class="psub">${esc(x.sub)}</p>
+    </div>
+    <div class="search-wrap pro-search">
+      <label class="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="msgFilter" type="search" placeholder="Search messaging" autocomplete="off" />
+      </label>
+    </div>
+  </div>
+
+  <div class="msg2-grid">
+    <div id="audRail">
+      ${p.audienceMessaging.map((a,i)=>`
+        <button class="aud-tab" data-i="${i}">
+          <span class="ai">${AUD_ICONS[a.audience] ?? ''}</span>
+          <span>${esc(AUD[a.audience] || a.audience)}</span>
+        </button>`).join('')}
+    </div>
+    <div class="card msg2-panel" id="audPanel"></div>
+  </div>
+
+  <div class="section msg2-band" id="msgBand">
+    <div class="cols">
+      <div class="col">
+        <div class="bt say-t">Say this</div>
+        ${p.sayThis.map(s=>`<div class="band-row"><span class="bmk ok">✓</span><span>${esc(s)}</span>${copyBtn('', payload(s))}</div>`).join('')}
+      </div>
+      <div class="col">
+        <div class="bt never-t">Never say</div>
+        ${p.notThis.map(s=>`<div class="band-row"><span class="bmk no">✕</span><span>${esc(s)}</span>${copyBtn('', payload(s))}</div>`).join('')}
+      </div>
+    </div>
+  </div>
+
+  <div class="section msg2-voice">
+    <div>
+      <div class="eyebrow">Sound like ${esc(p.name.split(' ')[0])}</div>
+      <div class="sb">${esc(x.soundBite)}</div>
+      <p class="vp">${esc(p.voice.split('—')[1] ? p.voice.split(' It ')[1] ? p.voice : p.voice : p.voice)}</p>
+    </div>
+    <div class="msg2-traits">
+      ${x.traits.map((t,i)=>`<div class="msg2-trait"><span class="ti">${TRAIT_ICONS[i%TRAIT_ICONS.length]}</span><span class="tt">${esc(t.t)}</span>${t.d?`<span class="td">${esc(t.d)}</span>`:''}</div>`).join('')}
+    </div>
+  </div>
+
+  <div class="section vcheck">
+    <span class="vcl">Voice check</span>
+    ${x.voiceCheck.map(v=>`<span class="vci"><svg class="vok" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 5-5.5"/></svg>${esc(v)}</span>`).join('')}
+  </div>
+
+  <div class="section pro-foot">
+    <button class="linky" data-route data-hash="#/process" data-anchor="#objection-finder">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 19V5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2Zm0 0a2 2 0 0 1 2-2h13"/></svg>
+      Open objection finder →</button>
+    <span class="fdiv"></span>
+    <button class="linky" data-route data-hash="#/${id}/playbook">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>
+      View playbook →</button>
+  </div>`;
+}
+
+function initMessagingPro(p){
+  const rail = $('#audRail'), panel = $('#audPanel');
+  if (!rail || !panel) return;
+  let sel = 0;
+  const render = () => {
+    const a = p.audienceMessaging[sel];
+    const angle = p.msgExtras.repAngles?.[a.audience] || '';
+    const half = Math.ceil(a.care.length / 2);
+    const careCol = list => list.map((c) => `<div class="care-item"><span class="care-n">${a.care.indexOf(c)+1}</span>${esc(c)}</div>`).join('');
+    panel.innerHTML = `
+      <div class="pgrid">
+        <div>
+          <div class="eyebrow">Lead with this</div>
+          <div class="lead-q">“${esc(a.leadMessage)}”</div>
+          ${copyBtn('Copy message', payload(a.leadMessage))}
+        </div>
+        <div>
+          <div class="eyebrow">What they care about</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 18px;margin-top:10px">
+            <div>${careCol(a.care.slice(0, half))}</div>
+            <div>${careCol(a.care.slice(half))}</div>
+          </div>
+        </div>
+      </div>
+      ${angle ? `<div class="rep-angle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-strong)" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg><span class="ral">Rep angle</span><span>${esc(angle)}</span></div>` : ''}`;
+    rail.querySelectorAll('.aud-tab').forEach((b,i)=>b.classList.toggle('on', i===sel));
+  };
+  rail.querySelectorAll('.aud-tab').forEach(b =>
+    b.addEventListener('click', () => { sel = Number(b.dataset.i); render(); }));
+  render();
+  $('#msgFilter')?.addEventListener('input', e => {
+    const q = e.target.value.toLowerCase().trim();
+    document.querySelectorAll('#msgBand .band-row').forEach(r => {
+      r.style.display = !q || r.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+
+function vPlaybook(id){
+  const p = prod(id);
+  return p.pbExtras ? vPlaybookPro(p, id) : vPlaybookClassic(id);
+}
+
+function vPlaybookPro(p, id){
+  const x = p.pbExtras;
+  const MOM_ICONS = {
+    call: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>`,
+    email: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>`,
+    pitch: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg>`
+  };
+  // parse pitch outline: "Problem (45s): text"
+  const beats = p.scripts.pitchOutline.map(l => {
+    const m = l.match(/^([^()]+?)\s*\(([^)]+)\)\s*:\s*(.*)$/);
+    return m ? { name: m[1].trim(), time: m[2].replace(' min','m').replace('min','m'), desc: m[3] } : { name: l, time: '', desc: '' };
+  });
+  return `
+  <div class="pro-top">${prodHead(p)}${stamp(p.updated?.scripts)}</div>
+  ${tabs(id,'playbook')}
+
+  <div class="pro-head2">
+    <div style="flex:1;min-width:260px">
+      <div class="eyebrow">Playbook</div>
+      <h1>${esc(x.headline)}</h1>
+      <p class="psub">${esc(x.sub)}</p>
+    </div>
+    <div class="core-hook">
+      <div class="chl">Core hook ${copyBtn('', payload(p.hook))}</div>
+      <p>${esc(p.hook)}</p>
+    </div>
+  </div>
+
+  <div class="pb2-grid">
+    <div id="momRail">
+      <div class="eyebrow" style="margin-bottom:10px">Sales moment</div>
+      ${x.moments.map((m,i)=>`
+        <button class="mom-tab" data-i="${i}">
+          <span class="mi">${MOM_ICONS[m.key]}</span>
+          <span><span class="ml">${esc(m.label)}</span><br><span class="ms">${esc(m.sub)}</span></span>
+        </button>`).join('')}
+    </div>
+    <div class="card pb2-panel" id="momPanel"></div>
+  </div>
+
+  <div class="section card pmap">
+    <div class="pml">Pitch map</div>
+    <div class="pmap-steps">
+      ${beats.map((b,i)=>`
+        <div class="pmap-step">
+          <div class="pn2">${String(i+1).padStart(2,'0')}</div>
+          <div class="pdot"></div>
+          ${b.time?`<span class="pt">${esc(b.time)}</span>`:''}
+          <h5>${esc(b.name)}</h5>
+          <p>${esc(b.desc.length > 90 ? b.desc.slice(0, 87) + '…' : b.desc)}</p>
+        </div>`).join('')}
+    </div>
+  </div>
+
+  <div class="section" id="obj">
+    <div class="sec-title"><h2>Objection responses</h2><span class="rule"></span>
+      <button class="linky" data-route data-hash="#/process" data-anchor="#objection-finder" style="background:none;border:0;cursor:pointer;color:var(--accent);font-weight:700;font-size:13.5px">Open objection finder →</button>
+    </div>
+    ${objList(p.objections)}
+  </div>
+
+  <div class="section grid g2" style="align-items:start">
+    <div class="card pad">
+      <div class="eyebrow" style="display:flex;align-items:center;gap:8px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-strong)" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/></svg>
+        Best-fit signals</div>
+      <div style="margin-top:12px">${p.bestFitSignals.map(s=>`<div class="sig-row"><span class="sigmk">✓</span><span>${esc(s)}</span></div>`).join('')}</div>
+    </div>
+    <div class="card pad">
+      <div class="eyebrow" style="display:flex;align-items:center;gap:8px">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-strong)" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 0 1 4.9.7c0 1.6-2.4 2.1-2.4 3.3M12 17h.01"/></svg>
+        Discovery questions</div>
+      <div style="margin-top:12px">
+        ${p.discoveryQuestions.map(q=>`<div class="dq-row"><svg class="dqok" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 5-5.5"/></svg><span>${esc(q)}</span>${copyBtn('', payload(q))}</div>`).join('')}
+      </div>
+    </div>
+  </div>
+
+  <div class="section pro-foot">
+    <button class="linky" data-route data-hash="#/${id}/messaging">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.6 8.6 0 0 1-3.9-.9L3 21l2-5.4a8.3 8.3 0 0 1-1-4A8.4 8.4 0 0 1 12.5 3a8.4 8.4 0 0 1 8.5 8.5Z"/></svg>
+      Messaging →</button>
+    <span class="fdiv"></span>
+    <button class="linky" data-route data-hash="#/process" data-anchor="#objection-finder">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      Objection finder →</button>
+    <span class="fdiv"></span>
+    <button class="btn" id="footCopyScript" style="font-size:14px">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+      Copy selected script</button>
+  </div>`;
+}
+
+function initPlaybookPro(p){
+  const rail = $('#momRail'), panel = $('#momPanel');
+  if (!rail || !panel) return;
+  const s = p.scripts;
+  let sel = 0;
+  let fields = { rep: '', name: '', district: '' };
+  let showPersonalize = false;
+
+  const fill = t => {
+    let out = t.split('___').join('[Your name]');
+    if (fields.rep) out = out.split('[Your name]').join(fields.rep).split('[Rep]').join(fields.rep);
+    if (fields.name) out = out.split('[Name]').join(fields.name);
+    if (fields.district) out = out.split('[District]').join(fields.district).split('[Campus]').join(fields.district);
+    return out;
+  };
+  const currentText = () => sel === 0
+    ? fill(s.coldCall)
+    : sel === 1
+      ? `Subject: ${fill(s.coldEmail.subject)}\n\n${fill(s.coldEmail.body)}`
+      : s.pitchOutline.map((l,i)=>`${i+1}. ${l}`).join('\n');
+  const hl = t => esc(t).replace(/\[(Your name|District|Name|Rep|Campus|number|link)\]/g, '<span class="ph">[$1]</span>');
+
+  const stopSpeak = () => { try { speechSynthesis.cancel(); } catch(e){} };
+
+  const render = () => {
+    stopSpeak();
+    const m = p.pbExtras.moments[sel];
+    const canSpeak = 'speechSynthesis' in window && sel < 2;
+    const bodyHtml = sel === 0
+      ? `<div class="pb2-body">${hl(fill(s.coldCall))}</div>`
+      : sel === 1
+        ? `<div class="email-sub" style="padding:0 0 10px"><b>Subject:</b> ${hl(fill(s.coldEmail.subject))}</div><div class="pb2-body">${hl(fill(s.coldEmail.body))}</div>`
+        : `<ol class="pitch" style="padding-left:20px">${s.pitchOutline.map(l=>`<li style="font-size:14px;margin-bottom:6px">${esc(l)}</li>`).join('')}</ol>`;
+    panel.innerHTML = `
+      <div class="phead">
+        <h2>${esc(m.label)}</h2>
+        ${sel < 2 ? `<button class="btn-ghost btn !py-1 !px-3" id="btnPersonalize" style="font-size:12.5px;padding:6px 12px">👤 Personalize</button>` : ''}
+        ${canSpeak ? `<button class="btn-ghost btn" id="btnSpeak" style="font-size:12.5px;padding:6px 12px">🔊 Practice aloud</button>` : ''}
+        ${copyBtn('Copy script', payload(currentText()))}
+      </div>
+      <div class="pb2-meta">${m.chips.map(c=>`<span class="chip">🕐 ${esc(c)}</span>`).join('')}</div>
+      ${showPersonalize && sel < 2 ? `
+        <div class="pb2-personalize">
+          <input class="input" id="pfRep" placeholder="Your name" value="${esc(fields.rep)}" />
+          ${sel === 1 ? `<input class="input" id="pfName" placeholder="Contact name" value="${esc(fields.name)}" />
+          <input class="input" id="pfDistrict" placeholder="District" value="${esc(fields.district)}" />` : ''}
+        </div>` : ''}
+      ${bodyHtml}`;
+    rail.querySelectorAll('.mom-tab').forEach((b,i)=>b.classList.toggle('on', i===sel));
+
+    $('#btnPersonalize')?.addEventListener('click', () => { showPersonalize = !showPersonalize; render(); });
+    ['pfRep','pfName','pfDistrict'].forEach(idn => {
+      const el = document.getElementById(idn);
+      el?.addEventListener('input', () => {
+        fields = { rep: $('#pfRep')?.value ?? fields.rep, name: $('#pfName')?.value ?? fields.name, district: $('#pfDistrict')?.value ?? fields.district };
+        // live-update only the body to keep input focus
+        const focusId = document.activeElement?.id; const pos = document.activeElement?.selectionStart;
+        const bodyEl = panel.querySelector('.pb2-body');
+        if (bodyEl && sel === 0) bodyEl.innerHTML = hl(fill(s.coldCall));
+        if (sel === 1){
+          const sub = panel.querySelector('.email-sub'); const bd = panel.querySelector('.pb2-body');
+          if (sub) sub.innerHTML = `<b>Subject:</b> ${hl(fill(s.coldEmail.subject))}`;
+          if (bd) bd.innerHTML = hl(fill(s.coldEmail.body));
+        }
+        if (focusId){ const f = document.getElementById(focusId); f?.focus(); try{ f?.setSelectionRange(pos,pos); }catch(e){} }
+      });
+    });
+    $('#btnSpeak')?.addEventListener('click', (e) => {
+      if (speechSynthesis.speaking){ stopSpeak(); e.target.textContent = '🔊 Practice aloud'; return; }
+      const u = new SpeechSynthesisUtterance(currentText());
+      u.rate = 1.02;
+      u.onend = () => { const b = $('#btnSpeak'); if (b) b.textContent = '🔊 Practice aloud'; };
+      speechSynthesis.speak(u);
+      e.target.textContent = '⏹ Stop';
+    });
+  };
+
+  rail.querySelectorAll('.mom-tab').forEach(b =>
+    b.addEventListener('click', () => { sel = Number(b.dataset.i); showPersonalize = false; render(); }));
+  render();
+
+  $('#footCopyScript')?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(currentText());
+      const btn = $('#footCopyScript'); const orig = btn.innerHTML;
+      btn.innerHTML = '✓ Copied'; showToast('Script copied');
+      setTimeout(() => { btn.innerHTML = orig; }, 1500);
+    } catch(e){}
+  });
+
+  window.addEventListener('hashchange', stopSpeak, { once: true });
+}
+
+function vMessagingClassic(id){
+  const p = prod(id);
   return `
   ${prodHead(p)}
   ${tabs(id,'messaging')}
@@ -1643,7 +2088,7 @@ function vMessaging(id){
   </div>`;
 }
 
-function vPlaybook(id){
+function vPlaybookClassic(id){
   const p = prod(id);
   const s = p.scripts;
   const emailBodyHtml = `<div class="email-sub"><b>Subject:</b> ${highlightPH(s.coldEmail.subject)}</div><div style="padding-top:6px">${highlightPH(s.coldEmail.body)}</div>`;
@@ -1978,6 +2423,10 @@ function route(){
       scrollToEl(document.getElementById('brands-row'));
     });
   }
+  const mMsg = hash.match(/^#\/(.+)\/messaging$/);
+  if (mMsg && prod(mMsg[1])?.msgExtras) initMessagingPro(prod(mMsg[1]));
+  const mPb = hash.match(/^#\/(.+)\/playbook$/);
+  if (mPb && prod(mPb[1])?.pbExtras) initPlaybookPro(prod(mPb[1]));
   if (hash === '#/process'){
     // jump bar: intercept clicks (plain anchors would fight the hash router) + scrollspy
     const links = [...document.querySelectorAll('#jumpbar a')];
