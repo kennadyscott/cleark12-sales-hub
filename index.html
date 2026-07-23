@@ -2166,12 +2166,6 @@ function vMessagingPro(p, id){
       <h1>${esc(x.headline)}</h1>
       <p class="psub">${esc(x.sub)}</p>
     </div>
-    <div class="search-wrap pro-search">
-      <label class="search">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        <input id="msgFilter" type="search" placeholder="Search messaging" autocomplete="off" />
-      </label>
-    </div>
   </div>
 
   <div class="msg2-grid">
@@ -2255,12 +2249,6 @@ function initMessagingPro(p){
   rail.querySelectorAll('.aud-tab').forEach(b =>
     b.addEventListener('click', () => { sel = Number(b.dataset.i); render(); }));
   render();
-  $('#msgFilter')?.addEventListener('input', e => {
-    const q = e.target.value.toLowerCase().trim();
-    document.querySelectorAll('#msgBand .band-row').forEach(r => {
-      r.style.display = !q || r.textContent.toLowerCase().includes(q) ? '' : 'none';
-    });
-  });
 }
 
 function vPlaybook(id){
