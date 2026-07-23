@@ -993,7 +993,7 @@
         "headline": "Find the right message for the person in the room.",
         "sub": "Choose an audience to see the lead message, buyer priorities, and language to use.",
         "repAngles": {
-          "teacher": "Focus on time back, clarity in the moment, and support that keeps the teacher in control.",
+          "teacher": "Teachers don't need help identifying who needs support. They need help building what those students need next.",
           "campus": "Focus on consistency across classrooms and visibility that doesn't add walkthrough burden.",
           "district": "Focus on scale inside their existing ecosystem — MTSS alignment and measurable growth outcomes."
         },
@@ -1148,12 +1148,12 @@
         {
           "audience": "teacher",
           "care": [
-            "Less prep & grading",
-            "Faster reteach",
-            "Clear next steps",
-            "Small-group support"
+            "More time to teach",
+            "Respond immediately after assessments",
+            "Confidence in what to teach next",
+            "Ready-to-teach small-group instruction"
           ],
-          "leadMessage": "Know what to do next — in real time, without extra work."
+          "leadMessage": "Teachers already know who needs help. They just don't have time to build what those students need next."
         },
         {
           "audience": "campus",
