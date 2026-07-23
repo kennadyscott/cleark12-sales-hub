@@ -2656,7 +2656,8 @@ function tabs(id, active){
     { hash:`#/${id}`, label:'Overview', key:'overview' },
     { hash:`#/${id}/messaging`, label:'Messaging', key:'messaging' },
     { hash:`#/${id}/playbook`, label:'Playbook', key:'playbook' },
-    ...(prod(id)?.pricing ? [{ hash:`#/${id}/pricing`, label:'Pricing', key:'pricing' }] : [])
+    ...(prod(id)?.pricing ? [{ hash:`#/${id}/pricing`, label:'Pricing', key:'pricing' }] : []),
+    ...(prod(id)?.outreachCadence ? [{ hash:`#/${id}/cadence`, label:'Cadence', key:'cadence' }] : [])
   ];
   return `<nav class="tabs">${t.map(x=>`<a href="${x.hash}" class="${x.key===active?'active':''}">${x.label}</a>`).join('')}</nav>`;
 }
@@ -2687,6 +2688,99 @@ function vPricing(id){
   <div class="section">
     <div class="sec-title"><h2>What we know today</h2><span class="rule"></span></div>
     <div class="card pad">${rows(pr.today)}</div>
+  </div>`;
+}
+
+// Highlight ANY [placeholder] token — cadence scripts use [number], [Campus], [link], [Scheduling Link], etc.
+const highlightAny = s => esc(s).replace(/\[([^\]]+)\]/g, '<span class="ph">[$1]</span>');
+// One expandable touch (call/voicemail/gatekeeper/email/text) with copy buttons.
+function touchAccordion(st){
+  return `
+    <details class="card task-row" style="overflow:hidden">
+      <summary style="display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;flex-wrap:wrap;list-style:none">
+        <span class="caret" style="color:var(--faint);font-size:11px">▸</span>
+        <span class="stage-n" style="width:auto;border-radius:999px;padding:0 10px;font-size:12px;height:26px">${esc(st.day)}</span>
+        <span class="chip" style="font-size:11px">${esc(st.channel)}</span>
+        ${st.owner?`<span class="chip" style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:${st.owner==='Sales Rep'?'var(--accent-strong)':'#0E9F6E'}">${esc(st.owner)}</span>`:''}
+        <span style="font-size:13px;color:var(--muted)">${esc(st.purpose)}</span>
+      </summary>
+      <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:12px">
+        ${st.components.map(c=>`
+          <div class="script"><div class="script-head"><h4>${esc(c.label)}</h4>${copyBtn('Copy', payload((c.subjectVariants?`Subject: ${c.subjectVariants[0]}\n\n`:'')+c.body))}</div>
+          ${c.subjectVariants?`<div class="email-sub"><b>Subject:</b> ${highlightAny(c.subjectVariants[0])}</div>`:''}
+          <div class="script-body">${highlightAny(c.body)}</div></div>`).join('')}
+      </div>
+    </details>`;
+}
+const cadHead = (t, sub) => `<div class="sec-title" style="margin-top:26px"><h2>${esc(t)}</h2><span class="rule"></span>${sub?`<span style="font-size:13px;color:var(--muted);font-weight:400">${esc(sub)}</span>`:''}</div>`;
+const chk = (items, color='#0E9F6E') => items.map(x=>`<div class="sp-check" style="padding:2px 0"><span style="color:${color};font-weight:800">✓</span><span>${esc(x)}</span></div>`).join('');
+
+// The full Crystal cadence, product-tabbed — mirrors the Sales HQ journey.
+function vProductCadence(id){
+  const p = prod(id);
+  const oc = p.outreachCadence, disc = p.discoverCadence, dm = p.demoCadence, cc = p.closeCadence, ob = p.onboardCadence;
+  const ns = DATA.process.nurtureSequence;
+  const nurtureAcc = t => `
+    <details class="card task-row" style="overflow:hidden">
+      <summary style="display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;flex-wrap:wrap;list-style:none">
+        <span class="caret" style="color:var(--faint);font-size:11px">▸</span>
+        <span class="stage-n" style="width:auto;border-radius:999px;padding:0 10px;font-size:12px;height:26px">${esc(t.id)}</span>
+        <span class="chip" style="font-size:11px">${esc(t.channel)}</span>
+        ${t.id==='N5'?'<span class="chip accent" style="font-size:10px;font-weight:800">RE-ENTRY</span>':''}
+        <span style="font-size:13px;color:var(--muted)">${esc(t.timing)} · ${esc(t.purpose)}</span>
+      </summary>
+      <div style="padding:0 16px 16px">
+        ${t.crystal ? `<div class="script"><div class="script-head"><h4>Crystal Instruction</h4>${copyBtn('Copy', payload((t.crystal.subject?`Subject: ${t.crystal.subject}\n\n`:'')+t.crystal.body))}</div>
+          ${t.crystal.subject?`<div class="email-sub"><b>Subject:</b> ${highlightAny(t.crystal.subject)}</div>`:''}
+          <div class="script-body">${highlightAny(t.crystal.body)}</div></div>` : `<p style="font-size:13px;color:var(--muted)">No Crystal copy for this touch.</p>`}
+      </div>
+    </details>`;
+  return `
+  ${prodHead(p)}
+  ${tabs(id,'cadence')}
+
+  <div class="page-head" style="margin-top:4px">
+    <div class="eyebrow">Cadence</div>
+    <h1>The full ${esc(p.name)} cadence.</h1>
+    <p class="lede">Every touch across the journey — Connect, Discover, Demo, Close, Onboard, and the long-tail Nurture — with the exact scripts, ready to copy. This is the same cadence your reps run in Sales HQ.</p>
+  </div>
+
+  ${oc ? `<div class="section">
+    ${cadHead('Connect — the 22-day cadence', oc.personaLabel)}
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${esc(oc.summary)}</p>
+    <div style="display:flex;flex-direction:column;gap:8px">${oc.steps.map(touchAccordion).join('')}</div>
+  </div>` : ''}
+
+  ${disc ? `<div class="section">
+    ${cadHead('Discover — the touch points', disc.purpose)}
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${esc(disc.intro)} Healthy pace ${esc(disc.healthy)} · stall alarm ${esc(disc.stallAlarm)}.</p>
+    <div style="display:flex;flex-direction:column;gap:8px">${disc.steps.map(touchAccordion).join('')}</div>
+  </div>` : ''}
+
+  ${dm ? `<div class="section">
+    ${cadHead('Demo — the touch points')}
+    <div class="callout" style="margin-bottom:12px"><b>${esc(dm.proposalMindset.heading)}.</b> ${esc(dm.proposalMindset.note)}</div>
+    <div style="display:flex;flex-direction:column;gap:8px">${dm.steps.map(touchAccordion).join('')}</div>
+    <div class="card pad" style="margin-top:12px"><div class="eyebrow" style="color:var(--accent-strong)">Demo prep checklist</div><p style="font-size:12.5px;color:var(--muted);margin:6px 0 8px">${esc(dm.prepChecklist.intro)}</p>${chk(dm.prepChecklist.items)}</div>
+  </div>` : ''}
+
+  ${cc ? `<div class="section">
+    ${cadHead('Close — the touch points')}
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${esc(cc.intro)}</p>
+    <div style="display:flex;flex-direction:column;gap:8px">${cc.steps.map(touchAccordion).join('')}</div>
+    <div class="card pad" style="margin-top:12px"><div class="eyebrow" style="color:var(--accent-strong)">The Approval Toolkit</div><p style="font-size:12.5px;color:var(--muted);margin:6px 0 8px">${esc(cc.approvalToolkit.intro)}</p><div class="disc-signals" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">${chk(cc.approvalToolkit.items)}</div></div>
+  </div>` : ''}
+
+  ${ob ? `<div class="section">
+    ${cadHead('Onboard & Expand', 'Customer Success — a separate pipeline')}
+    <div class="callout" style="margin-bottom:12px;border-color:#0E9F6E55;background:color-mix(in srgb,#0E9F6E 6%,var(--surface))"><b style="color:#0E9F6E">${esc(ob.handoff.heading)}</b><div style="margin-top:6px">${chk(ob.handoff.items)}</div></div>
+    <div style="display:flex;flex-direction:column;gap:8px">${ob.steps.map(touchAccordion).join('')}</div>
+  </div>` : ''}
+
+  <div class="section">
+    ${cadHead('Nurture — the long game', ns.name)}
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px"><b>Who enters:</b> ${esc(ns.entryCriteria)}</p>
+    <div style="display:flex;flex-direction:column;gap:8px">${ns.touches.map(nurtureAcc).join('')}</div>
   </div>`;
 }
 function prodHead(p){
@@ -4036,6 +4130,7 @@ const ROUTES = {
   '#/crystal/messaging':  { prod:'crystal',  nav:'#/crystal',  view:()=>vMessaging('crystal') },
   '#/crystal/playbook':   { prod:'crystal',  nav:'#/crystal',  view:()=>vPlaybook('crystal') },
   '#/crystal/pricing':    { prod:'crystal',  nav:'#/crystal',  view:()=>vPricing('crystal') },
+  '#/crystal/cadence':    { prod:'crystal',  nav:'#/crystal',  view:()=>vProductCadence('crystal') },
   '#/writing':                    { prod:'writing', nav:'#/writing', view:vWriting },
   '#/writing/ohio':               { prod:'writing', nav:'#/writing', view:()=>vProduct('writing/ohio') },
   '#/writing/ohio/messaging':     { prod:'writing', nav:'#/writing', view:()=>vMessaging('writing/ohio') },
