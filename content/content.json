@@ -721,7 +721,7 @@
       },
       {
         "objection": "Just send me information.",
-        "response": "Happy to — I'll send a one-pager. It'll land better if I tailor it to your priority; is it more instructional response or STAAR writing? A 15-minute call beats a PDF every time."
+        "response": "Happy to! I'll send over our asynchronous demo — you can watch it in under five minutes to see how it supports the curriculum and data you're already using in your school. I'll reach back out in a few days to see if you have any questions or are interested in a fuller demo."
       }
     ]
   },
@@ -738,6 +738,31 @@
       "oneLiner": "The instructional response partner for Texas classrooms.",
       "cardBlurb": "Instructional tools that turn insight into action.",
       "selfGuidedDemo": "crystalinstruction.com/self-guided-demo",
+      "pricing": {
+        "intro": "Pricing and procurement guidance for reps. The numbers are being finalized with sales enablement — the placeholders below mark exactly what's coming, so you know what to expect here.",
+        "sections": [
+          {
+            "title": "School-level pricing",
+            "status": "coming",
+            "body": "Per-campus pricing lands here: annual license tiers, what's included, and minimums."
+          },
+          {
+            "title": "District pricing",
+            "status": "coming",
+            "body": "District-wide agreements land here: volume tiers, multi-campus discounts, and multi-year terms."
+          },
+          {
+            "title": "Deals in place",
+            "status": "coming",
+            "body": "Current promotions, pilot pricing, and named agreements you can reference land here."
+          }
+        ],
+        "today": [
+          "Districts commonly fund Crystal through Title, curriculum, PD, or local budgets — and often start at one campus or grade band.",
+          "Know the purchasing path early: ESCs and purchasing co-ops in Texas; confirm whether a specific approval path applies.",
+          "Until this guide is filled in, never quote a number — route pricing questions to Kennady and keep the deal moving on value."
+        ]
+      },
       "overview": {
         "repHeadline": "Sell the instructional response — not another resource library.",
         "repSub": "Crystal Instruction helps Texas teachers turn student performance into the next instructional move — without adding prep, grading, or another disconnected system.",
@@ -750,6 +775,13 @@
           }
         ],
         "fieldResultsNote": "Real, single-classroom trial result — tell it as a story, not a statistic. More field results land here as pilots close.",
+        "helpfulLinks": [
+          {
+            "label": "Self-guided demo",
+            "sub": "Asynchronous — watchable in under 5 minutes. Your answer to 'just send me information.'",
+            "url": "https://crystalinstruction.com/self-guided-demo"
+          }
+        ],
         "buyers": [
           {
             "n": "01",
