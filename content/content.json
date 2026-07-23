@@ -496,10 +496,10 @@
       {
         "n": 4,
         "name": "Demo",
-        "goal": "Show the specific workflow that solves their stated pain.",
-        "exit": "Champion confirms fit and names remaining stakeholders.",
-        "healthy": "1–2 weeks from discovery",
-        "stall": "2+ weeks and the demo won't schedule → re-engage the champion with two specific times and a deadline."
+        "goal": "Prepare for a tailored demo, maximize attendance, and position the next step as a proposal — not another meeting.",
+        "exit": "Demo completed; champion confirms interest; remaining stakeholders identified; next step is proposal/pricing.",
+        "healthy": "1–2 weeks",
+        "stall": "4 days past the scheduled demo without a completed meeting → re-engage and rebook."
       },
       {
         "n": 5,
@@ -740,6 +740,112 @@
       "name": "Crystal Instruction",
       "endorsement": "a ClearK12 product",
       "logo": "assets/crystal-logo.png",
+      "demoCadence": {
+        "intro": "The demo is booked — now protect it. These touches maximize attendance, tailor the conversation, and set up the proposal before the meeting starts.",
+        "purpose": "Prepare for a tailored demo, maximize attendance, and position the next step as a proposal — not another meeting.",
+        "healthy": "1–2 weeks",
+        "stallAlarm": "4 days past the scheduled demo without a completed meeting",
+        "steps": [
+          {
+            "day": "Touch 1",
+            "channel": "Email",
+            "purpose": "Immediately after booking — confirmation. No agenda, no attachment; just reassurance.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Confirmation email",
+                "subjectVariants": [
+                  "Looking forward to next week"
+                ],
+                "body": "Hi [Name],\n\nThanks for scheduling time to meet.\n\nTo make the conversation as relevant as possible, I'll tailor everything around your current instructional process.\n\nIf there's anything you'd especially like to see — small groups, benchmark response, MTSS, intervention, walkthrough visibility, etc. — just let me know beforehand.\n\nOtherwise, I'll come prepared to show how Crystal helps teachers spend less time planning and more time teaching.\n\nLooking forward to talking with you.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 2",
+            "channel": "Email",
+            "purpose": "Two days before — ask what would make it most valuable. This dramatically improves demos.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Priorities email",
+                "subjectVariants": [
+                  "One quick question before we meet"
+                ],
+                "body": "Hi [Name],\n\nI'm putting the finishing touches on our walkthrough.\n\nOne quick question:\n\nWhat would make this conversation most valuable for you?\n\nExamples...\n\n• Small-group instruction\n• Benchmark response\n• Teacher planning\n• MTSS\n• Walkthrough consistency\n• Something else?\n\nI'll tailor everything around your priorities.\n\nSee you soon.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 3",
+            "channel": "Email",
+            "purpose": "Day before — friendly reminder. Nothing else.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Reminder email",
+                "subjectVariants": [
+                  "See you tomorrow"
+                ],
+                "body": "Hi [Name],\n\nJust a quick reminder about our conversation tomorrow.\n\nLooking forward to learning more about your campus and sharing how other Texas schools are helping teachers move from assessment to instruction with less planning.\n\nIf anything changes, just let me know.\n\nOtherwise, see you tomorrow!\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 4",
+            "channel": "Text",
+            "purpose": "Morning of the demo — optional text, if you have their cell.",
+            "components": [
+              {
+                "type": "text",
+                "label": "Morning-of text",
+                "body": "Hi [Name] — looking forward to connecting at [time] today.\n\nI've tailored everything around the priorities you shared and think it'll be a productive conversation.\n\nSee you soon!"
+              }
+            ]
+          },
+          {
+            "day": "If they no-show",
+            "channel": "Email + Call",
+            "purpose": "The most overlooked part — recover gracefully the same day, then call the next morning.",
+            "components": [
+              {
+                "type": "email",
+                "label": "No-show email",
+                "subjectVariants": [
+                  "Should we find another time?"
+                ],
+                "body": "Hi [Name],\n\nSorry we missed each other today.\n\nI know how quickly schedules change.\n\nI'm happy to find another time whenever it's convenient.\n\nOr, if it's easier, here's our five-minute self-guided walkthrough so you can get a quick overview first:\n\n👉 crystalinstruction.com/self-guided-demo\n\nJust let me know what works best.\n\n— [Rep]"
+              }
+            ]
+          }
+        ],
+        "prepChecklist": {
+          "intro": "Before the rep joins — did they answer:",
+          "items": [
+            "Current curriculum?",
+            "Assessment system?",
+            "Grade levels?",
+            "Priority pain?",
+            "MTSS?",
+            "Small groups?",
+            "Decision maker attending?",
+            "Additional stakeholders?",
+            "Desired implementation timeline?"
+          ],
+          "note": "That checklist ensures every demo feels customized."
+        },
+        "proposalMindset": {
+          "heading": "Know your likely proposal before the demo starts",
+          "options": [
+            "Campus license",
+            "District pilot",
+            "Elementary only",
+            "Benchmark response package",
+            "Full implementation"
+          ],
+          "note": "Then the demo isn't about discovering the solution — it's about validating it. Not “I need to show them everything” but “I need to show them why the solution I already have in mind fits their needs.” That's how you eliminate unnecessary second demos and transition naturally to a proposal at the end of the meeting."
+        }
+      },
       "discoverCadence": {
         "intro": "Most prospects skip straight from Connect to a scheduled demo. For the few who make a real connection without booking one, this is the plan.",
         "purpose": "Validate fit, build urgency, and schedule a tailored demo.",

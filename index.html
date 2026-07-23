@@ -1178,8 +1178,8 @@ const DATA = {
         healthy:"1–3 weeks (one full 22-day cadence)", stall:"Cadence exhausted with no conversation → move to nurture; don't let it sit in Connect." },
       { n:3, name:"Discover", goal:"Understand their systems, pain, priorities, and buying process.", exit:"Confirmed pain, decision-makers, timeline, and rough budget path.",
         healthy:"1–2 weeks", stall:"3+ weeks without confirmed pain and decision-makers → re-run FIT or escalate to your manager." },
-      { n:4, name:"Demo", goal:"Show the specific workflow that solves their stated pain.", exit:"Champion confirms fit and names remaining stakeholders.",
-        healthy:"1–2 weeks from discovery", stall:"2+ weeks and the demo won't schedule → re-engage the champion with two specific times and a deadline." },
+      { n:4, name:"Demo", goal:"Prepare for a tailored demo, maximize attendance, and position the next step as a proposal — not another meeting.", exit:"Demo completed; champion confirms interest; remaining stakeholders identified; next step is proposal/pricing.",
+        healthy:"1–2 weeks", stall:"4 days past the scheduled demo without a completed meeting → re-engage and rebook." },
       { n:5, name:"Propose", goal:"Deliver pricing/quote and implementation picture.", exit:"Proposal reviewed; objections surfaced; next step to decision set.",
         healthy:"2–4 weeks", stall:"30+ days without movement → manager touch; re-anchor to their budget window." },
       { n:6, name:"Close", goal:"Navigate approval (budget, PO, procurement) and sign.", exit:"Signed agreement / PO issued.",
@@ -1325,6 +1325,112 @@ const DATA = {
     {
       id:"crystal", name:"Crystal Instruction", endorsement:"a ClearK12 product",
       logo:"assets/crystal-logo.png",
+      demoCadence: {
+        "intro": "The demo is booked — now protect it. These touches maximize attendance, tailor the conversation, and set up the proposal before the meeting starts.",
+        "purpose": "Prepare for a tailored demo, maximize attendance, and position the next step as a proposal — not another meeting.",
+        "healthy": "1–2 weeks",
+        "stallAlarm": "4 days past the scheduled demo without a completed meeting",
+        "steps": [
+          {
+            "day": "Touch 1",
+            "channel": "Email",
+            "purpose": "Immediately after booking — confirmation. No agenda, no attachment; just reassurance.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Confirmation email",
+                "subjectVariants": [
+                  "Looking forward to next week"
+                ],
+                "body": "Hi [Name],\n\nThanks for scheduling time to meet.\n\nTo make the conversation as relevant as possible, I'll tailor everything around your current instructional process.\n\nIf there's anything you'd especially like to see — small groups, benchmark response, MTSS, intervention, walkthrough visibility, etc. — just let me know beforehand.\n\nOtherwise, I'll come prepared to show how Crystal helps teachers spend less time planning and more time teaching.\n\nLooking forward to talking with you.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 2",
+            "channel": "Email",
+            "purpose": "Two days before — ask what would make it most valuable. This dramatically improves demos.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Priorities email",
+                "subjectVariants": [
+                  "One quick question before we meet"
+                ],
+                "body": "Hi [Name],\n\nI'm putting the finishing touches on our walkthrough.\n\nOne quick question:\n\nWhat would make this conversation most valuable for you?\n\nExamples...\n\n• Small-group instruction\n• Benchmark response\n• Teacher planning\n• MTSS\n• Walkthrough consistency\n• Something else?\n\nI'll tailor everything around your priorities.\n\nSee you soon.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 3",
+            "channel": "Email",
+            "purpose": "Day before — friendly reminder. Nothing else.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Reminder email",
+                "subjectVariants": [
+                  "See you tomorrow"
+                ],
+                "body": "Hi [Name],\n\nJust a quick reminder about our conversation tomorrow.\n\nLooking forward to learning more about your campus and sharing how other Texas schools are helping teachers move from assessment to instruction with less planning.\n\nIf anything changes, just let me know.\n\nOtherwise, see you tomorrow!\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 4",
+            "channel": "Text",
+            "purpose": "Morning of the demo — optional text, if you have their cell.",
+            "components": [
+              {
+                "type": "text",
+                "label": "Morning-of text",
+                "body": "Hi [Name] — looking forward to connecting at [time] today.\n\nI've tailored everything around the priorities you shared and think it'll be a productive conversation.\n\nSee you soon!"
+              }
+            ]
+          },
+          {
+            "day": "If they no-show",
+            "channel": "Email + Call",
+            "purpose": "The most overlooked part — recover gracefully the same day, then call the next morning.",
+            "components": [
+              {
+                "type": "email",
+                "label": "No-show email",
+                "subjectVariants": [
+                  "Should we find another time?"
+                ],
+                "body": "Hi [Name],\n\nSorry we missed each other today.\n\nI know how quickly schedules change.\n\nI'm happy to find another time whenever it's convenient.\n\nOr, if it's easier, here's our five-minute self-guided walkthrough so you can get a quick overview first:\n\n👉 crystalinstruction.com/self-guided-demo\n\nJust let me know what works best.\n\n— [Rep]"
+              }
+            ]
+          }
+        ],
+        "prepChecklist": {
+          "intro": "Before the rep joins — did they answer:",
+          "items": [
+            "Current curriculum?",
+            "Assessment system?",
+            "Grade levels?",
+            "Priority pain?",
+            "MTSS?",
+            "Small groups?",
+            "Decision maker attending?",
+            "Additional stakeholders?",
+            "Desired implementation timeline?"
+          ],
+          "note": "That checklist ensures every demo feels customized."
+        },
+        "proposalMindset": {
+          "heading": "Know your likely proposal before the demo starts",
+          "options": [
+            "Campus license",
+            "District pilot",
+            "Elementary only",
+            "Benchmark response package",
+            "Full implementation"
+          ],
+          "note": "Then the demo isn't about discovering the solution — it's about validating it. Not “I need to show them everything” but “I need to show them why the solution I already have in mind fits their needs.” That's how you eliminate unnecessary second demos and transition naturally to a proposal at the end of the meeting."
+        }
+      },
       discoverCadence: {
         "intro": "Most prospects skip straight from Connect to a scheduled demo. For the few who make a real connection without booking one, this is the plan.",
         "purpose": "Validate fit, build urgency, and schedule a tailored demo.",
@@ -3265,6 +3371,23 @@ function vProcess(){
   const fitS = sents(pr.fitNote);
   const dd = pr.discoverStage;
   const dcad = prod('crystal').discoverCadence;
+  const dm = prod('crystal').demoCadence;
+  const demoOwner = prod('crystal').pbExtras?.demoOwner;
+  const touchAcc = st => `
+        <details class="card task-row" style="overflow:hidden">
+          <summary style="display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;flex-wrap:wrap;list-style:none">
+            <span class="caret" style="color:var(--faint);font-size:11px">▸</span>
+            <span class="stage-n" style="width:auto;border-radius:999px;padding:0 10px;font-size:12px;height:26px">${esc(st.day)}</span>
+            <span class="chip" style="font-size:11px">${esc(st.channel)}</span>
+            <span style="font-size:13px;color:var(--muted)">${esc(st.purpose)}</span>
+          </summary>
+          <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:12px">
+            ${st.components.map(c=>`
+              <div class="script"><div class="script-head"><h4>${esc(c.label)}</h4>${copyBtn('Copy', payload((c.subjectVariants?`Subject: ${c.subjectVariants[0]}\n\n`:'')+c.body))}</div>
+              ${c.subjectVariants?`<div class="email-sub"><b>Subject:</b> ${highlightPH(c.subjectVariants[0])}</div>`:''}
+              <div class="script-body">${highlightPH(c.body)}</div></div>`).join('')}
+          </div>
+        </details>`;
 
   return `
   <div class="sp-head">
@@ -3292,7 +3415,7 @@ function vProcess(){
   </div>
 
   <nav class="jumpbar" id="jumpbar" aria-label="On this page">
-    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#objection-finder","Objections"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
+    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#sec-demo","Demo"],["#objection-finder","Objections"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
   </nav>
 
   <div class="section" id="sec-stages">
@@ -3386,10 +3509,7 @@ function vProcess(){
     </div>
 
     <h3 class="disc-h3">Transition to the demo</h3>
-    <div class="grid g2" style="align-items:start">
-      <div class="script"><div class="script-head"><h4>Hand-off script</h4>${copyBtn('Copy', payload(dd.transitionToDemo.script))}</div><div class="script-body">${esc(dd.transitionToDemo.script)}</div></div>
-      <div class="card pad"><div class="eyebrow">Then: demo tips</div><div style="margin-top:10px">${crows(pr.demoTips)}</div></div>
-    </div>
+    <div class="script"><div class="script-head"><h4>Hand-off script</h4>${copyBtn('Copy', payload(dd.transitionToDemo.script))}</div><div class="script-body">${esc(dd.transitionToDemo.script)}</div></div>
 
     ${dcad ? `
     <h3 class="disc-h3">If the demo doesn't get scheduled — the Discover touch points</h3>
@@ -3414,6 +3534,34 @@ function vProcess(){
 
     <p style="font-size:12.5px;color:var(--muted);margin-top:14px">Product-specific discovery questions also live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
   </div>
+
+  ${dm ? `
+  <div class="section" id="sec-demo">
+    <div class="sec-title"><h2>Demo</h2><span class="rule"></span>${demoOwner ? `<span style="font-size:13px;color:var(--muted);font-weight:400">🎤 Run by ${esc(demoOwner)} — you schedule it and you're on the call</span>` : ''}</div>
+    <p style="color:var(--ink-2);font-size:14px;margin-bottom:12px">${esc(dm.purpose)} <span style="color:var(--muted);font-size:13px">Healthy pace: ${esc(dm.healthy)} · stall alarm: ${esc(dm.stallAlarm)}.</span></p>
+
+    <div class="callout" style="margin-bottom:16px">
+      <b>${esc(dm.proposalMindset.heading)}.</b>
+      <span style="display:inline-flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px 0">${dm.proposalMindset.options.map(o=>`<span class="chip" style="font-size:11px">${esc(o)}</span>`).join('')}</span><br/>
+      ${esc(dm.proposalMindset.note)}
+    </div>
+
+    <h3 class="disc-h3">The demo touch points</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${esc(dm.intro)}</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${dm.steps.map(touchAcc).join('')}
+    </div>
+
+    <div class="grid g2" style="align-items:start;margin-top:16px">
+      <div class="card pad">
+        <div class="eyebrow" style="color:var(--accent-strong)">Demo prep checklist</div>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:6px">${esc(dm.prepChecklist.intro)}</p>
+        <div style="margin-top:10px">${dm.prepChecklist.items.map(x=>`<div class="sp-check">${CK}<span>${esc(x)}</span></div>`).join('')}</div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px">${esc(dm.prepChecklist.note)}</p>
+      </div>
+      <div class="card pad"><div class="eyebrow">Demo tips</div><div style="margin-top:10px">${crows(pr.demoTips)}</div></div>
+    </div>
+  </div>` : ''}
 
   <div class="section" id="objection-finder">
     <div class="sec-title"><h2>Objection finder</h2><span class="rule"></span>${stamp(pr.updated?.objections)}</div>
