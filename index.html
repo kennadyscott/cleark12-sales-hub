@@ -501,6 +501,21 @@
     .sp-close aside { border-left: 0; padding-left: 0; }
   }
 
+  /* ============ Discover stage (disc-) ============ */
+  .disc-moves { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 6px; }
+  .disc-move h4 { font-size: 15px; color: var(--ink); }
+  .disc-intent { font-size: 12.5px; color: var(--accent-strong); font-style: italic; margin: 4px 0 10px; line-height: 1.45; }
+  .disc-lens { border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); padding: 16px 18px; }
+  .disc-lens-h { display: flex; align-items: center; gap: 7px; font-size: 14px; font-weight: 800; margin-bottom: 2px; }
+  .disc-signals { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .disc-sig { border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; }
+  .disc-sig .hd { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: #fff; padding: 8px 14px; }
+  .disc-sig.good .hd { background: #0E9F6E; }
+  .disc-sig.notyet .hd { background: #B45309; }
+  .disc-sig .bd { padding: 12px 14px; }
+  .disc-h3 { font-size: 16px; font-weight: 800; margin: 24px 0 4px; }
+  @media (max-width: 900px) { .disc-moves, .disc-signals { grid-template-columns: 1fr; } }
+
   .rows { display: flex; flex-direction: column; gap: 9px; }
   .row { display: flex; gap: 11px; align-items: flex-start; font-size: 13.5px; color: var(--ink-2); }
   .row .b { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 8px; }
@@ -1164,6 +1179,95 @@ const DATA = {
       "Show the teacher time saved and the student experience — that's what champions repeat to leadership.",
       "Confirm fit out loud and ask who else needs to see it."
     ],
+    discoverStage: {
+      name: "Discover",
+      goal: "Understand their campus, confirm a real and specific pain, map how a decision would actually get made, and mutually decide whether a tailored demo is worth their time.",
+      entry: "A booked conversation earned in Connect — or a contact who re-engaged from nurture. Treat it as a two-way conversation, not a scheduled pitch.",
+      mindset: "Discover is a conversation between two experts: they know their campus, we know this problem. We're not qualifying a lead — we're figuring out together whether there's a fit worth their time. Curious, generous, and honest, including being willing to say 'this might not be right for you this year.' Listen far more than you talk — aim for them talking about 70% of the time.",
+      howToOpen: {
+        script: "Thanks for making the time, [Name] — I know it's precious. Before I show you anything, I'd rather understand your campus so that whatever I share is actually relevant to you. Could I ask a few questions about how things work now and what you're focused on this year? And please stop me anytime — this should be a conversation, not an interview. Sound okay?",
+        notes: [
+          "Set a time expectation up front and honor it.",
+          "Ask permission to ask questions — it signals partnership, not extraction.",
+          "Take visible notes and reflect their words back later; people trust being heard.",
+          "Resist the urge to solve out loud. Every minute you talk is a minute you aren't learning."
+        ]
+      },
+      framework: {
+        name: "The conversation, in four moves",
+        note: "Not a script to read top to bottom — a map. Follow their lead, and make sure you leave with each move covered. Together these fill in the FIT picture (Fit & Pain, Influence, Timing & Money).",
+        sections: [
+          { theme: "1. Priorities & current state", intent: "Understand their world and confirm we'd be solving something they actually care about.", questions: [
+            "What are your top academic priorities on campus this year, and how are you measuring progress?",
+            "Walk me through what happens today after a benchmark or major assessment — from results to what actually changes in classrooms.",
+            "What systems and tools do your teachers already lean on for curriculum, assessment, and data?",
+            "What's working well that you'd want to protect — and where does it tend to break down?"
+          ] },
+          { theme: "2. Pain, impact & why now", intent: "Surface the real cost of the problem and whether there's urgency behind it.", questions: [
+            "Where do you feel the most teacher time or energy gets lost right now?",
+            "When that happens, what's the downstream effect — on students, on teachers, on your data?",
+            "How are you handling it today, and what would you say that's costing you?",
+            "Is this something you're actively trying to fix this year, or more of a someday? What's making it a priority now — or not?"
+          ] },
+          { theme: "3. People, process & path", intent: "Map who's involved and how a purchase would realistically happen — the Influence and Timing & Money of FIT.", questions: [
+            "If you found something that genuinely helped, who else would want to weigh in — C&I, your AP team, technology, the district?",
+            "How do decisions like this usually get made on your campus or in your district?",
+            "What does timing look like — is this a this-year conversation, or part of next-year planning?",
+            "And if it came to it, how are tools like this typically funded — campus budget, Title, district, a grant?"
+          ] },
+          { theme: "4. Confirm & agree the next step", intent: "Reflect back what you heard, confirm you got it right, and mutually decide on a focused demo.", questions: [
+            "Let me make sure I've got this right: [play back their pain and priority in their words]. Did I capture that?",
+            "Based on what you've shared, the most useful thing I could show you is [the specific workflow]. Would a 20-minute walkthrough focused on exactly that be worth your time?",
+            "Who should be in that conversation with us?"
+          ] }
+        ]
+      },
+      productLenses: {
+        crystal: { focus: "Instructional response — how fast and how consistently classrooms turn assessment data into targeted reteach.", questions: [
+          "After a benchmark or unit assessment, how long until students actually get targeted support — and how consistent is that from classroom to classroom?",
+          "How is MTSS / Tier 1 execution going — where does it slip between the plan and what happens in practice?",
+          "How much of your teachers' time goes to analyzing data, regrouping students, and planning reteach?",
+          "How do you get visibility today into whether reteach is happening well across classrooms?"
+        ] },
+        lonestar: { focus: "Constructed-response writing — how much students write, how quickly they get feedback, and what it costs ELAR teachers.", questions: [
+          "Since the STAAR redesign, how is constructed response (ECR/SCR) going — on the test and in daily practice?",
+          "Realistically, how often do students write constructed responses, and how long until they get feedback?",
+          "How much time are your ELAR teachers spending grading writing each week?",
+          "What's your read on writing as a driver of your STAAR and accountability picture this year?"
+        ] }
+      },
+      listenFor: {
+        goodFit: [
+          "They name a specific, felt pain in their own words — not just 'we're always looking to improve.'",
+          "There's a clear 'why now': an initiative, a score, a board goal, a new mandate.",
+          "They can identify who else is involved and roughly how buying works.",
+          "They're doing the work manually today and it visibly costs them time or results."
+        ],
+        notYet: [
+          "No urgency and no 'why now' — purely exploratory browsing.",
+          "Can't identify any decision process or budget path.",
+          "Genuinely happy with the current state; no felt pain.",
+          "Wrong person, with no path to the right one (route to a referral or nurture)."
+        ]
+      },
+      avoid: [
+        "Don't pitch or demo yet — you haven't earned the relevance.",
+        "Don't feature-dump; questions teach you more than statements do.",
+        "Don't interrogate — keep it a dialogue, and offer a relevant observation between questions.",
+        "Don't skip the 'boring' parts (process, timing, budget) just because the pain is exciting.",
+        "Don't lead the witness — let them describe the problem instead of putting words in their mouth."
+      ],
+      exitChecklist: [
+        "A confirmed, specific pain — captured in their words.",
+        "Decision-makers and influencers identified.",
+        "A realistic timeline or decision window.",
+        "A rough budget path.",
+        "Mutual agreement that a tailored demo is the right next step — and who should attend."
+      ],
+      transitionToDemo: {
+        script: "Here's what I'm hearing, [Name]: [their pain + priority + why now]. If that's right, the most useful next step is a short, tailored walkthrough of exactly [the workflow that solves it] — not a full tour. I'd suggest we include [stakeholders]. Would [timeframe] work to get that on the calendar?"
+      }
+    },
     closeSteps: [
       "Recap the pain and the specific value shown; send a tailored one-pager + recap email same day.",
       "Deliver the quote/proposal with a clear implementation picture and start options (pilot campus, grade band).",
@@ -2606,6 +2710,7 @@ function vProcess(){
   ];
   const crows = list => list.map(t=>`<div class="sp-crow">${CK}<span>${esc(t)}</span>${copyBtn('Copy', payload(t))}</div>`).join('');
   const fitS = sents(pr.fitNote);
+  const dd = pr.discoverStage;
 
   return `
   <div class="sp-head">
@@ -2693,13 +2798,46 @@ function vProcess(){
   </div>
 
   <div class="section" id="sec-discovery">
-    <div class="sec-title"><h2>Discovery &amp; demo</h2><span class="rule"></span>${stamp(pr.updated?.discovery)}</div>
-    <p style="color:var(--muted);font-size:13.5px;margin-bottom:14px">${esc(pr.discoveryIntro)}</p>
+    <div class="sec-title"><h2>Discover</h2><span class="rule"></span><span style="font-size:13px;color:var(--muted);font-weight:400">The conversation that earns the demo</span>${stamp(pr.updated?.discovery)}</div>
+    <p style="color:var(--ink-2);font-size:14px;margin-bottom:12px">${esc(dd.goal)}</p>
+    <div class="callout" style="margin-bottom:16px"><b>Mindset.</b> ${esc(dd.mindset)}</div>
+
     <div class="grid g2" style="align-items:start">
-      <div class="card pad"><div class="eyebrow">Discovery — ask with intent</div><div style="margin-top:10px">${crows(pr.discoveryShared)}</div></div>
-      <div class="card pad"><div class="eyebrow">Demo tips</div><div style="margin-top:10px">${crows(pr.demoTips)}</div></div>
+      <div class="script"><div class="script-head"><h4>Opening script</h4>${copyBtn('Copy', payload(dd.howToOpen.script))}</div><div class="script-body">${esc(dd.howToOpen.script)}</div></div>
+      <div class="card pad"><div class="eyebrow">Reminders</div><div style="margin-top:10px">${rows(dd.howToOpen.notes)}</div></div>
     </div>
-    <p style="font-size:12.5px;color:var(--muted);margin-top:12px">Product-specific discovery questions live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
+
+    <h3 class="disc-h3">${esc(dd.framework.name)}</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:6px">${esc(dd.framework.note)}</p>
+    <div class="disc-moves">
+      ${dd.framework.sections.map(s=>`<div class="card pad disc-move"><h4>${esc(s.theme)}</h4><p class="disc-intent">${esc(s.intent)}</p>${crows(s.questions)}</div>`).join('')}
+    </div>
+
+    <h3 class="disc-h3">Product lenses</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:6px">Once the shared moves are covered, go deep on the pain that matches the product.</p>
+    <div class="grid g2" style="align-items:start">
+      <div class="disc-lens" style="border-left:3px solid #D81BB8"><div class="disc-lens-h" style="color:#D81BB8">${gem('#D81BB8',14)} Crystal Instruction</div><p class="disc-intent" style="color:var(--muted)">${esc(dd.productLenses.crystal.focus)}</p>${crows(dd.productLenses.crystal.questions)}</div>
+      <div class="disc-lens" style="border-left:3px solid #2FB4CC"><div class="disc-lens-h" style="color:#2FB4CC">${gem('#2FB4CC',14)} LoneStar CR</div><p class="disc-intent" style="color:var(--muted)">${esc(dd.productLenses.lonestar.focus)}</p>${crows(dd.productLenses.lonestar.questions)}</div>
+    </div>
+
+    <h3 class="disc-h3">Listen for</h3>
+    <div class="disc-signals">
+      <div class="disc-sig good"><div class="hd">Good-fit signals</div><div class="bd">${rows(dd.listenFor.goodFit)}</div></div>
+      <div class="disc-sig notyet"><div class="hd">Not-yet signals</div><div class="bd">${rows(dd.listenFor.notYet)}</div></div>
+    </div>
+
+    <div class="grid g2" style="align-items:start;margin-top:16px">
+      <div class="card pad"><div class="eyebrow" style="color:#C2410C">Avoid</div><div style="margin-top:10px">${rows(dd.avoid)}</div></div>
+      <div class="card pad" style="border-color:color-mix(in srgb,var(--accent) 30%,var(--border))"><div class="eyebrow" style="color:var(--accent-strong)">You&rsquo;ve completed Discover when you have&hellip;</div><div style="margin-top:10px">${dd.exitChecklist.map(x=>`<div class="sp-check">${CK}<span>${esc(x)}</span></div>`).join('')}</div></div>
+    </div>
+
+    <h3 class="disc-h3">Transition to the demo</h3>
+    <div class="grid g2" style="align-items:start">
+      <div class="script"><div class="script-head"><h4>Hand-off script</h4>${copyBtn('Copy', payload(dd.transitionToDemo.script))}</div><div class="script-body">${esc(dd.transitionToDemo.script)}</div></div>
+      <div class="card pad"><div class="eyebrow">Then: demo tips</div><div style="margin-top:10px">${crows(pr.demoTips)}</div></div>
+    </div>
+
+    <p style="font-size:12.5px;color:var(--muted);margin-top:14px">Product-specific discovery questions also live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
   </div>
 
   <div class="section" id="objection-finder">
