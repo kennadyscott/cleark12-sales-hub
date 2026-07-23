@@ -503,11 +503,11 @@
       },
       {
         "n": 5,
-        "name": "Propose",
-        "goal": "Deliver pricing/quote and implementation picture.",
-        "exit": "Proposal reviewed; objections surfaced; next step to decision set.",
+        "name": "Decision",
+        "goal": "Help them make a confident decision. Deliver pricing and the implementation picture — then every touch removes one barrier to deciding, instead of asking if they've reviewed the proposal.",
+        "exit": "Proposal reviewed; barriers surfaced and removed; next step to a decision set.",
         "healthy": "2–4 weeks",
-        "stall": "30+ days without movement → manager touch; re-anchor to their budget window."
+        "stall": "30+ days without movement → manager touch; re-anchor to their budget window and remove the next barrier."
       },
       {
         "n": 6,
