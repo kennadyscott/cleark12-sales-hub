@@ -810,6 +810,15 @@
   .pb2-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
   .pb2-meta .chip { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); border-color: color-mix(in srgb, var(--accent) 25%, var(--border)); color: var(--accent-strong); }
   .pb2-body { font-size: 15px; line-height: 1.75; color: var(--ink-2); white-space: pre-wrap; }
+  .cc-car { display: flex; align-items: center; gap: 12px; margin: 2px 0 14px; }
+  .cc-nav { width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); font-size: 17px; cursor: pointer; flex-shrink: 0; line-height: 1; display: grid; place-items: center; padding: 0; }
+  .cc-nav:hover { border-color: var(--accent); color: var(--accent-strong); }
+  .cc-mid { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; flex: 1; min-width: 0; }
+  .cc-lab { font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--accent-strong); }
+  .cc-dots { display: inline-flex; gap: 6px; }
+  .cc-dot { width: 8px; height: 8px; border-radius: 50%; border: 0; background: var(--border-strong); cursor: pointer; padding: 0; }
+  .cc-dot.on { background: var(--accent); }
+  .ov-15 .vp-body { font-size: 13.5px; font-weight: 500; color: var(--ink-2); margin-top: 10px; white-space: pre-wrap; line-height: 1.6; }
   .pb2-personalize { display: flex; gap: 10px; flex-wrap: wrap; background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 14px; }
   .pb2-personalize input { flex: 1; min-width: 150px; }
   .core-hook { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); padding: 18px 20px; max-width: 360px; }
@@ -942,7 +951,15 @@
 <script>
 /* ============================ CONTENT ============================ */
 const DATA = {
+  meta: {
+    "version": "1.14",
+    "title": "ClearK12 Sales Hub",
+    "description": "Sales enablement content for ClearK12: Crystal Instruction and Crystal Writing (LoneStar CR in Texas; Crystal Writing in Ohio & Georgia).",
+    "lastUpdated": "2026-07-23",
+    "source": "Synced from ClearK12 Sales Brand & Messaging Guide + ClearK12 Sales Playbook (Word, v1.0). Stage benchmarks + nurture motion and OH/GA state editions are drafts pending sales-enablement approval. Unverifiable 10x/2-hour claims removed 2026-07-21. Crystal outreach touch kit (persona: campus) merged 2026-07-21. Nurture sequence (N1-N7) + LoneStar CR touch kit merged 2026-07-22. Cold-call carousel (4 user-approved options) + tomorrow's-lesson-today value prop + Discover stage + pricing scaffold, 2026-07-23."
+  },
   company: {
+    logo: "assets/clark12-logo.png",
     name: "ClearK12",
     tagline: "Educational Technology",
     positioning: "ClearK12 is an educational technology company built for the realities of today's classrooms. We make the day-to-day work of teaching measurably easier — turning student data and required standards into fast, confident instructional action. Our products sit alongside the curriculum, assessments, and systems districts already own; we make those investments work harder rather than asking schools to rip and replace.",
@@ -973,6 +990,7 @@ const DATA = {
     familyNote: "The platforms are complementary, not competing. Crystal Instruction is about instructional response across Math, ELAR, and Science; Crystal Writing, including LoneStar CR, is a specialist in the single hardest-to-grade skill. Many districts are strong candidates for both."
   },
   crystalWriting: {
+    logo: "assets/crystal-writing-logo.png",
     name: "Crystal Writing",
     endorsement: "a ClearK12 product",
     tagline: "A system for developing strong writers.",
@@ -1306,6 +1324,166 @@ const DATA = {
   products: [
     {
       id:"crystal", name:"Crystal Instruction", endorsement:"a ClearK12 product",
+      logo:"assets/crystal-logo.png",
+      outreachCadence: {
+        "persona": "campus",
+        "personaLabel": "Campus leaders (principals)",
+        "leadMessage": "Consistent, visible instructional response in every classroom.",
+        "tonePrinciple": "Confident, collaborative partner — never salesy or pushy. We respect that principals know their campus better than we do. We offer, we don't corner: every touch has a low-friction ask and a graceful out. No assumptive closes, no pressure, no hype.",
+        "summary": "7-touch, 22-day sequence tuned for principals. Every touch leads with a challenge principals recognize — inconsistent reteach and limited visibility after benchmarks — framed as a partnership, not a pitch. Placeholders: [Name], [Campus], [District], [Rep], [number], [link].",
+        "coachingNotes": [
+          "Tone is partner, not vendor. We're confident collaborators who assume the principal is the expert on their campus. Invite their perspective before offering ours.",
+          "Lead with consistency and visibility, not features. Principals care about the outcome of every classroom responding the same way.",
+          "Always reinforce 'works alongside your curriculum' and 'in partnership with your teachers' — never another disruptive rollout, never around the teacher.",
+          "Give a graceful out in every ask ('if it's useful', 'you're the best judge', 'no pressure'). Offering beats cornering.",
+          "Most calls hit voicemail; the voicemail + email pairing is the real play. Try early mornings and right after dismissal.",
+          "Keep the guardrails: never say all-in-one, never say replaces your curriculum, never say we are your MTSS platform."
+        ],
+        "steps": [
+          {
+            "day": "Day 1",
+            "channel": "Call + Email",
+            "purpose": "First touch. Attempt a live call; leave a voicemail; send the email same day so they can consider it on their own time.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Cold call script",
+                "body": "Hi, this is [Rep] with Crystal Instruction. Did I catch you with about 30 seconds?\n\nOne question…\n\nAfter your last benchmark, how long did it take before teachers were actually reteaching the skills students missed?\n\n(Pause.)\n\nThat's the gap we're helping schools close.\n\nCrystal Instruction gives teachers ready-to-use, TEKS-aligned instruction they can launch immediately, so they spend less time planning and more time teaching.\n\nI'd love to show you how districts are shortening the time between assessment and action. Would you be open to a 20-minute walkthrough next week?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], this is [Rep] with Crystal Instruction. We partner with Texas campuses to make instructional response more consistent across classrooms — faster reteach after assessments, without more work for teachers. I'll follow up by email so you can look on your own time; if it's helpful to talk, I'm at [number]. Thanks, [Name]."
+              },
+              {
+                "type": "gatekeeper",
+                "label": "Gatekeeper / front office",
+                "body": "Hi, I'm hoping you can help me — I'm trying to reach [Name] about supporting your teachers' reteach and intervention after benchmarks. Is there a good way to get 20 minutes on their calendar, or is there someone on the instructional side you'd suggest I start with?"
+              },
+              {
+                "type": "email",
+                "label": "Fallback email",
+                "subjectVariants": [
+                  "Consistent reteach in every classroom at [Campus]",
+                  "After the benchmark — how consistent is the response?",
+                  "A partner for your teachers' reteach (not another platform)"
+                ],
+                "body": "Hi [Name] — you know your campus better than anyone, so you've likely already felt this: after a benchmark, the gap usually isn't the data, it's how consistently each classroom responds to it. Some teachers reteach the right TEKS right away, others take a week.\n\nCrystal Instruction helps every teacher respond faster — targeted, TEKS-aligned reteach, live checks for understanding (no grading), and a clear next step — while working alongside the curriculum you already use. We see ourselves as a partner to your instructional team, not another platform to manage.\n\nIf it's useful, I'd like to learn how your campus approaches this and share what we've seen work elsewhere. Open to a 20-minute conversation?\n— [Rep]",
+                "variant": {
+                  "label": "A/B — short version",
+                  "subject": "A quick question about reteach at [Campus]",
+                  "body": "Hi [Name] — quick one, no pitch. When a benchmark comes back, how consistent is the reteach from classroom to classroom? That's the challenge we help campuses work through — alongside your current curriculum and in partnership with your teachers, without adding to their plates. If it's worth a short conversation, I'd welcome it.\n— [Rep]"
+                }
+              }
+            ]
+          },
+          {
+            "day": "Day 3",
+            "channel": "Email",
+            "purpose": "Value follow-up + the self-guided demo. Give one concrete scenario, hand over the async demo link, then leave the decision with them.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Value email",
+                "subjectVariants": [
+                  "The week after a benchmark",
+                  "One less thing on your teachers' plates",
+                  "From data to reteach in the same day"
+                ],
+                "body": "Hi [Name] — a concrete example of what I meant, and then I'll leave it with you. A 3rd-grade teacher finishes a unit and 12 students miss key TEKS. Normally that's hours of analyzing, regrouping, and hunting for reteach. With Crystal, those gaps surface right away and the teacher can respond the same day — without building anything from scratch.\n\nAcross a campus, that's more consistent response in every room and teachers who feel supported rather than buried. If that fits where you're headed this year, I'd enjoy walking your team through it — 20 minutes, whenever suits you. If you'd rather explore on your own first, here's a self-guided demo — no scheduling required: crystalinstruction.com/self-guided-demo\n— [Rep]",
+                "variant": {
+                  "label": "A/B — outcome-led",
+                  "subject": "What consistent reteach could look like at [Campus]",
+                  "body": "Hi [Name] — picture walking any classroom the week after a benchmark and seeing the same thing everywhere: teachers already reteaching the exact TEKS students missed and checking understanding live. That consistency is what we help campuses build — alongside your current curriculum, and in partnership with your teachers, not around them. Happy to show you if it's useful; you're the best judge of the fit.\n— [Rep]\n\nWant to look on your own first? Self-guided demo: crystalinstruction.com/self-guided-demo"
+                }
+              }
+            ]
+          },
+          {
+            "day": "Day 5",
+            "channel": "Call",
+            "purpose": "Second call attempt. Reference the emails, invite their perspective, and offer to work around their schedule — no assumptive close.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], [Rep] with Crystal Instruction — I sent a couple of notes about consistent instructional response after benchmarks. I'd genuinely value your perspective: is that something your campus is working on this year? [pause and listen] If it's useful, I'd like to show your team how it works and hear how you're approaching it now. I can fit a 20-minute conversation whenever works best for you — what does your calendar look like over the next couple of weeks?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], [Rep] with Crystal Instruction following up. No pressure at all — if it's useful, I'd like to show you how campuses build more consistent reteach across classrooms, in about 20 minutes. I'll resend my email, or I'm at [number]. Thanks, [Name]."
+              }
+            ]
+          },
+          {
+            "day": "Day 8",
+            "channel": "Email",
+            "purpose": "Lower the effort. Share a short overview so they can self-qualify on their own time; offer a walkthrough only if worthwhile.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Show-don't-tell email",
+                "subjectVariants": [
+                  "2-minute look at Crystal (for [Campus])",
+                  "Something to look at on your own time",
+                  "How other Texas campuses handle reteach"
+                ],
+                "body": "Hi [Name] — figured it's easier to show than tell, and this way you can look whenever suits you. Here's a 2-minute overview of how Crystal helps teachers turn assessment results into targeted reteach: [link].\n\nCampuses in [similar Texas district/ESC] use it to keep instructional response consistent from classroom to classroom. If it looks relevant, I'd be glad to walk through it with your team, tailored to your grade bands — only if it's worth your time.\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Day 12",
+            "channel": "Call",
+            "purpose": "Third call. Try early morning or right after dismissal; tie to an upcoming window and make it easy to say 'not now.'",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], [Rep] with Crystal Instruction. I know your mornings are about the only quiet moment, so I'll be brief. I think there could be a real fit here for supporting your teachers' response after assessments — but you're the best judge of that. If you're open to it, I'd welcome a 20-minute conversation before your next benchmark window, on your schedule. And if the timing isn't right, just say so and I'll step back."
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], [Rep] again with Crystal Instruction — trying you early since afternoons are full. Same idea: more consistent instructional response across classrooms, in partnership with your teachers and without more work for them. I'm at [number] if it's useful — and no worries at all if now isn't the time. Thanks, [Name]."
+              }
+            ]
+          },
+          {
+            "day": "Day 15",
+            "channel": "Email",
+            "purpose": "Referral pivot. Offer an easy out and ask to be pointed to the right owner — follow their lead on timing.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Referral email",
+                "subjectVariants": [
+                  "Am I aimed at the right person?",
+                  "Happy to follow your lead here"
+                ],
+                "body": "Hi [Name] — I don't want to keep filling your inbox, and I may simply have this pointed at the wrong person. If instructional response and reteach across classrooms sits more with your C&I or assessment lead, I'd be grateful for a pointer their way.\n\nAnd if it is you but the timing's just off, tell me when to circle back — I'm happy to follow your lead. Either way, thank you for reading.\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Day 22",
+            "channel": "Email",
+            "purpose": "Step back gracefully. Close the loop with warmth, leave the door open, and seed the spring planning window.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Step-back email",
+                "subjectVariants": [
+                  "Stepping back for now — door's open",
+                  "Closing the loop"
+                ],
+                "body": "Hi [Name] — I'll pause here so I'm not a distraction during a busy stretch. If it's ever useful: Crystal Instruction helps campuses make reteach faster and more consistent across every classroom, in partnership with your teachers and alongside what you already use.\n\nSpring is when a lot of campuses plan for next year, so I'll plan to check back around then unless you'd like to talk sooner. Whatever you decide, I'm rooting for you and your teachers this year.\n— [Rep]"
+              }
+            ]
+          }
+        ]
+      },
       updated: { scripts: "2026-07-22", objections: "2026-07-22", messaging: "2026-07-21" },
       oneLiner:"The instructional response partner for Texas classrooms.",
       cardBlurb:"Instructional tools that turn insight into action.",
@@ -1335,6 +1513,10 @@ const DATA = {
         helpfulLinks:[
           { label:"Self-guided demo", sub:"Asynchronous — watchable in under 5 minutes. Your answer to 'just send me information.'", url:"https://crystalinstruction.com/self-guided-demo" }
         ],
+        valueProp:{
+          lead:"Teachers know who needs help. Crystal Instruction builds what those students need next, without any extra lift from the teacher.",
+          body:"We give teachers tomorrow's lesson today.\n\nInstead of spending the evening creating small-group lessons, teachers can immediately launch targeted instruction that's already aligned to the skills their students need.\n\nWould it be worth 20 minutes to show you how districts are using it?"
+        },
         buyers:[
           { n:"01", label:"The problem", text:"Schools have data. Teachers still have to figure out what to do next." },
           { n:"02", label:"The difference", text:"Crystal closes the gap between seeing a need and responding instructionally." },
@@ -1430,11 +1612,23 @@ const DATA = {
       ],
       hook:"Crystal Instruction helps teachers respond before learning gaps become bigger problems.",
       scripts:{
-        coldCall:"Hi, this is [Your name] with Crystal Instruction. I'll be quick — most Texas schools already have the data and the curriculum; the hard part is what happens right after a benchmark, when teachers have to figure out exactly what students missed and respond before the gap grows. Crystal Instruction works alongside what you already use to help teachers pinpoint the gap, check understanding live, and reteach on the spot. Would a 20-minute demo be worth it to see how it fits your campus?",
+        coldCall:"Hi, this is [Rep] with Crystal Instruction. Did I catch you with about 30 seconds?\n\nOne question...\n\nAfter your last benchmark, how long did it take before teachers were actually reteaching the skills students missed?\n\n(Pause.)\n\nThat's the gap we're helping schools close.\n\nCrystal Instruction gives teachers ready-to-use, TEKS-aligned instruction they can launch immediately, so they spend less time planning and more time teaching.\n\nI'd love to show you how districts are shortening the time between assessment and action. Would you be open to a 20-minute walkthrough next week?",
+        coldCallVariants:[
+          { label:"Option 1 · The benchmark gap", body:"Hi, this is [Rep] with Crystal Instruction. Did I catch you with about 30 seconds?\n\nOne question...\n\nAfter your last benchmark, how long did it take before teachers were actually reteaching the skills students missed?\n\n(Pause.)\n\nThat's the gap we're helping schools close.\n\nCrystal Instruction gives teachers ready-to-use, TEKS-aligned instruction they can launch immediately, so they spend less time planning and more time teaching.\n\nI'd love to show you how districts are shortening the time between assessment and action. Would you be open to a 20-minute walkthrough next week?" },
+          { label:"Option 2 · The day after", body:"Hi, this is [Rep] with Crystal Instruction. Did I catch you with about 30 seconds?\n\nOne question...\n\nWhat happens the day after your benchmark?\n\nMost teachers already know who needs help.\n\nThe challenge is finding the time to create five or six different lessons for the students who need something different.\n\nWe believe teachers already know who needs help. They just don't have time to create what those students need next.\n\nThat's why we built Crystal Instruction.\n\nWe give teachers tomorrow's lesson today — ready-to-teach, TEKS-aligned instruction based on exactly what students need, so they can spend less time planning and more time teaching.\n\nWould you be open to a 20-minute walkthrough to see how schools are using it?" },
+          { label:"Option 3 · One quick question", body:"Hi, this is [Rep] with Crystal Instruction.\n\nCan I ask you one quick question?\n\nAfter a benchmark, what do you expect teachers to do within a week of evaluating the data?\n\n(Pause.)\n\nFor most schools, that's where the challenge begins.\n\nTeachers know who needs support — but creating meaningful instruction for every group takes hours.\n\nCrystal Instruction was built to solve that problem." },
+          { label:"Option 4 · Tomorrow's lesson today", body:"Hi, this is [Rep] with Crystal Instruction. I promise this will only take 30 seconds.\n\nWe've been talking with instructional leaders across Texas, and one thing keeps coming up.\n\nTeachers already know who needs help. They just don't have time to create what those students need next.\n\nThat's exactly why we built Crystal Instruction.\n\nWe give teachers tomorrow's lesson today.\n\nAfter an assessment, teachers can immediately launch targeted, TEKS-aligned instruction instead of spending hours planning small-group lessons and reteach activities.\n\nI'd love to show you what that looks like. Would you have 20 minutes sometime next week?" }
+        ],
         coldEmail:{
           subject:"Responding faster to learning gaps at [District]",
-          body:"Hi [Name] — schools already have curriculum, benchmarks, and dashboards. The hard part is what happens next: identifying exactly what students missed and responding before the gap grows.\n\nCrystal Instruction is the instructional response partner for Texas classrooms. It works alongside what you already use to help teachers reteach the right TEKS, check understanding live (no grading), and act immediately — supporting Tier 1 and MTSS while saving teacher time.\n\nOpen to a 20-minute look at how this fits [District]? — [Rep]"
+          body:"Hi [Name],\n\nAfter a benchmark, most teachers already know who needs help.\n\nThe challenge isn't identifying the gaps.\n\nIt's finding the time to build meaningful instruction for every group of students who need something different.\n\nWe believe teachers already know who needs help. They just don't have time to build what those students need next.\n\nThat's why we built Crystal Instruction.\n\nInstead of asking teachers to spend hours creating reteach lessons and small-group activities, Crystal provides ready-to-teach, TEKS-aligned instruction, live checks for understanding, and targeted next steps — all designed to help teachers spend less time planning and more time teaching.\n\nIf you're curious, we've put together a self-guided walkthrough that takes less than five minutes:\n\n👉 crystalinstruction.com/self-guided-demo\n\nIf it sparks any ideas for your campus or district, I'd be happy to schedule a quick conversation to answer questions and learn more about your instructional goals.\n\nBest,\n[Rep]"
         },
+        coldEmailVariants:[
+          { label:"Option 1 · Teachers know", subject:"Responding faster to learning gaps at [District]", body:"Hi [Name],\n\nAfter a benchmark, most teachers already know who needs help.\n\nThe challenge isn't identifying the gaps.\n\nIt's finding the time to build meaningful instruction for every group of students who need something different.\n\nWe believe teachers already know who needs help. They just don't have time to build what those students need next.\n\nThat's why we built Crystal Instruction.\n\nInstead of asking teachers to spend hours creating reteach lessons and small-group activities, Crystal provides ready-to-teach, TEKS-aligned instruction, live checks for understanding, and targeted next steps — all designed to help teachers spend less time planning and more time teaching.\n\nIf you're curious, we've put together a self-guided walkthrough that takes less than five minutes:\n\n👉 crystalinstruction.com/self-guided-demo\n\nIf it sparks any ideas for your campus or district, I'd be happy to schedule a quick conversation to answer questions and learn more about your instructional goals.\n\nBest,\n[Rep]" },
+          { label:"Option 2 · After the benchmark", subject:"What happens after the benchmark?", body:"Hi [Name],\n\nTeachers already know who needs help after an assessment.\n\nThe challenge is finding the time to build what those students need next.\n\nThat's why we built Crystal Instruction.\n\nWe help teachers move from assessment to instruction with ready-to-teach, TEKS-aligned lessons, live checks for understanding, and targeted next steps.\n\nTake our self-guided walkthrough — it takes less than 5 minutes:\n\n👉 crystalinstruction.com/self-guided-demo\n\nIf it resonates, I'd love to hear your thoughts.\n\nBest,\n[Rep]" },
+          { label:"Option 3 · More time to teach", subject:"Give teachers more time to teach.", body:"Hi [Name],\n\nWhat if the day after a benchmark, teachers didn't have to spend hours planning reteach lessons?\n\nCrystal Instruction gives teachers ready-to-teach, TEKS-aligned instruction so they can spend less time planning and more time teaching.\n\nSee how it works in our self-guided demo (less than 5 minutes):\n\n👉 crystalinstruction.com/self-guided-demo\n\nIf you'd like to explore it further, I'd be happy to connect.\n\nBest,\n[Rep]" },
+          { label:"Option 4 · One belief", subject:"A quick idea for your teachers", body:"Hi [Name],\n\nWe built Crystal Instruction around one belief:\n\nTeachers already know who needs help. They just don't have time to build what those students need next.\n\nThat's exactly what Crystal provides.\n\nSee the entire experience in our self-guided walkthrough (under 5 minutes):\n\n👉 crystalinstruction.com/self-guided-demo\n\nIf it sparks any ideas, I'd love to talk.\n\nBest,\n[Rep]" }
+        ],
         pitchOutline:[
           "Problem (45s): schools have data and resources; the gap is instructional response — turning performance into immediate action.",
           "Who we are (45s): the instructional response partner; we work alongside existing curriculum — additive, not a replacement.",
@@ -1453,6 +1647,166 @@ const DATA = {
     },
     {
       id:"lonestar", name:"LoneStar CR", endorsement:"a ClearK12 product", stateCrumb:"Texas",
+      logo:"assets/lonestar-logo.png",
+      outreachCadence: {
+        "persona": "campus",
+        "personaLabel": "Campus leaders (principals)",
+        "leadMessage": "More writing practice in every classroom — with visible, tracked growth.",
+        "tonePrinciple": "Confident, collaborative partner — never salesy or pushy. We respect that principals know their campus and their teachers. We offer, we don't corner: every touch has a low-friction ask and a graceful out. No assumptive closes, no pressure, no hype.",
+        "summary": "7-touch, 22-day sequence tuned for principals. Every touch leads with a challenge principals recognize since the STAAR redesign — students can only write as much as teachers can grade — framed as a partnership with their ELAR team, not a pitch. Placeholders: [Name], [Campus], [District], [Rep], [number], [link].",
+        "coachingNotes": [
+          "Tone is partner, not vendor. Assume the principal is the expert on their campus and their teachers. Invite their perspective before offering ours.",
+          "Lead with the writing bottleneck and teacher time, not features. Principals care about more writing practice, tracked growth, and ELAR teachers who aren't buried in grading.",
+          "Always reinforce 'built for TEKS and Texas writing' and 'in partnership with your teachers' — never generic, never around the teacher.",
+          "Give a graceful out in every ask ('if it's useful', 'you're the best judge', 'no pressure'). Offering beats cornering.",
+          "Most calls hit voicemail; the voicemail + email pairing is the real play. Try early mornings and right after dismissal.",
+          "Keep the guardrails: never say 'just an AI essay grader', never say it replaces your ELAR curriculum, never say it works for any state, never imply teachers don't need to review."
+        ],
+        "steps": [
+          {
+            "day": "Day 1",
+            "channel": "Call + Email",
+            "purpose": "First touch. Attempt a live call; leave a voicemail; send the email same day so they can consider it on their own time.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Cold call script",
+                "body": "Hi [Name], this is [Rep] with LoneStar CR — I'll keep this short out of respect for your time. I partner with Texas principals on a challenge you've probably seen since the STAAR redesign: constructed-response writing matters more than ever, but students can only write as much as teachers can realistically grade — so practice stays limited and feedback comes late. LoneStar CR is built specifically for TEKS and Texas writing. Teachers assign ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so writing practice goes up and grading comes off your teachers' plates. I'd genuinely like to hear how your campus is handling writing right now, and show you what we do if it's useful. Would a 20-minute conversation be worthwhile?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], this is [Rep] with LoneStar CR. We partner with Texas campuses to help students write more and grow faster on constructed response — while taking the grading burden off ELAR teachers. I'll follow up by email so you can look on your own time; if it's helpful to talk, I'm at [number]. Thanks, [Name]."
+              },
+              {
+                "type": "gatekeeper",
+                "label": "Gatekeeper / front office",
+                "body": "Hi, I'm hoping you can help me — I'm trying to reach [Name] about supporting your ELAR teachers with STAAR writing and constructed response. Is there a good way to get 20 minutes on their calendar, or is there someone on the instructional side you'd suggest I start with?"
+              },
+              {
+                "type": "email",
+                "label": "Fallback email",
+                "subjectVariants": [
+                  "More writing practice in every classroom at [Campus]",
+                  "The STAAR writing bottleneck — and your ELAR teachers' time",
+                  "A partner for constructed response (not another grading pile)"
+                ],
+                "body": "Hi [Name] — you know your campus better than anyone, so you've likely felt this since the STAAR redesign: constructed response matters more than ever, but students can only write as much as teachers can grade. So practice stays limited and feedback lags — through no fault of your teachers.\n\nLoneStar CR is built specifically for TEKS and Texas writing. Teachers assign ECR and SCR tasks in seconds, students write with scaffolding matched to their level, and every response is scored instantly with personalized feedback — so writing practice goes up (some campuses see up to 10x) and grading comes off your teachers' plates. We see ourselves as a partner to your ELAR team, not another platform to manage.\n\nIf it's useful, I'd like to learn how your campus approaches writing now and share what we've seen work elsewhere. Open to a 20-minute conversation?\n— [Rep]",
+                "variant": {
+                  "label": "A/B — short version",
+                  "subject": "A quick question about writing practice at [Campus]",
+                  "body": "Hi [Name] — quick one, no pitch. Since the STAAR redesign, how often do your students actually get to write constructed responses — and how long until they get feedback? That's the bottleneck we help campuses work through: more writing, instant feedback, and grading off your teachers' plates, all built for TEKS. If it's worth a short conversation, I'd welcome it.\n— [Rep]"
+                }
+              }
+            ]
+          },
+          {
+            "day": "Day 3",
+            "channel": "Email",
+            "purpose": "Value follow-up. Make it concrete with one believable classroom scenario, then leave the decision with them.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Value email",
+                "subjectVariants": [
+                  "What 10x more writing looks like",
+                  "Giving your ELAR teachers their evenings back",
+                  "From one essay a month to weekly writing"
+                ],
+                "body": "Hi [Name] — a concrete example of what I meant, and then I'll leave it with you. A 7th-grade ELAR teacher wants students writing constructed responses every week, but hand-grading 130 responses makes that impossible — so it happens maybe once a month. With LoneStar CR, students write as often as the teacher likes, each response is scored instantly with feedback, and students revise across drafts — which is exactly where the research shows writing gains come from.\n\nAcross a campus, that's far more writing practice, growth you can actually track, and ELAR teachers who aren't buried in grading. If that fits where you're headed this year, I'd enjoy walking your team through it — 20 minutes, whenever suits you.\n— [Rep]",
+                "variant": {
+                  "label": "A/B — outcome-led",
+                  "subject": "What consistent writing growth could look like at [Campus]",
+                  "body": "Hi [Name] — picture every ELAR classroom on your campus writing constructed responses weekly, students getting instant feedback and revising, and you able to see growth building through the year. That's what LoneStar CR makes routine — built for TEKS, in partnership with your teachers rather than around them. Happy to show you if it's useful; you're the best judge of the fit.\n— [Rep]"
+                }
+              }
+            ]
+          },
+          {
+            "day": "Day 5",
+            "channel": "Call",
+            "purpose": "Second call attempt. Reference the emails, invite their perspective, and offer to work around their schedule — no assumptive close.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], [Rep] with LoneStar CR — I sent a couple of notes about helping students write more while taking grading off your ELAR teachers. I'd genuinely value your perspective: is writing, and constructed response specifically, something your campus is focused on this year? [pause and listen] If it's useful, I'd like to show your team how it works and hear how you're approaching it now. I can fit a 20-minute conversation whenever works best for you — what does your calendar look like over the next couple of weeks?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], [Rep] with LoneStar CR following up. No pressure at all — if it's useful, I'd like to show you how campuses get students writing more and growing faster, with grading off teachers' plates, in about 20 minutes. I'll resend my email, or I'm at [number]. Thanks, [Name]."
+              }
+            ]
+          },
+          {
+            "day": "Day 8",
+            "channel": "Email",
+            "purpose": "Lower the effort. Share a short overview so they can self-qualify on their own time; offer a walkthrough only if worthwhile.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Show-don't-tell email",
+                "subjectVariants": [
+                  "2-minute look at LoneStar CR (for [Campus])",
+                  "Something to look at on your own time",
+                  "How other Texas campuses handle STAAR writing"
+                ],
+                "body": "Hi [Name] — figured it's easier to show than tell, and this way you can look whenever suits you. Here's a 2-minute overview of how LoneStar CR helps students write more and get instant, TEKS-aligned feedback: [link].\n\nCampuses in [similar Texas district/ESC] use it to raise writing practice and track growth without adding to teachers' loads. If it looks relevant, I'd be glad to walk through it with your ELAR team, tailored to your grade bands — only if it's worth your time.\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Day 12",
+            "channel": "Call",
+            "purpose": "Third call. Try early morning or right after dismissal; tie to an upcoming window and make it easy to say 'not now.'",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], [Rep] with LoneStar CR. I know your mornings are about the only quiet moment, so I'll be brief. I think there could be a real fit here for supporting your ELAR teachers and your writing scores — but you're the best judge of that. If you're open to it, I'd welcome a 20-minute conversation before your next benchmark or STAAR window, on your schedule. And if the timing isn't right, just say so and I'll step back."
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], [Rep] again with LoneStar CR — trying you early since afternoons are full. Same idea: more writing practice across classrooms, in partnership with your teachers and without more grading for them. I'm at [number] if it's useful — and no worries at all if now isn't the time. Thanks, [Name]."
+              }
+            ]
+          },
+          {
+            "day": "Day 15",
+            "channel": "Email",
+            "purpose": "Referral pivot. Offer an easy out and ask to be pointed to the right owner — follow their lead on timing.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Referral email",
+                "subjectVariants": [
+                  "Am I aimed at the right person?",
+                  "Happy to follow your lead here"
+                ],
+                "body": "Hi [Name] — I don't want to keep filling your inbox, and I may simply have this pointed at the wrong person. If STAAR writing and constructed response sit more with your ELAR lead, C&I, or a department chair, I'd be grateful for a pointer their way.\n\nAnd if it is you but the timing's just off, tell me when to circle back — I'm happy to follow your lead. Either way, thank you for reading.\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Day 22",
+            "channel": "Email",
+            "purpose": "Step back gracefully. Close the loop with warmth, leave the door open, and seed the spring planning window.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Step-back email",
+                "subjectVariants": [
+                  "Stepping back for now — door's open",
+                  "Closing the loop"
+                ],
+                "body": "Hi [Name] — I'll pause here so I'm not a distraction during a busy stretch. If it's ever useful: LoneStar CR helps campuses get students writing far more and growing on constructed response, in partnership with your ELAR teachers and without the grading burden — built specifically for TEKS and Texas writing.\n\nSpring is when a lot of campuses plan for next year, so I'll plan to check back around then unless you'd like to talk sooner. Whatever you decide, I'm rooting for you and your teachers this year.\n— [Rep]"
+              }
+            ]
+          }
+        ]
+      },
       updated: { scripts: "2026-07-21", objections: "2026-07-21", messaging: "2026-07-21", proof: "2026-07-21" },
       oneLiner:"The constructed-response writing partner for Texas classrooms.",
       cardBlurb:"Writing practice and instant scoring built for STAAR growth.",
@@ -1552,6 +1906,7 @@ const DATA = {
 function makeStateWriting(cfg){
   const base = JSON.parse(JSON.stringify(DATA.products.find(p => p.id === 'lonestar')));
   delete base.paletteMeta; delete base.logoRules; delete base.cardBlurb;
+  delete base.outreachCadence; delete base.logo; // TX kit + logo stay Texas-only; OH/GA kits pend state variants
   const walk = v =>
     typeof v === 'string' ? cfg.pairs.reduce((s,[a,b]) => s.split(a).join(b), v)
     : Array.isArray(v) ? v.map(walk)
@@ -2089,6 +2444,17 @@ function vProduct(id){
     <div>${copyBtn('Copy pitch', pitchId)}</div>
   </div>
 
+  ${o.valueProp ? `
+  <div class="section ov-15">
+    <div style="flex:1;min-width:280px">
+      <div class="lbl">The value prop — tomorrow's lesson today</div>
+      <p>${esc(o.valueProp.lead)}</p>
+      <p class="vp-body">${esc(o.valueProp.body)}</p>
+    </div>
+    <span class="rule"></span>
+    <div>${copyBtn('Copy value prop', payload(o.valueProp.lead + "\n\n" + o.valueProp.body))}</div>
+  </div>` : ''}
+
   <div class="section">
     <div class="sec-title"><h2>What buyers need to understand</h2><span class="rule"></span></div>
     <div class="ov-buyers">
@@ -2440,6 +2806,19 @@ function initPlaybookPro(p){
   if (!rail || !panel) return;
   const s = p.scripts;
   let sel = 0;
+  let ccSel = 0; // active cold-call carousel option
+  const ccList = s.coldCallVariants?.length ? s.coldCallVariants : [{ label:'Cold call', body:s.coldCall }];
+  const ccScript = () => ccList[ccSel].body;
+  let ceSel = 0; // active cold-email carousel option
+  const ceList = s.coldEmailVariants?.length ? s.coldEmailVariants : [{ label:'Cold email', subject:s.coldEmail.subject, body:s.coldEmail.body }];
+  const ceMail = () => ceList[ceSel];
+  const carHtml = (list, idx) => list.length > 1 ? `<div class="cc-car">
+          <button class="cc-nav" id="ccPrev" aria-label="Previous option">‹</button>
+          <div class="cc-mid"><span class="cc-lab">${esc(list[idx].label)}</span>
+            <span class="cc-dots">${list.map((_,i)=>`<button class="cc-dot ${i===idx?'on':''}" data-cc="${i}" aria-label="Option ${i+1}"></button>`).join('')}</span>
+          </div>
+          <button class="cc-nav" id="ccNext" aria-label="Next option">›</button>
+        </div>` : '';
   let fields = { rep: '', name: '', district: '' };
   let showPersonalize = false;
 
@@ -2451,9 +2830,9 @@ function initPlaybookPro(p){
     return out;
   };
   const currentText = () => sel === 0
-    ? fill(s.coldCall)
+    ? fill(ccScript())
     : sel === 1
-      ? `Subject: ${fill(s.coldEmail.subject)}\n\n${fill(s.coldEmail.body)}`
+      ? `Subject: ${fill(ceMail().subject)}\n\n${fill(ceMail().body)}`
       : s.pitchOutline.map((l,i)=>`${i+1}. ${l}`).join('\n');
   const hl = t => esc(t).replace(/\[(Your name|District|Name|Rep|Campus|number|link)\]/g, '<span class="ph">[$1]</span>');
 
@@ -2464,9 +2843,9 @@ function initPlaybookPro(p){
     const m = p.pbExtras.moments[sel];
     const canSpeak = 'speechSynthesis' in window && sel < 2;
     const bodyHtml = sel === 0
-      ? `<div class="pb2-body">${hl(fill(s.coldCall))}</div>`
+      ? `${carHtml(ccList, ccSel)}<div class="pb2-body">${hl(fill(ccScript()))}</div>`
       : sel === 1
-        ? `<div class="email-sub" style="padding:0 0 10px"><b>Subject:</b> ${hl(fill(s.coldEmail.subject))}</div><div class="pb2-body">${hl(fill(s.coldEmail.body))}</div>`
+        ? `${carHtml(ceList, ceSel)}<div class="email-sub" style="padding:0 0 10px"><b>Subject:</b> ${hl(fill(ceMail().subject))}</div><div class="pb2-body">${hl(fill(ceMail().body))}</div>`
         : `<ol class="pitch" style="padding-left:20px">${s.pitchOutline.map(l=>`<li style="font-size:14px;margin-bottom:6px">${esc(l)}</li>`).join('')}</ol>`;
     panel.innerHTML = `
       <div class="phead">
@@ -2493,15 +2872,28 @@ function initPlaybookPro(p){
         // live-update only the body to keep input focus
         const focusId = document.activeElement?.id; const pos = document.activeElement?.selectionStart;
         const bodyEl = panel.querySelector('.pb2-body');
-        if (bodyEl && sel === 0) bodyEl.innerHTML = hl(fill(s.coldCall));
+        if (bodyEl && sel === 0) bodyEl.innerHTML = hl(fill(ccScript()));
         if (sel === 1){
           const sub = panel.querySelector('.email-sub'); const bd = panel.querySelector('.pb2-body');
-          if (sub) sub.innerHTML = `<b>Subject:</b> ${hl(fill(s.coldEmail.subject))}`;
-          if (bd) bd.innerHTML = hl(fill(s.coldEmail.body));
+          if (sub) sub.innerHTML = `<b>Subject:</b> ${hl(fill(ceMail().subject))}`;
+          if (bd) bd.innerHTML = hl(fill(ceMail().body));
         }
         if (focusId){ const f = document.getElementById(focusId); f?.focus(); try{ f?.setSelectionRange(pos,pos); }catch(e){} }
       });
     });
+    const bump = (d) => {
+      if (sel === 0) ccSel = (ccSel + d + ccList.length) % ccList.length;
+      else if (sel === 1) ceSel = (ceSel + d + ceList.length) % ceList.length;
+      render();
+    };
+    $('#ccPrev')?.addEventListener('click', () => bump(-1));
+    $('#ccNext')?.addEventListener('click', () => bump(1));
+    panel.querySelectorAll('.cc-dot').forEach(d =>
+      d.addEventListener('click', () => {
+        if (sel === 0) ccSel = Number(d.dataset.cc);
+        else if (sel === 1) ceSel = Number(d.dataset.cc);
+        render();
+      }));
     $('#btnSpeak')?.addEventListener('click', (e) => {
       if (speechSynthesis.speaking){ stopSpeak(); e.target.textContent = '🔊 Practice aloud'; return; }
       const u = new SpeechSynthesisUtterance(currentText());
