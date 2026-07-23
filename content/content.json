@@ -512,10 +512,10 @@
       {
         "n": 6,
         "name": "Close",
-        "goal": "Navigate approval (budget, PO, procurement) and sign.",
-        "exit": "Signed agreement / PO issued.",
+        "goal": "Help the champion navigate internal approvals, procurement, and implementation planning with confidence. Your job isn't to pressure them — it's to make them the hero inside their own organization.",
+        "exit": "Agreement signed; PO received; kickoff scheduled.",
         "healthy": "4–8 weeks (procurement + board calendars)",
-        "stall": "60+ days or a missed board date → reconfirm the procurement path; reset to the next board meeting."
+        "stall": "60+ days → don't 'just check in.' Send a seasonal, no-action touch and keep the Approval Toolkit flowing until procurement reaches you."
       },
       {
         "n": 7,
@@ -740,6 +740,129 @@
       "name": "Crystal Instruction",
       "endorsement": "a ClearK12 product",
       "logo": "assets/crystal-logo.png",
+      "closeCadence": {
+        "intro": "The deal's moving forward — now make the champion the internal hero. Every touch removes work and reinforces confidence; none of them 'just check in.'",
+        "purpose": "Help the champion navigate internal approvals, procurement, and implementation planning with confidence.",
+        "healthy": "4–8 weeks (procurement + board calendars)",
+        "stallAlarm": "60 days",
+        "steps": [
+          {
+            "day": "Touch 1",
+            "channel": "Email",
+            "purpose": "Proposal accepted / pending approval — this isn't a follow-up, it's removing work.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Next-steps email",
+                "subjectVariants": [
+                  "Next steps"
+                ],
+                "body": "Hi [Name],\n\nI'm excited we're moving forward.\n\nI know the next step is usually internal approvals, so I wanted to make this as easy as possible.\n\nIf it would help, I'm happy to provide:\n\n• A one-page executive summary\n• Budget justification\n• Implementation timeline\n• ROI or outcomes overview\n• Anything else your leadership team needs\n\nMy goal is to make this process as smooth as possible for you.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 2",
+            "channel": "Call",
+            "purpose": "One week later — not 'just checking in,' but 'what can I help prepare?'",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name],\n\nI wanted to see where things are in your approval process.\n\nIs there anything I can help prepare before it goes to leadership or procurement?"
+              }
+            ]
+          },
+          {
+            "day": "Touch 3",
+            "channel": "Email",
+            "purpose": "Supporting, not chasing — offer to join a call with anyone involved.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Offer-to-help email",
+                "subjectVariants": [
+                  "Anything I can help with?"
+                ],
+                "body": "Hi [Name],\n\nI know these processes sometimes involve several conversations before a decision is finalized.\n\nIf questions come up around implementation, teacher adoption, pricing, or rollout, I'd be happy to jump on a quick call with anyone involved.\n\nHappy to help however I can.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 4",
+            "channel": "Email",
+            "purpose": "Procurement — very practical; make the business office's job easy.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Procurement-ready email",
+                "subjectVariants": [
+                  "Ready whenever procurement is"
+                ],
+                "body": "Hi [Name],\n\nJust wanted to let you know we're ready whenever your procurement process reaches us.\n\nIf your business office needs any additional documentation, W-9s, vendor forms, insurance information, or anything else, we'll turn it around quickly.\n\nLooking forward to working together.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 5",
+            "channel": "Call",
+            "purpose": "Find the holdup — no pressure.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name],\n\nI wanted to check whether we're waiting on procurement or whether there's anything else holding things up.\n\nIf there's anything I can do to make the process easier, just let me know."
+              }
+            ]
+          },
+          {
+            "day": "Touch 6",
+            "channel": "Email",
+            "purpose": "Planning ahead — subtly reinforce implementation confidence.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Plan-ahead email",
+                "subjectVariants": [
+                  "Planning ahead"
+                ],
+                "body": "Hi [Name],\n\nOne thing we've found...\n\nThe smoothest implementations begin planning before paperwork is completely finished.\n\nIf you'd like, we can start talking through onboarding, teacher communication, or rollout ideas now so you're ready to go once everything is finalized.\n\nNo extra meetings required — just wanted you to know we're here.\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "If procurement drags",
+            "channel": "Email",
+            "purpose": "Months-long procurement is constant in K–12 — send a seasonal, no-action touch instead of 'just checking in.'",
+            "components": [
+              {
+                "type": "email",
+                "label": "Seasonal check touch",
+                "subjectVariants": [
+                  "Hope the semester is going well"
+                ],
+                "body": "Hi [Name],\n\nHope things are going well on your campus.\n\nNo action needed — I just wanted to check whether anything has changed on the procurement side.\n\nIf not, no worries at all.\n\nWhenever the timing is right, we'll be ready.\n\n— [Rep]"
+              }
+            ]
+          }
+        ],
+        "approvalToolkit": {
+          "intro": "When the deal reaches Close, the rep can send these so the champion becomes the hero internally:",
+          "items": [
+            "Executive Summary",
+            "One-page Overview",
+            "Implementation Timeline",
+            "Texas District References",
+            "Pricing",
+            "W-9",
+            "Vendor Packet",
+            "Security Documentation",
+            "Data Privacy",
+            "Support Plan"
+          ],
+          "note": "The rep's job isn't to pressure the champion — it's to make them successful inside their own organization."
+        }
+      },
       "demoCadence": {
         "intro": "The demo is booked — now protect it. These touches maximize attendance, tailor the conversation, and set up the proposal before the meeting starts.",
         "purpose": "Prepare for a tailored demo, maximize attendance, and position the next step as a proposal — not another meeting.",
