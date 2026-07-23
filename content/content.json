@@ -743,6 +743,13 @@
         "repSub": "Crystal Instruction helps Texas teachers turn student performance into the next instructional move — without adding prep, grading, or another disconnected system.",
         "badge": "Built for Texas classrooms · TEKS aligned",
         "fifteenSecond": "Crystal Instruction connects assessment data, standards-aligned instruction, real-time visibility, and built-in next steps so teachers can respond faster — with less work.",
+        "fieldResults": [
+          {
+            "tag": "Field result · STAAR",
+            "text": "In our trial year, one teacher used Crystal Instruction regularly in her classroom — and ended the year with the best STAAR scores in her school district."
+          }
+        ],
+        "fieldResultsNote": "Real, single-classroom trial result — tell it as a story, not a statistic. More field results land here as pilots close.",
         "buyers": [
           {
             "n": "01",
@@ -887,7 +894,7 @@
         ]
       },
       "isIsnt": {
-        "is": "Instructional response infrastructure that connects assessment data, standard-aligned instruction, real-time insight, and targeted next steps into one streamlined workflow — supporting Tier 1, MTSS, small groups, and intervention.",
+        "is": "Instructional response infrastructure that connects assessment data, standards-aligned instruction, real-time insight, and targeted next steps into one teach–see–respond cycle — supporting Tier 1, MTSS, small groups, and intervention.",
         "isnt": "A curriculum replacement, a supplemental-content library, a practice/worksheet platform, or an MTSS platform. We support MTSS — we don't become it."
       },
       "paletteMeta": [
@@ -968,6 +975,7 @@
         "We are your MTSS platform",
         "Teachers run instruction through Crystal"
       ],
+      "voiceLine": "Describing the connected teach → see → respond cycle is always on-voice — that's the value story. Calling Crystal 'one platform' or 'one system that does it all' never is: districts own their platforms, and Crystal makes what they own work harder.",
       "bestFitSignals": [
         "Active MTSS/RTI focus, Tier 1 or reteach initiatives, or a data-to-action gap.",
         "Already invested in curriculum, benchmarks (MAP, Interim), and dashboards — but next steps are cumbersome, inconsistent, and often independent.",
