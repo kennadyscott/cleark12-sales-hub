@@ -2633,7 +2633,7 @@ function vProcess(){
   </div>
 
   <nav class="jumpbar" id="jumpbar" aria-label="On this page">
-    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#objection-finder","Objections"],["#sec-cadence","Cadence"],["#sec-nurture","Nurture"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
+    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#objection-finder","Objections"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
   </nav>
 
   <div class="section" id="sec-stages">
@@ -2719,10 +2719,6 @@ function vProcess(){
     </div>
     <div id="objResults"></div>
   </div>
-
-  ${cadenceSectionHTML(pr, '#/process')}
-
-  ${nurtureSectionHTML(pr)}
 
   <div class="section" id="sec-close">
     <div class="sp-close">
