@@ -994,7 +994,7 @@
         "sub": "Choose an audience to see the lead message, buyer priorities, and language to use.",
         "repAngles": {
           "teacher": "Teachers don't need help identifying who needs support. They need help building what those students need next.",
-          "campus": "Focus on consistency across classrooms and visibility that doesn't add walkthrough burden.",
+          "campus": "Principals aren't trying to observe more classrooms — they're trying to know that strong instruction is happening consistently, even when they aren't in the room.",
           "district": "Focus on scale inside their existing ecosystem — MTSS alignment and measurable growth outcomes."
         },
         "soundBite": "Bold. Energetic. Confident.",
@@ -1158,12 +1158,12 @@
         {
           "audience": "campus",
           "care": [
-            "Instructional consistency",
-            "Walkthrough visibility",
-            "Intervention effectiveness",
-            "Teacher support & growth"
+            "Consistent instructional practice",
+            "Stronger teacher coaching",
+            "More effective intervention",
+            "Visibility into classroom instruction"
           ],
-          "leadMessage": "Consistent, visible instructional response in every classroom."
+          "leadMessage": "Turn instructional expectations into classroom reality."
         },
         {
           "audience": "district",
