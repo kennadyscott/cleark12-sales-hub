@@ -1325,6 +1325,100 @@ const DATA = {
     {
       id:"crystal", name:"Crystal Instruction", endorsement:"a ClearK12 product",
       logo:"assets/crystal-logo.png",
+      discoverCadence: {
+        "intro": "Most prospects skip straight from Connect to a scheduled demo. For the few who make a real connection without booking one, this is the plan.",
+        "purpose": "Validate fit, build urgency, and schedule a tailored demo.",
+        "healthy": "1–2 weeks",
+        "stallAlarm": "21 days",
+        "steps": [
+          {
+            "day": "Touch 1",
+            "channel": "Call",
+            "purpose": "Immediately after engagement — understand their situation and schedule the demo.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call opener",
+                "body": "Hi [Name], thanks again for responding to my email.\n\nBefore I show you Crystal, I'd love to understand how your campus currently handles reteach after assessments. Do you have a couple of minutes?\n\n(If the conversation goes well:)\n\nBased on what you've shared, I think it'd be helpful to show you how schools similar to yours are using Crystal. Would next Tuesday or Thursday work better?"
+              },
+              {
+                "type": "voicemail",
+                "label": "Voicemail",
+                "body": "Hi [Name], it's [Rep].\n\nThanks again for connecting with me. I wanted to follow up because I'd love to learn a little more about how your campus currently approaches reteach before showing you anything.\n\nGive me a call back at [number], or I'll send a quick email with a couple of times."
+              }
+            ]
+          },
+          {
+            "day": "Touch 2",
+            "channel": "Email",
+            "purpose": "Same day — not 'want a demo?' but 'I want to make the demo worthwhile.'",
+            "components": [
+              {
+                "type": "email",
+                "label": "Email",
+                "subjectVariants": [
+                  "A quick question before I show you Crystal"
+                ],
+                "body": "Hi [Name],\n\nThanks again for connecting with me.\n\nBefore I schedule a walkthrough, I'd love to understand one thing:\n\nHow are teachers currently responding after benchmark assessments?\n\nAre they mostly creating reteach lessons themselves, or do they already have instructional resources they can use?\n\nThat answer helps me tailor the conversation so it's relevant to your campus.\n\nIf it's easier, we can simply talk through it during a 20-minute walkthrough.\n\nDo either Tuesday or Thursday next week work?\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 3",
+            "channel": "Call",
+            "purpose": "3–4 days later — this is where you begin creating urgency.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], it's [Rep].\n\nI was thinking about our conversation, and something came to mind.\n\nThe schools getting the most value from Crystal usually aren't looking for more curriculum — they're looking to give teachers more time to teach.\n\nI think it would be worth showing you a few examples specific to your grade levels.\n\nDo you have about 20 minutes sometime this week?"
+              }
+            ]
+          },
+          {
+            "day": "Touch 4",
+            "channel": "Email",
+            "purpose": "Make the meeting feel customized — tailored around their current process.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Email",
+                "subjectVariants": [
+                  "I made a few notes for your campus"
+                ],
+                "body": "Hi [Name],\n\nI've been thinking about what you shared regarding your instructional process.\n\nIf we met, these are the three things I'd focus on:\n\n• How teachers can move from assessment to instruction faster\n• Making small-group instruction more consistent\n• Reducing the amount of lesson planning after benchmarks\n\nRather than giving you a generic product demo, I'd tailor everything around your current process.\n\nWould Wednesday morning or Thursday afternoon work better?\n\n— [Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 5",
+            "channel": "Call",
+            "purpose": "Final attempt before moving forward — or back to nurture.",
+            "components": [
+              {
+                "type": "call_script",
+                "label": "Call talk-track",
+                "body": "Hi [Name], it's [Rep].\n\nI know calendars fill up quickly, so I wanted to make one last attempt.\n\nI think there are a few ideas that could genuinely help your teachers, and I'd be happy to tailor everything around how your campus already operates.\n\nIf now isn't the right time, that's completely okay. Just let me know, and I'll circle back during your planning season."
+              }
+            ]
+          },
+          {
+            "day": "Final email",
+            "channel": "Email",
+            "purpose": "If the last call doesn't land — step back gracefully and move them to nurture.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Step-back email",
+                "subjectVariants": [
+                  "Worth revisiting later?"
+                ],
+                "body": "Hi [Name],\n\nI know timing is everything in education.\n\nI'll step back for now.\n\nIf improving reteach, small-group instruction, or reducing planning time becomes a priority this semester, I'd be happy to pick the conversation back up.\n\nIn the meantime, here's our five-minute self-guided walkthrough if you'd ever like a quick overview:\n\n👉 crystalinstruction.com/self-guided-demo\n\nHope the rest of your semester goes well.\n\n— [Rep]"
+              }
+            ]
+          }
+        ]
+      },
       outreachCadence: {
         "persona": "campus",
         "personaLabel": "Campus leaders (principals)",
@@ -3143,6 +3237,14 @@ function vCadence(){
     <p class="lede">Your day-by-day outreach rhythm — the 22-day Connect sequence, then the long-tail nurture track for contacts who aren't ready yet. It's the same plan both products run on; the words change on the messaging pages.</p>
   </div>
   ${cadenceSectionHTML(pr, '#/cadence')}
+
+  <div class="callout" style="margin-top:4px">
+    <b>They engaged? That's Discover.</b> Most prospects book the demo on the spot — but for the few who make a real
+    connection without scheduling one, run the Discover touch points: validate fit, build urgency, and schedule a
+    tailored demo (healthy pace 1–2 weeks; stall alarm at 21 days).
+    <button class="bchip" data-route data-hash="#/process" data-anchor="#sec-discovery" style="--bc:var(--accent);margin-left:8px;padding:3px 10px;font-size:12px">Open the Discover touch points →</button>
+  </div>
+
   ${nurtureSectionHTML(pr)}`;
 }
 function vProcess(){
@@ -3162,6 +3264,7 @@ function vProcess(){
   const crows = list => list.map(t=>`<div class="sp-crow">${CK}<span>${esc(t)}</span>${copyBtn('Copy', payload(t))}</div>`).join('');
   const fitS = sents(pr.fitNote);
   const dd = pr.discoverStage;
+  const dcad = prod('crystal').discoverCadence;
 
   return `
   <div class="sp-head">
@@ -3287,6 +3390,27 @@ function vProcess(){
       <div class="script"><div class="script-head"><h4>Hand-off script</h4>${copyBtn('Copy', payload(dd.transitionToDemo.script))}</div><div class="script-body">${esc(dd.transitionToDemo.script)}</div></div>
       <div class="card pad"><div class="eyebrow">Then: demo tips</div><div style="margin-top:10px">${crows(pr.demoTips)}</div></div>
     </div>
+
+    ${dcad ? `
+    <h3 class="disc-h3">If the demo doesn't get scheduled — the Discover touch points</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${esc(dcad.intro)} <b>${esc(dcad.purpose)}</b> Healthy pace: ${esc(dcad.healthy)} · stall alarm at ${esc(dcad.stallAlarm)}.</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${dcad.steps.map(st=>`
+        <details class="card task-row" style="overflow:hidden">
+          <summary style="display:flex;align-items:center;gap:10px;padding:14px 16px;cursor:pointer;flex-wrap:wrap;list-style:none">
+            <span class="caret" style="color:var(--faint);font-size:11px">▸</span>
+            <span class="stage-n" style="width:auto;border-radius:999px;padding:0 10px;font-size:12px;height:26px">${esc(st.day)}</span>
+            <span class="chip" style="font-size:11px">${esc(st.channel)}</span>
+            <span style="font-size:13px;color:var(--muted)">${esc(st.purpose)}</span>
+          </summary>
+          <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:12px">
+            ${st.components.map(c=>`
+              <div class="script"><div class="script-head"><h4>${esc(c.label)}</h4>${copyBtn('Copy', payload((c.subjectVariants?`Subject: ${c.subjectVariants[0]}\n\n`:'')+c.body))}</div>
+              ${c.subjectVariants?`<div class="email-sub"><b>Subject:</b> ${highlightPH(c.subjectVariants[0])}</div>`:''}
+              <div class="script-body">${highlightPH(c.body)}</div></div>`).join('')}
+          </div>
+        </details>`).join('')}
+    </div>` : ''}
 
     <p style="font-size:12.5px;color:var(--muted);margin-top:14px">Product-specific discovery questions also live on each playbook: <a href="#/crystal/playbook" style="color:#D81BB8;font-weight:600">Crystal</a> · <a href="#/lonestar/playbook" style="color:var(--accent-strong);font-weight:600">Texas</a> · <a href="#/writing/ohio/playbook" style="color:var(--accent-strong);font-weight:600">Ohio</a> · <a href="#/writing/georgia/playbook" style="color:var(--accent-strong);font-weight:600">Georgia</a></p>
   </div>
