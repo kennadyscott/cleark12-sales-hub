@@ -1184,8 +1184,8 @@ const DATA = {
         healthy:"2–4 weeks", stall:"30+ days without movement → manager touch; re-anchor to their budget window and remove the next barrier." },
       { n:6, name:"Close", goal:"Help the champion navigate internal approvals, procurement, and implementation planning with confidence. Your job isn't to pressure them — it's to make them the hero inside their own organization.", exit:"Agreement signed; PO received; kickoff scheduled.",
         healthy:"4–8 weeks (procurement + board calendars)", stall:"60+ days → don't 'just check in.' Send a seasonal, no-action touch and keep the Approval Toolkit flowing until procurement reaches you." },
-      { n:7, name:"Onboard & Expand", goal:"Fast, successful rollout; then grow (more campuses, second product).", exit:"Live usage + a named expansion or renewal path.",
-        healthy:"Live usage within 30–60 days", stall:"No named expansion or renewal path by day 90 → schedule the growth conversation." }
+      { n:7, name:"Onboard & Expand", goal:"Deliver a smooth implementation, achieve early teacher adoption, demonstrate instructional impact, and identify growth opportunities. This is a separate pipeline — Customer Success (Erin) owns it, and ownership transfers from the AE the moment the deal is Closed Won.", exit:"Successful implementation; teachers actively using Crystal; success metrics established; expansion or renewal plan identified.",
+        healthy:"First 30–60 days", stall:"No kickoff scheduled within 7 days, or no meaningful teacher adoption within 30 days." }
     ],
     cycleNote: "A healthy end-to-end cycle runs roughly 3–6 months. Spring deals close for a fall start; fall deals usually close in the spring budget cycle. Rule of thumb: a deal that has doubled its stage benchmark is stalled — act on it, don't wait on it.",
     timingNote: "K-12 buying runs on budget cycles and procurement rules everywhere we sell. Spring (planning next year) and late summer are prime; know the district's fiscal year and its purchasing path — ESCs and purchasing co-ops in Texas, ESCs in Ohio, RESAs in Georgia — and whether a specific approval path applies.",
@@ -1325,6 +1325,172 @@ const DATA = {
     {
       id:"crystal", name:"Crystal Instruction", endorsement:"a ClearK12 product",
       logo:"assets/crystal-logo.png",
+      onboardCadence: {
+        "intro": "This is a separate pipeline. The AE's job ends at Closed Won; Customer Success (Erin) owns implementation, adoption, and growth. The customer gets one clear point of contact from kickoff through adoption.",
+        "purpose": "Deliver a smooth implementation, achieve early teacher adoption, demonstrate instructional impact, and identify growth opportunities.",
+        "owner": "Customer Success (Erin)",
+        "healthy": "First 30–60 days",
+        "stallAlarm": "No kickoff within 7 days, or no meaningful teacher adoption within 30 days",
+        "handoff": {
+          "heading": "Internal handoff — the moment the deal is marked Closed Won",
+          "items": [
+            "Ownership changes from the Account Executive to Erin",
+            "Create an Implementation Opportunity",
+            "Notify Erin",
+            "Notify James",
+            "Create onboarding tasks"
+          ],
+          "note": "The AE's work is complete. Customer Success now owns the relationship, and every future task, reminder, and communication belongs to CS — freeing Sales to focus on new opportunities."
+        },
+        "steps": [
+          {
+            "day": "Touch 1",
+            "owner": "Sales Rep",
+            "channel": "Email",
+            "purpose": "Immediately after signing — introduce the implementation team, then hand off. This is the AE's last touch.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Sales → CS introduction",
+                "subjectVariants": [
+                  "Welcome to Crystal Instruction! Meet your implementation team."
+                ],
+                "body": "Hi [Name],\n\nCongratulations! We're excited to officially welcome your team to Crystal Instruction.\n\nNow that we're getting started, I'd like to introduce the people who will guide your implementation and make sure everything gets off to a successful start.\n\nErin is our Product Specialist and will be your primary point of contact throughout onboarding. She'll coordinate implementation, training, and rollout planning.\n\nJames works alongside Erin to support implementation and ensure your team has everything needed for a successful launch.\n\nErin and James — meet [Name]'s team.\n\nI'll let you take it from here!\n\nThank you again for trusting Crystal Instruction. It has been a pleasure working with you, and I'm excited to see what your teachers accomplish this year.\n\nPlease don't hesitate to reach out if I can ever help.\n\nBest,\n[Rep]"
+              }
+            ]
+          },
+          {
+            "day": "Touch 2",
+            "owner": "Erin",
+            "channel": "Email",
+            "purpose": "Same day — Erin takes ownership and books the kickoff.",
+            "components": [
+              {
+                "type": "email",
+                "label": "CS ownership + kickoff",
+                "subjectVariants": [
+                  "Let's get your implementation started!"
+                ],
+                "body": "Hi [Name],\n\nIt's wonderful to meet you!\n\nI'm excited to partner with you and your team as we begin implementing Crystal Instruction.\n\nMy role is simple: to make onboarding easy, organized, and successful for everyone involved.\n\nOver the next few weeks we'll:\n\n• Build your implementation timeline\n• Schedule administrator and teacher training\n• Prepare for your first instructional rollout\n• Make sure your team feels confident using Crystal\n\nTo get started, I'd love to schedule a quick 30-minute kickoff meeting. Does one of these times work?\n\n[Scheduling Link]\n\nLooking forward to working together!\n\n— Erin"
+              }
+            ]
+          },
+          {
+            "day": "Touch 3",
+            "owner": "Erin",
+            "channel": "Email",
+            "purpose": "Immediately after kickoff is scheduled — confirmation.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Kickoff confirmation",
+                "subjectVariants": [
+                  "Looking forward to kickoff!"
+                ],
+                "body": "Hi [Name],\n\nThanks for scheduling our kickoff meeting.\n\nDuring our conversation we'll:\n\n• Review your implementation timeline\n• Discuss teacher onboarding\n• Confirm training dates\n• Answer any questions\n\nLooking forward to getting started!\n\n— Erin"
+              }
+            ]
+          },
+          {
+            "day": "Touch 4",
+            "owner": "Erin",
+            "channel": "Email",
+            "purpose": "After kickoff — recap and confirm milestones.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Post-kickoff recap",
+                "subjectVariants": [
+                  "Great kickoff today!"
+                ],
+                "body": "Hi [Name],\n\nThank you for your time today.\n\nHere's a quick summary of what we covered:\n\n✓ Kickoff complete\n✓ Training scheduled\n✓ Implementation timeline confirmed\n✓ Next milestones established\n\nI'll stay in touch throughout implementation to make sure everything stays on track.\n\nLooking forward to our next step!\n\n— Erin"
+              }
+            ]
+          },
+          {
+            "day": "Touch 5",
+            "owner": "Erin",
+            "channel": "Email",
+            "purpose": "One-week check-in.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Week-1 check-in",
+                "subjectVariants": [
+                  "How is everything going so far?"
+                ],
+                "body": "Hi [Name],\n\nI wanted to check in now that implementation is underway.\n\nHow are things going? Have any questions come up? Is there anything we can make easier for your teachers?\n\nWe're here to help however we can.\n\n— Erin"
+              }
+            ]
+          },
+          {
+            "day": "Touch 6",
+            "owner": "Erin",
+            "channel": "Email",
+            "purpose": "30-day success review.",
+            "components": [
+              {
+                "type": "email",
+                "label": "30-day success review",
+                "subjectVariants": [
+                  "Let's review your first month"
+                ],
+                "body": "Hi [Name],\n\nIt's hard to believe you've already been using Crystal for a month!\n\nI'd love to schedule a quick Success Review so we can talk about:\n\n• Teacher adoption\n• Early wins\n• Questions\n• Next benchmark\n• Future goals\n\nDoes next week work?\n\n— Erin"
+              }
+            ]
+          },
+          {
+            "day": "Touch 7",
+            "owner": "Erin",
+            "channel": "Email",
+            "purpose": "60-day growth conversation — expansion, renewal, or reference.",
+            "components": [
+              {
+                "type": "email",
+                "label": "Growth conversation",
+                "subjectVariants": [
+                  "Looking ahead"
+                ],
+                "body": "Hi [Name],\n\nNow that your team has had time to use Crystal, I'd love to hear what's working well and where we can continue supporting your teachers.\n\nWe'll review:\n\n• Teacher feedback\n• Student impact\n• Usage trends\n• Additional opportunities\n\nWhether that's another grade level, another campus, or another product, we'll only recommend what's helpful for your team.\n\nLooking forward to catching up!\n\n— Erin"
+              }
+            ]
+          }
+        ],
+        "csDashboard": {
+          "intro": "Customer Success dashboard — the implementation workflow that's created automatically on handoff:",
+          "weeks": [
+            {
+              "label": "Week 1",
+              "tasks": [
+                "Welcome email sent",
+                "Kickoff scheduled",
+                "Kickoff completed"
+              ]
+            },
+            {
+              "label": "Week 2",
+              "tasks": [
+                "Training delivered",
+                "Teacher onboarding complete"
+              ]
+            },
+            {
+              "label": "Week 4",
+              "tasks": [
+                "30-Day Success Review"
+              ]
+            },
+            {
+              "label": "Week 8",
+              "tasks": [
+                "Growth Conversation",
+                "Expansion opportunity?",
+                "Reference candidate?"
+              ]
+            }
+          ]
+        }
+      },
       closeCadence: {
         "intro": "The deal's moving forward — now make the champion the internal hero. Every touch removes work and reinforces confidence; none of them 'just check in.'",
         "purpose": "Help the champion navigate internal approvals, procurement, and implementation planning with confidence.",
@@ -3502,6 +3668,7 @@ function vProcess(){
             <span class="caret" style="color:var(--faint);font-size:11px">▸</span>
             <span class="stage-n" style="width:auto;border-radius:999px;padding:0 10px;font-size:12px;height:26px">${esc(st.day)}</span>
             <span class="chip" style="font-size:11px">${esc(st.channel)}</span>
+            ${st.owner?`<span class="chip" style="font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:${st.owner==='Sales Rep'?'var(--accent-strong)':'#0E9F6E'};border-color:${st.owner==='Sales Rep'?'color-mix(in srgb,var(--accent) 30%,var(--border))':'#0E9F6E55'}">${esc(st.owner)}</span>`:''}
             <span style="font-size:13px;color:var(--muted)">${esc(st.purpose)}</span>
           </summary>
           <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:12px">
@@ -3538,7 +3705,7 @@ function vProcess(){
   </div>
 
   <nav class="jumpbar" id="jumpbar" aria-label="On this page">
-    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#sec-demo","Demo"],["#objection-finder","Objections"],["#sec-close","Close"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
+    ${[["#sec-stages","Stages"],["#sec-icp","Who we target"],["#sec-fit","FIT"],["#sec-discovery","Discovery"],["#sec-demo","Demo"],["#objection-finder","Objections"],["#sec-close","Close"],["#sec-onboard","Onboard"]].map(([h,l])=>`<a href="${h}" data-jump="${h}">${l}</a>`).join('')}
   </nav>
 
   <div class="section" id="sec-stages">
@@ -3734,7 +3901,31 @@ function vProcess(){
       </div>
       <p style="font-size:12px;color:var(--muted);margin-top:12px">${esc(cc.approvalToolkit.note)}</p>
     </div>` : ''; })()}
-  </div>`;
+  </div>
+
+  ${(() => { const oc = prod('crystal').onboardCadence; return oc ? `
+  <div class="section" id="sec-onboard">
+    <div class="sec-title"><h2>Onboard &amp; Expand</h2><span class="rule"></span><span style="font-size:13px;color:var(--muted);font-weight:400">A separate pipeline · owned by ${esc(oc.owner)}</span></div>
+    <p style="color:var(--ink-2);font-size:14px;margin-bottom:12px">${esc(oc.intro)}</p>
+
+    <div class="callout" style="margin-bottom:16px;border-color:#0E9F6E55;background:color-mix(in srgb, #0E9F6E 6%, var(--surface))">
+      <b style="color:#0E9F6E">${esc(oc.handoff.heading)}</b>
+      <div style="margin-top:8px">${oc.handoff.items.map(x=>`<div class="sp-check" style="padding:2px 0"><span style="color:#0E9F6E;font-weight:800">✓</span><span>${esc(x)}</span></div>`).join('')}</div>
+      <p style="font-size:12.5px;color:var(--muted);margin-top:8px">${esc(oc.handoff.note)}</p>
+    </div>
+
+    <h3 class="disc-h3">The onboarding touch points</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">Healthy pace: ${esc(oc.healthy)} · stall alarm: ${esc(oc.stallAlarm)}. Touch 1 is the AE's hand-off; every touch after is Erin.</p>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${oc.steps.map(touchAcc).join('')}
+    </div>
+
+    <h3 class="disc-h3">Customer Success dashboard</h3>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${esc(oc.csDashboard.intro)}</p>
+    <div class="disc-signals" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr))">
+      ${oc.csDashboard.weeks.map(w=>`<div class="card pad"><div class="eyebrow" style="color:var(--accent-strong)">${esc(w.label)}</div><div style="margin-top:8px">${w.tasks.map(t=>`<div style="display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:var(--ink-2);padding:2px 0"><span style="color:var(--faint)">☐</span><span>${esc(t)}</span></div>`).join('')}</div></div>`).join('')}
+    </div>
+  </div>` : ''; })()}`;
 }
 
 let objMix = 'all', objSel = 0, _objKey = '';
