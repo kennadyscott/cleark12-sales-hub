@@ -951,6 +951,103 @@
 <script>
 /* ============================ CONTENT ============================ */
 const DATA = {
+  onboarding: {
+    "intro": "New to the team? Start here. The essentials — who we are, the tools you'll live in, who does what, and where to get unstuck. (Starter content — edit freely.)",
+    "sections": [
+      {
+        "id": "who",
+        "title": "Who is ClearK12?",
+        "body": [
+          "ClearK12 is an educational-technology company built for K–12 classrooms. We help teachers respond to what students need — faster, and without more work.",
+          "Two products: Crystal Instruction (the instructional-response partner — turn assessment data into the next teaching move) and Crystal Writing / LoneStar CR in Texas (the constructed-response writing partner).",
+          "The through-line we sell on: teachers already know who needs help — we build what those students need next."
+        ]
+      },
+      {
+        "id": "platforms",
+        "title": "What platforms do we use?",
+        "items": [
+          {
+            "name": "Sales HQ",
+            "desc": "Your daily driver — dashboard to-dos, cadence scripts, Call Log, Celebration Board.",
+            "url": "https://cleark12-sales-hq.vercel.app"
+          },
+          {
+            "name": "Sales Hub (this site)",
+            "desc": "The playbook — messaging, cold-call and email scripts, objection finder, brand, and the full cadence.",
+            "url": ""
+          },
+          {
+            "name": "Self-guided demo",
+            "desc": "The ~5-minute async walkthrough you send prospects.",
+            "url": "https://crystalinstruction.com/self-guided-demo"
+          },
+          {
+            "name": "Zoom",
+            "desc": "Live demos (led by Erin).",
+            "url": ""
+          },
+          {
+            "name": "The CI Deck",
+            "desc": "The Crystal Instruction presentation deck.",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "title": "Who's who and who does what",
+        "people": [
+          {
+            "name": "Kennady Scott",
+            "role": "Sales lead / Account Executive",
+            "does": "Pipeline, pricing and deal approval, playbook owner."
+          },
+          {
+            "name": "Sara Prascher",
+            "role": "Account Executive",
+            "does": "Works prospects through Connect → Decision."
+          },
+          {
+            "name": "Erin Montagne",
+            "role": "Customer Success",
+            "does": "Leads product demos; owns implementation and onboarding after Closed Won."
+          },
+          {
+            "name": "James",
+            "role": "Customer Success",
+            "does": "Supports implementation and launch alongside Erin."
+          }
+        ]
+      },
+      {
+        "id": "help",
+        "title": "Who do I ask for help?",
+        "asks": [
+          {
+            "q": "Pricing or deal approval",
+            "who": "Kennady"
+          },
+          {
+            "q": "Running a product demo",
+            "who": "Erin — she leads demos"
+          },
+          {
+            "q": "Onboarding a new customer / implementation",
+            "who": "Erin & James (Customer Success)"
+          },
+          {
+            "q": "Messaging, scripts, or playbook questions",
+            "who": "Kennady / sales enablement"
+          },
+          {
+            "q": "Something broken in Sales HQ",
+            "who": "Kennady"
+          }
+        ]
+      }
+    ]
+  },
   meta: {
     "version": "1.14",
     "title": "ClearK12 Sales Hub",
@@ -2805,7 +2902,9 @@ function vHome(){
     { t:"Objection finder", s:"Search every response, shared + product", hash:"#/process", anchor:"#objection-finder", col:"#D81BB8",
       ic:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2"/></svg>` },
     { t:"Brand kit", s:"Colors, logos & voice guidelines", hash:"#/brand", col:"#1F9BE0",
-      ic:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F9BE0" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="2.3"/><circle cx="17.5" cy="10.5" r="2.3"/><circle cx="8.5" cy="7.5" r="2.3"/><circle cx="6.5" cy="12.5" r="2.3"/><path d="M12 22a10 10 0 1 1 0-20c5 0 8 3 8 6.5 0 2-1.6 3.2-3.2 3.2h-1.8c-1.1 0-2 .9-2 2 0 .5.2 1 .5 1.4.3.5.2 1.3-.4 1.7-.3.1-.6.2-1.1.2Z"/></svg>` }
+      ic:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F9BE0" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="2.3"/><circle cx="17.5" cy="10.5" r="2.3"/><circle cx="8.5" cy="7.5" r="2.3"/><circle cx="6.5" cy="12.5" r="2.3"/><path d="M12 22a10 10 0 1 1 0-20c5 0 8 3 8 6.5 0 2-1.6 3.2-3.2 3.2h-1.8c-1.1 0-2 .9-2 2 0 .5.2 1 .5 1.4.3.5.2 1.3-.4 1.7-.3.1-.6.2-1.1.2Z"/></svg>` },
+    { t:"Onboarding", s:"New here? Who we are, our tools, who's who & who to ask", hash:"#/onboarding", col:"#1F9BE0",
+      ic:`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F9BE0" stroke-width="1.8"><path d="M12 14 3 9l9-5 9 5-9 5Z"/><path d="M6 10.5V16c0 1.1 2.7 3 6 3s6-1.9 6-3v-5.5M21 9v5"/></svg>` }
   ];
   const cards = [
     { id:"clark12", name:"ClearK12", accent:"#1F9BE0",
@@ -4060,6 +4159,34 @@ function renderObjFinder(){
     b.addEventListener('click', () => { objSel = +b.dataset.oi; renderObjFinder(); }));
 }
 
+function vOnboarding(){
+  const o = DATA.onboarding;
+  const initials = n => n.split(/\s+/).slice(0,2).map(w=>w[0]?.toUpperCase()).join('');
+  const sec = s => {
+    let inner = '';
+    if (s.body) inner = s.body.map(p=>`<p style="color:var(--ink-2);font-size:14px;line-height:1.65;margin-bottom:8px">${esc(p)}</p>`).join('');
+    else if (s.items) inner = `<div class="ov-links">${s.items.map(it=>`${it.url?`<a class="ov-link" href="${it.url}" target="_blank" rel="noreferrer">`:`<div class="ov-link">`}
+        <span class="li"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></span>
+        <span><span class="ll2">${esc(it.name)}</span><span class="ls">${esc(it.desc)}</span></span>
+        ${it.url?`<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg></a>`:`</div>`}`).join('')}</div>`;
+    else if (s.people) inner = `<div class="grid g2" style="align-items:start">${s.people.map(p=>`<div class="card pad" style="display:flex;gap:13px;align-items:flex-start">
+        <span style="width:42px;height:42px;border-radius:50%;background:color-mix(in srgb,var(--accent) 14%,var(--surface));color:var(--accent-strong);display:grid;place-items:center;font-weight:800;font-size:14px;flex-shrink:0">${esc(initials(p.name))}</span>
+        <div><div style="font-weight:800;font-size:15px">${esc(p.name)}</div><div class="eyebrow" style="margin:2px 0 6px">${esc(p.role)}</div><p style="font-size:13px;color:var(--muted);line-height:1.5">${esc(p.does)}</p></div>
+      </div>`).join('')}</div>`;
+    else if (s.asks) inner = `<div class="card pad"><div class="rows">${s.asks.map(a=>`<div class="row" style="align-items:flex-start"><span class="b" style="margin-top:7px"></span><span><b style="color:var(--ink)">${esc(a.q)}</b> <span style="color:var(--muted)">→ ${esc(a.who)}</span></span></div>`).join('')}</div></div>`;
+    return `<div class="section" id="ob-${s.id}"><div class="sec-title"><h2>${esc(s.title)}</h2><span class="rule"></span></div>${inner}</div>`;
+  };
+  return `
+  <div class="page-head">
+    <div class="eyebrow">Onboarding</div>
+    <h1>Welcome to ClearK12.</h1>
+    <p class="lede">${esc(o.intro)}</p>
+  </div>
+  <nav class="jumpbar" aria-label="On this page">
+    ${o.sections.map(s=>`<a href="#ob-${s.id}" data-jump="#ob-${s.id}">${esc(s.title)}</a>`).join('')}
+  </nav>
+  ${o.sections.map(sec).join('')}`;
+}
 function vBrand(){
   const c = DATA.company;
   const swatches = (meta) => `<div class="palette">${meta.map(s=>`
@@ -4126,6 +4253,7 @@ const ROUTES = {
   '#/process':            { prod:'clark12',  nav:'#/process',  view:vProcess },
   '#/cadence':            { prod:'clark12',  nav:'#/cadence',  view:vCadence },
   '#/brand':              { prod:'clark12',  nav:'#/brand',    view:vBrand },
+  '#/onboarding':         { prod:'clark12',  nav:'#/home',     view:vOnboarding },
   '#/crystal':            { prod:'crystal',  nav:'#/crystal',  view:()=>vProduct('crystal') },
   '#/crystal/messaging':  { prod:'crystal',  nav:'#/crystal',  view:()=>vMessaging('crystal') },
   '#/crystal/playbook':   { prod:'crystal',  nav:'#/crystal',  view:()=>vPlaybook('crystal') },

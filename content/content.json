@@ -1,4 +1,101 @@
 {
+  "onboarding": {
+    "intro": "New to the team? Start here. The essentials — who we are, the tools you'll live in, who does what, and where to get unstuck. (Starter content — edit freely.)",
+    "sections": [
+      {
+        "id": "who",
+        "title": "Who is ClearK12?",
+        "body": [
+          "ClearK12 is an educational-technology company built for K–12 classrooms. We help teachers respond to what students need — faster, and without more work.",
+          "Two products: Crystal Instruction (the instructional-response partner — turn assessment data into the next teaching move) and Crystal Writing / LoneStar CR in Texas (the constructed-response writing partner).",
+          "The through-line we sell on: teachers already know who needs help — we build what those students need next."
+        ]
+      },
+      {
+        "id": "platforms",
+        "title": "What platforms do we use?",
+        "items": [
+          {
+            "name": "Sales HQ",
+            "desc": "Your daily driver — dashboard to-dos, cadence scripts, Call Log, Celebration Board.",
+            "url": "https://cleark12-sales-hq.vercel.app"
+          },
+          {
+            "name": "Sales Hub (this site)",
+            "desc": "The playbook — messaging, cold-call and email scripts, objection finder, brand, and the full cadence.",
+            "url": ""
+          },
+          {
+            "name": "Self-guided demo",
+            "desc": "The ~5-minute async walkthrough you send prospects.",
+            "url": "https://crystalinstruction.com/self-guided-demo"
+          },
+          {
+            "name": "Zoom",
+            "desc": "Live demos (led by Erin).",
+            "url": ""
+          },
+          {
+            "name": "The CI Deck",
+            "desc": "The Crystal Instruction presentation deck.",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "id": "team",
+        "title": "Who's who and who does what",
+        "people": [
+          {
+            "name": "Kennady Scott",
+            "role": "Sales lead / Account Executive",
+            "does": "Pipeline, pricing and deal approval, playbook owner."
+          },
+          {
+            "name": "Sara Prascher",
+            "role": "Account Executive",
+            "does": "Works prospects through Connect → Decision."
+          },
+          {
+            "name": "Erin Montagne",
+            "role": "Customer Success",
+            "does": "Leads product demos; owns implementation and onboarding after Closed Won."
+          },
+          {
+            "name": "James",
+            "role": "Customer Success",
+            "does": "Supports implementation and launch alongside Erin."
+          }
+        ]
+      },
+      {
+        "id": "help",
+        "title": "Who do I ask for help?",
+        "asks": [
+          {
+            "q": "Pricing or deal approval",
+            "who": "Kennady"
+          },
+          {
+            "q": "Running a product demo",
+            "who": "Erin — she leads demos"
+          },
+          {
+            "q": "Onboarding a new customer / implementation",
+            "who": "Erin & James (Customer Success)"
+          },
+          {
+            "q": "Messaging, scripts, or playbook questions",
+            "who": "Kennady / sales enablement"
+          },
+          {
+            "q": "Something broken in Sales HQ",
+            "who": "Kennady"
+          }
+        ]
+      }
+    ]
+  },
   "meta": {
     "version": "1.14",
     "title": "ClearK12 Sales Hub",
